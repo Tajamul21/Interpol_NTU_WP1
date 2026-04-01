@@ -1,0 +1,236 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/1.jpg",
+  "categories_requested": [
+    "person",
+    "face",
+    "tattoo",
+    "blood",
+    "palm",
+    "text",
+    "weapon",
+    "keyboard",
+    "hotel room"
+  ],
+  "general_detections": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        320,
+        121,
+        876,
+        997
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "face",
+      "bbox_2d": [
+        380,
+        158,
+        688,
+        382
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        570,
+        538,
+        764,
+        762
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        625,
+        802,
+        702,
+        856
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        701,
+        758,
+        802,
+        823
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        574,
+        871,
+        631,
+        915
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        528,
+        971,
+        562,
+        997
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        657,
+        951,
+        725,
+        997
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        574,
+        915,
+        733,
+        965
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        345,
+        649,
+        478,
+        822
+      ],
+      "text_content": ""
+    }
+  ],
+  "persons": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        316,
+        119,
+        877,
+        997
+      ],
+      "face_bbox_2d": [
+        379,
+        158,
+        697,
+        378
+      ],
+      "action": "leaning against wall",
+      "gender": "female",
+      "ethnicity": "white",
+      "age": "25-35",
+      "visible_clothing": [
+        "tank top"
+      ],
+      "visible_accessories": [
+        "nose ring",
+        "earring",
+        "necklace"
+      ],
+      "tattoo_detected": true,
+      "blood_visible": false,
+      "palm_visible": false,
+      "weapon_near_person": false
+    }
+  ],
+  "ocr_texts": [
+    {
+      "label": "text",
+      "bbox_2d": [
+        356,
+        653,
+        405,
+        677
+      ],
+      "text_content": "PINK DOS"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        357,
+        673,
+        394,
+        688
+      ],
+      "text_content": "AT CAME"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        357,
+        688,
+        372,
+        701
+      ],
+      "text_content": "-Peds-"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        352,
+        684,
+        461,
+        785
+      ],
+      "text_content": "Cork"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        419,
+        791,
+        466,
+        808
+      ],
+      "text_content": ".01"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        416,
+        804,
+        465,
+        819
+      ],
+      "text_content": "ENDING"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        377,
+        823,
+        433,
+        844
+      ],
+      "text_content": "a pool of"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        378,
+        837,
+        433,
+        856
+      ],
+      "text_content": "Tattoos"
+    }
+  ],
+  "raw_responses": {
+    "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [320, 121, 876, 997]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [380, 158, 688, 382]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [570, 538, 764, 762]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [625, 802, 702, 856]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [701, 758, 802, 823]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [574, 871, 631, 915]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [528, 971, 562, 997]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [657, 951, 725, 997]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [574, 915, 733, 965]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [345, 649, 478, 822]\n  }\n]",
+    "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [316, 119, 877, 997],\n    \"face_bbox_2d\": [379, 158, 697, 378],\n    \"action\": \"leaning against wall\",\n    \"gender\": \"female\",\n    \"age\": \"25-35\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"tank top\"],\n    \"visible_accessories\": [\"nose ring\", \"earring\", \"necklace\"],\n    \"tattoo_detected\": true,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  }\n]",
+    "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [356, 653, 405, 677],\n    \"text_content\": \"PINK DOS\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [357, 673, 394, 688],\n    \"text_content\": \"AT CAME\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [357, 688, 372, 701],\n    \"text_content\": \"-Peds-\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [352, 684, 461, 785],\n    \"text_content\": \"Cork\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [419, 791, 466, 808],\n    \"text_content\": \".01\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [416, 804, 465, 819],\n    \"text_content\": \"ENDING\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [377, 823, 433, 844],\n    \"text_content\": \"a pool of\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [378, 837, 433, 856],\n    \"text_content\": \"Tattoos\"\n  }\n]"
+  }
+}

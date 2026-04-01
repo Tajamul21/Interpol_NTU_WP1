@@ -1,0 +1,104 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/7.jpg",
+  "categories_requested": [
+    "person",
+    "face",
+    "tattoo",
+    "blood",
+    "palm",
+    "text",
+    "weapon",
+    "keyboard",
+    "hotel room"
+  ],
+  "general_detections": [
+    {
+      "label": "keyboard",
+      "bbox_2d": [
+        162,
+        43,
+        967,
+        893
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        935,
+        821,
+        976,
+        843
+      ],
+      "text_content": ""
+    }
+  ],
+  "persons": [],
+  "ocr_texts": [
+    {
+      "label": "text",
+      "bbox_2d": [
+        534,
+        588,
+        557,
+        615
+      ],
+      "text_content": "Lang"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        624,
+        683,
+        643,
+        703
+      ],
+      "text_content": "Ctrl"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        707,
+        670,
+        727,
+        694
+      ],
+      "text_content": "Shift"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        805,
+        691,
+        829,
+        719
+      ],
+      "text_content": "Enter"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        853,
+        583,
+        895,
+        627
+      ],
+      "text_content": "Backspace"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        903,
+        578,
+        919,
+        597
+      ],
+      "text_content": "Del"
+    }
+  ],
+  "raw_responses": {
+    "general_detection": "[\n  {\n    \"label\": \"keyboard\",\n    \"bbox_2d\": [162, 43, 967, 893]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [935, 821, 976, 843]\n  }\n]",
+    "person_detection": "[]",
+    "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [534, 588, 557, 615],\n    \"text_content\": \"Lang\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [624, 683, 643, 703],\n    \"text_content\": \"Ctrl\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [707, 670, 727, 694],\n    \"text_content\": \"Shift\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [805, 691, 829, 719],\n    \"text_content\": \"Enter\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [853, 583, 895, 627],\n    \"text_content\": \"Backspace\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [903, 578, 919, 597],\n    \"text_content\": \"Del\"\n  }\n]"
+  }
+}

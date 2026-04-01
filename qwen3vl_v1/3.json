@@ -1,0 +1,113 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/3.jpg",
+  "categories_requested": [
+    "person",
+    "face",
+    "tattoo",
+    "blood",
+    "palm",
+    "text",
+    "weapon",
+    "keyboard",
+    "hotel room"
+  ],
+  "general_detections": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        466,
+        117,
+        859,
+        912
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "face",
+      "bbox_2d": [
+        575,
+        194,
+        734,
+        477
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "palm",
+      "bbox_2d": [
+        681,
+        626,
+        793,
+        786
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "palm",
+      "bbox_2d": [
+        767,
+        643,
+        842,
+        750
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "keyboard",
+      "bbox_2d": [
+        707,
+        856,
+        831,
+        947
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "hotel room",
+      "bbox_2d": [
+        0,
+        0,
+        1000,
+        1000
+      ],
+      "text_content": ""
+    }
+  ],
+  "persons": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        466,
+        119,
+        852,
+        915
+      ],
+      "face_bbox_2d": [
+        562,
+        198,
+        734,
+        477
+      ],
+      "action": "looking at phone",
+      "gender": "male",
+      "ethnicity": "white",
+      "age": "30-40",
+      "visible_clothing": [
+        "white shirt"
+      ],
+      "visible_accessories": [
+        "glasses"
+      ],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": true,
+      "weapon_near_person": false
+    }
+  ],
+  "ocr_texts": [],
+  "raw_responses": {
+    "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [466, 117, 859, 912],\n    \"description\": \"man wearing glasses and a white shirt, smiling while looking at his phone\"\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [575, 194, 734, 477],\n    \"description\": \"man with dark hair and glasses, smiling, wearing a white shirt\"\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [681, 626, 793, 786],\n    \"description\": \"right hand holding a phone\"\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [767, 643, 842, 750],\n    \"description\": \"left hand holding a phone\"\n  },\n  {\n    \"label\": \"keyboard\",\n    \"bbox_2d\": [707, 856, 831, 947],\n    \"description\": \"partially visible laptop keyboard\"\n  },\n  {\n    \"label\": \"hotel room\",\n    \"bbox_2d\": [0, 0, 1000, 1000],\n    \"description\": \"modern hotel room with a bed, laptop, and ambient lighting\"\n  }\n]",
+    "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [466, 119, 852, 915],\n    \"face_bbox_2d\": [562, 198, 734, 477],\n    \"action\": \"looking at phone\",\n    \"gender\": \"male\",\n    \"age\": \"30-40\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"white shirt\"],\n    \"visible_accessories\": [\"glasses\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  }\n]",
+    "ocr": "[]"
+  }
+}

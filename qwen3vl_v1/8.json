@@ -1,0 +1,117 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/8.jpg",
+  "categories_requested": [
+    "person",
+    "face",
+    "tattoo",
+    "blood",
+    "palm",
+    "text",
+    "weapon",
+    "keyboard",
+    "hotel room"
+  ],
+  "general_detections": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        0,
+        109,
+        536,
+        1000
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "face",
+      "bbox_2d": [
+        238,
+        278,
+        342,
+        455
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "palm",
+      "bbox_2d": [
+        317,
+        527,
+        446,
+        684
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        112,
+        203,
+        161,
+        243
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "weapon",
+      "bbox_2d": [
+        230,
+        271,
+        679,
+        608
+      ],
+      "text_content": ""
+    }
+  ],
+  "persons": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        0,
+        109,
+        538,
+        1000
+      ],
+      "face_bbox_2d": [
+        224,
+        283,
+        344,
+        459
+      ],
+      "action": "aiming rifle",
+      "gender": "male",
+      "ethnicity": "white",
+      "age": "60-70",
+      "visible_clothing": [
+        "camouflage uniform",
+        "camouflage cap"
+      ],
+      "visible_accessories": [
+        "sunglasses",
+        "earplugs",
+        "name tag on cap"
+      ],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": true,
+      "weapon_near_person": true
+    }
+  ],
+  "ocr_texts": [
+    {
+      "label": "text",
+      "bbox_2d": [
+        114,
+        204,
+        160,
+        244
+      ],
+      "text_content": "BERRY"
+    }
+  ],
+  "raw_responses": {
+    "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [0, 109, 536, 1000]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [238, 278, 342, 455]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [317, 527, 446, 684]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [112, 203, 161, 243]\n  },\n  {\n    \"label\": \"weapon\",\n    \"bbox_2d\": [230, 271, 679, 608]\n  }\n]",
+    "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [0, 109, 538, 1000],\n    \"face_bbox_2d\": [224, 283, 344, 459],\n    \"action\": \"aiming rifle\",\n    \"gender\": \"male\",\n    \"age\": \"60-70\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\n      \"camouflage uniform\",\n      \"camouflage cap\"\n    ],\n    \"visible_accessories\": [\n      \"sunglasses\",\n      \"earplugs\",\n      \"name tag on cap\"\n    ],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": true\n  }\n]",
+    "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [114, 204, 160, 244],\n    \"text_content\": \"BERRY\"\n  }\n]"
+  }
+}

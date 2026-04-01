@@ -1,0 +1,23 @@
+Qwen3-VL Batch Inference Timing Report
+==================================================
+model_name: Qwen/Qwen3-VL-8B-Instruct
+input_folder: /home2/tajamul/Qwen3VL/images
+output_folder: ./qwen3vl_batch_outputs
+total_images: 8
+batch_size: 2
+total_batches: 4
+dtype: torch.bfloat16
+attn_implementation: sdpa
+max_new_tokens_det: 1024
+max_new_tokens_ocr: 2048
+
+general_infer_time_sec: 106.3581
+person_infer_time_sec: 80.2596
+ocr_infer_time_sec: 95.8639
+total_infer_time_sec: 282.4816
+json_write_time_sec: 0.6979
+annotate_time_sec: 2.0936
+total_wall_time_sec: 285.2761
+
+avg_wall_time_per_image_sec: 35.6595
+avg_infer_time_per_image_sec: 35.3102

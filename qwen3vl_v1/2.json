@@ -1,0 +1,135 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/2.jpg",
+  "categories_requested": [
+    "person",
+    "face",
+    "tattoo",
+    "blood",
+    "palm",
+    "text",
+    "weapon",
+    "keyboard",
+    "hotel room"
+  ],
+  "general_detections": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        0,
+        18,
+        522,
+        997
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "person",
+      "bbox_2d": [
+        475,
+        0,
+        991,
+        997
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "face",
+      "bbox_2d": [
+        305,
+        86,
+        495,
+        493
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "face",
+      "bbox_2d": [
+        586,
+        93,
+        773,
+        428
+      ],
+      "text_content": ""
+    }
+  ],
+  "persons": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        0,
+        17,
+        520,
+        1000
+      ],
+      "face_bbox_2d": [
+        295,
+        79,
+        493,
+        495
+      ],
+      "action": "smiling and posing",
+      "gender": "female",
+      "ethnicity": "white",
+      "age": "30-40",
+      "visible_clothing": [
+        "denim jacket",
+        "black top"
+      ],
+      "visible_accessories": [
+        "necklace"
+      ],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": true,
+      "weapon_near_person": false
+    },
+    {
+      "label": "person",
+      "bbox_2d": [
+        475,
+        4,
+        992,
+        1000
+      ],
+      "face_bbox_2d": [
+        586,
+        87,
+        768,
+        424
+      ],
+      "action": "smiling and posing",
+      "gender": "female",
+      "ethnicity": "white",
+      "age": "50-60",
+      "visible_clothing": [
+        "grey cardigan",
+        "black top"
+      ],
+      "visible_accessories": [
+        "necklace"
+      ],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": false,
+      "weapon_near_person": false
+    }
+  ],
+  "ocr_texts": [
+    {
+      "label": "text",
+      "bbox_2d": [
+        364,
+        592,
+        382,
+        628
+      ],
+      "text_content": "V"
+    }
+  ],
+  "raw_responses": {
+    "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [0, 18, 522, 997],\n    \"attributes\": {\n      \"age\": \"middle\",\n      \"gender\": \"female\",\n      \"race\": \"white\"\n    }\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [475, 0, 991, 997],\n    \"attributes\": {\n      \"age\": \"middle\",\n      \"gender\": \"female\",\n      \"race\": \"white\"\n    }\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [305, 86, 495, 493],\n    \"attributes\": {\n      \"age\": \"middle\",\n      \"gender\": \"female\",\n      \"race\": \"white\"\n    }\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [586, 93, 773, 428],\n    \"attributes\": {\n      \"age\": \"middle\",\n      \"gender\": \"female\",\n      \"race\": \"white\"\n    }\n  }\n]",
+    "person_detection": "```json\n[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [0, 17, 520, 1000],\n    \"face_bbox_2d\": [295, 79, 493, 495],\n    \"action\": \"smiling and posing\",\n    \"gender\": \"female\",\n    \"age\": \"30-40\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"denim jacket\", \"black top\"],\n    \"visible_accessories\": [\"necklace\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [475, 4, 992, 1000],\n    \"face_bbox_2d\": [586, 87, 768, 424],\n    \"action\": \"smiling and posing\",\n    \"gender\": \"female\",\n    \"age\": \"50-60\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"grey cardigan\", \"black top\"],\n    \"visible_accessories\": [\"necklace\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  }\n]\n```",
+    "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [364, 592, 382, 628],\n    \"text_content\": \"V\"\n  }\n]"
+  }
+}

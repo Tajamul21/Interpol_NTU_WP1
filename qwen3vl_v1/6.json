@@ -1,0 +1,103 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/6.jpeg",
+  "categories_requested": [
+    "person",
+    "face",
+    "tattoo",
+    "blood",
+    "palm",
+    "text",
+    "weapon",
+    "keyboard",
+    "hotel room"
+  ],
+  "general_detections": [
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        0,
+        58,
+        206,
+        515
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        0,
+        585,
+        194,
+        953
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        302,
+        58,
+        494,
+        515
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        298,
+        579,
+        506,
+        953
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        544,
+        64,
+        810,
+        634
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        798,
+        168,
+        1000,
+        832
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        496,
+        601,
+        642,
+        926
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        656,
+        590,
+        810,
+        926
+      ],
+      "text_content": ""
+    }
+  ],
+  "persons": [],
+  "ocr_texts": [],
+  "raw_responses": {
+    "general_detection": "[\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [0, 58, 206, 515]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [0, 585, 194, 953]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [302, 58, 494, 515]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [298, 579, 506, 953]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [544, 64, 810, 634]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [798, 168, 1000, 832]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [496, 601, 642, 926]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [656, 590, 810, 926]\n  }\n]",
+    "person_detection": "[]",
+    "ocr": "[]"
+  }
+}

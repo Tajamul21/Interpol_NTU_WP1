@@ -1,0 +1,17 @@
+# Ignore data / outputs
+images/
+qwen3vl_batch_outputs/
+
+# Python
+__pycache__/
+*.pyc
+
+# Env
+.env
+*.pt
+*.pth
+*.ckpt
+*.bin
+
+# Huggingface cache
+.cache/

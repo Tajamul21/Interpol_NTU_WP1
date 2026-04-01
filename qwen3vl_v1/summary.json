@@ -1,0 +1,935 @@
+[
+  {
+    "image_path": "/home2/tajamul/Qwen3VL/images/1.jpg",
+    "categories_requested": [
+      "person",
+      "face",
+      "tattoo",
+      "blood",
+      "palm",
+      "text",
+      "weapon",
+      "keyboard",
+      "hotel room"
+    ],
+    "general_detections": [
+      {
+        "label": "person",
+        "bbox_2d": [
+          320,
+          121,
+          876,
+          997
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "face",
+        "bbox_2d": [
+          380,
+          158,
+          688,
+          382
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "tattoo",
+        "bbox_2d": [
+          570,
+          538,
+          764,
+          762
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "tattoo",
+        "bbox_2d": [
+          625,
+          802,
+          702,
+          856
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "tattoo",
+        "bbox_2d": [
+          701,
+          758,
+          802,
+          823
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "tattoo",
+        "bbox_2d": [
+          574,
+          871,
+          631,
+          915
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "tattoo",
+        "bbox_2d": [
+          528,
+          971,
+          562,
+          997
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "tattoo",
+        "bbox_2d": [
+          657,
+          951,
+          725,
+          997
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "tattoo",
+        "bbox_2d": [
+          574,
+          915,
+          733,
+          965
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          345,
+          649,
+          478,
+          822
+        ],
+        "text_content": ""
+      }
+    ],
+    "persons": [
+      {
+        "label": "person",
+        "bbox_2d": [
+          316,
+          119,
+          877,
+          997
+        ],
+        "face_bbox_2d": [
+          379,
+          158,
+          697,
+          378
+        ],
+        "action": "leaning against wall",
+        "gender": "female",
+        "ethnicity": "white",
+        "age": "25-35",
+        "visible_clothing": [
+          "tank top"
+        ],
+        "visible_accessories": [
+          "nose ring",
+          "earring",
+          "necklace"
+        ],
+        "tattoo_detected": true,
+        "blood_visible": false,
+        "palm_visible": false,
+        "weapon_near_person": false
+      }
+    ],
+    "ocr_texts": [
+      {
+        "label": "text",
+        "bbox_2d": [
+          356,
+          653,
+          405,
+          677
+        ],
+        "text_content": "PINK DOS"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          357,
+          673,
+          394,
+          688
+        ],
+        "text_content": "AT CAME"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          357,
+          688,
+          372,
+          701
+        ],
+        "text_content": "-Peds-"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          352,
+          684,
+          461,
+          785
+        ],
+        "text_content": "Cork"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          419,
+          791,
+          466,
+          808
+        ],
+        "text_content": ".01"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          416,
+          804,
+          465,
+          819
+        ],
+        "text_content": "ENDING"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          377,
+          823,
+          433,
+          844
+        ],
+        "text_content": "a pool of"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          378,
+          837,
+          433,
+          856
+        ],
+        "text_content": "Tattoos"
+      }
+    ],
+    "raw_responses": {
+      "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [320, 121, 876, 997]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [380, 158, 688, 382]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [570, 538, 764, 762]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [625, 802, 702, 856]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [701, 758, 802, 823]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [574, 871, 631, 915]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [528, 971, 562, 997]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [657, 951, 725, 997]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [574, 915, 733, 965]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [345, 649, 478, 822]\n  }\n]",
+      "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [316, 119, 877, 997],\n    \"face_bbox_2d\": [379, 158, 697, 378],\n    \"action\": \"leaning against wall\",\n    \"gender\": \"female\",\n    \"age\": \"25-35\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"tank top\"],\n    \"visible_accessories\": [\"nose ring\", \"earring\", \"necklace\"],\n    \"tattoo_detected\": true,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  }\n]",
+      "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [356, 653, 405, 677],\n    \"text_content\": \"PINK DOS\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [357, 673, 394, 688],\n    \"text_content\": \"AT CAME\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [357, 688, 372, 701],\n    \"text_content\": \"-Peds-\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [352, 684, 461, 785],\n    \"text_content\": \"Cork\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [419, 791, 466, 808],\n    \"text_content\": \".01\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [416, 804, 465, 819],\n    \"text_content\": \"ENDING\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [377, 823, 433, 844],\n    \"text_content\": \"a pool of\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [378, 837, 433, 856],\n    \"text_content\": \"Tattoos\"\n  }\n]"
+    }
+  },
+  {
+    "image_path": "/home2/tajamul/Qwen3VL/images/2.jpg",
+    "categories_requested": [
+      "person",
+      "face",
+      "tattoo",
+      "blood",
+      "palm",
+      "text",
+      "weapon",
+      "keyboard",
+      "hotel room"
+    ],
+    "general_detections": [
+      {
+        "label": "person",
+        "bbox_2d": [
+          0,
+          18,
+          522,
+          997
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "person",
+        "bbox_2d": [
+          475,
+          0,
+          991,
+          997
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "face",
+        "bbox_2d": [
+          305,
+          86,
+          495,
+          493
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "face",
+        "bbox_2d": [
+          586,
+          93,
+          773,
+          428
+        ],
+        "text_content": ""
+      }
+    ],
+    "persons": [
+      {
+        "label": "person",
+        "bbox_2d": [
+          0,
+          17,
+          520,
+          1000
+        ],
+        "face_bbox_2d": [
+          295,
+          79,
+          493,
+          495
+        ],
+        "action": "smiling and posing",
+        "gender": "female",
+        "ethnicity": "white",
+        "age": "30-40",
+        "visible_clothing": [
+          "denim jacket",
+          "black top"
+        ],
+        "visible_accessories": [
+          "necklace"
+        ],
+        "tattoo_detected": false,
+        "blood_visible": false,
+        "palm_visible": true,
+        "weapon_near_person": false
+      },
+      {
+        "label": "person",
+        "bbox_2d": [
+          475,
+          4,
+          992,
+          1000
+        ],
+        "face_bbox_2d": [
+          586,
+          87,
+          768,
+          424
+        ],
+        "action": "smiling and posing",
+        "gender": "female",
+        "ethnicity": "white",
+        "age": "50-60",
+        "visible_clothing": [
+          "grey cardigan",
+          "black top"
+        ],
+        "visible_accessories": [
+          "necklace"
+        ],
+        "tattoo_detected": false,
+        "blood_visible": false,
+        "palm_visible": false,
+        "weapon_near_person": false
+      }
+    ],
+    "ocr_texts": [
+      {
+        "label": "text",
+        "bbox_2d": [
+          364,
+          592,
+          382,
+          628
+        ],
+        "text_content": "V"
+      }
+    ],
+    "raw_responses": {
+      "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [0, 18, 522, 997],\n    \"attributes\": {\n      \"age\": \"middle\",\n      \"gender\": \"female\",\n      \"race\": \"white\"\n    }\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [475, 0, 991, 997],\n    \"attributes\": {\n      \"age\": \"middle\",\n      \"gender\": \"female\",\n      \"race\": \"white\"\n    }\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [305, 86, 495, 493],\n    \"attributes\": {\n      \"age\": \"middle\",\n      \"gender\": \"female\",\n      \"race\": \"white\"\n    }\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [586, 93, 773, 428],\n    \"attributes\": {\n      \"age\": \"middle\",\n      \"gender\": \"female\",\n      \"race\": \"white\"\n    }\n  }\n]",
+      "person_detection": "```json\n[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [0, 17, 520, 1000],\n    \"face_bbox_2d\": [295, 79, 493, 495],\n    \"action\": \"smiling and posing\",\n    \"gender\": \"female\",\n    \"age\": \"30-40\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"denim jacket\", \"black top\"],\n    \"visible_accessories\": [\"necklace\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [475, 4, 992, 1000],\n    \"face_bbox_2d\": [586, 87, 768, 424],\n    \"action\": \"smiling and posing\",\n    \"gender\": \"female\",\n    \"age\": \"50-60\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"grey cardigan\", \"black top\"],\n    \"visible_accessories\": [\"necklace\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  }\n]\n```",
+      "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [364, 592, 382, 628],\n    \"text_content\": \"V\"\n  }\n]"
+    }
+  },
+  {
+    "image_path": "/home2/tajamul/Qwen3VL/images/3.jpg",
+    "categories_requested": [
+      "person",
+      "face",
+      "tattoo",
+      "blood",
+      "palm",
+      "text",
+      "weapon",
+      "keyboard",
+      "hotel room"
+    ],
+    "general_detections": [
+      {
+        "label": "person",
+        "bbox_2d": [
+          466,
+          117,
+          859,
+          912
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "face",
+        "bbox_2d": [
+          575,
+          194,
+          734,
+          477
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "palm",
+        "bbox_2d": [
+          681,
+          626,
+          793,
+          786
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "palm",
+        "bbox_2d": [
+          767,
+          643,
+          842,
+          750
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "keyboard",
+        "bbox_2d": [
+          707,
+          856,
+          831,
+          947
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "hotel room",
+        "bbox_2d": [
+          0,
+          0,
+          1000,
+          1000
+        ],
+        "text_content": ""
+      }
+    ],
+    "persons": [
+      {
+        "label": "person",
+        "bbox_2d": [
+          466,
+          119,
+          852,
+          915
+        ],
+        "face_bbox_2d": [
+          562,
+          198,
+          734,
+          477
+        ],
+        "action": "looking at phone",
+        "gender": "male",
+        "ethnicity": "white",
+        "age": "30-40",
+        "visible_clothing": [
+          "white shirt"
+        ],
+        "visible_accessories": [
+          "glasses"
+        ],
+        "tattoo_detected": false,
+        "blood_visible": false,
+        "palm_visible": true,
+        "weapon_near_person": false
+      }
+    ],
+    "ocr_texts": [],
+    "raw_responses": {
+      "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [466, 117, 859, 912],\n    \"description\": \"man wearing glasses and a white shirt, smiling while looking at his phone\"\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [575, 194, 734, 477],\n    \"description\": \"man with dark hair and glasses, smiling, wearing a white shirt\"\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [681, 626, 793, 786],\n    \"description\": \"right hand holding a phone\"\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [767, 643, 842, 750],\n    \"description\": \"left hand holding a phone\"\n  },\n  {\n    \"label\": \"keyboard\",\n    \"bbox_2d\": [707, 856, 831, 947],\n    \"description\": \"partially visible laptop keyboard\"\n  },\n  {\n    \"label\": \"hotel room\",\n    \"bbox_2d\": [0, 0, 1000, 1000],\n    \"description\": \"modern hotel room with a bed, laptop, and ambient lighting\"\n  }\n]",
+      "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [466, 119, 852, 915],\n    \"face_bbox_2d\": [562, 198, 734, 477],\n    \"action\": \"looking at phone\",\n    \"gender\": \"male\",\n    \"age\": \"30-40\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"white shirt\"],\n    \"visible_accessories\": [\"glasses\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  }\n]",
+      "ocr": "[]"
+    }
+  },
+  {
+    "image_path": "/home2/tajamul/Qwen3VL/images/4.jpg",
+    "categories_requested": [
+      "person",
+      "face",
+      "tattoo",
+      "blood",
+      "palm",
+      "text",
+      "weapon",
+      "keyboard",
+      "hotel room"
+    ],
+    "general_detections": [
+      {
+        "label": "person",
+        "bbox_2d": [
+          96,
+          88,
+          598,
+          997
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "face",
+        "bbox_2d": [
+          164,
+          210,
+          307,
+          398
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "palm",
+        "bbox_2d": [
+          331,
+          311,
+          418,
+          434
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "weapon",
+        "bbox_2d": [
+          406,
+          229,
+          472,
+          386
+        ],
+        "text_content": ""
+      }
+    ],
+    "persons": [
+      {
+        "label": "person",
+        "bbox_2d": [
+          99,
+          88,
+          596,
+          997
+        ],
+        "face_bbox_2d": [
+          154,
+          208,
+          306,
+          404
+        ],
+        "action": "holding beer bottle",
+        "gender": "male",
+        "ethnicity": "caucasian",
+        "age": "20-30",
+        "visible_clothing": [
+          "black t-shirt",
+          "dark pants"
+        ],
+        "visible_accessories": [],
+        "tattoo_detected": false,
+        "blood_visible": false,
+        "palm_visible": true,
+        "weapon_near_person": false
+      }
+    ],
+    "ocr_texts": [],
+    "raw_responses": {
+      "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [96, 88, 598, 997]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [164, 210, 307, 398]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [331, 311, 418, 434]\n  },\n  {\n    \"label\": \"weapon\",\n    \"bbox_2d\": [406, 229, 472, 386]\n  }\n]",
+      "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [99, 88, 596, 997],\n    \"face_bbox_2d\": [154, 208, 306, 404],\n    \"action\": \"holding beer bottle\",\n    \"gender\": \"male\",\n    \"age\": \"20-30\",\n    \"ethnicity\": \"caucasian\",\n    \"visible_clothing\": [\"black t-shirt\", \"dark pants\"],\n    \"visible_accessories\": [],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  }\n]",
+      "ocr": "[]"
+    }
+  },
+  {
+    "image_path": "/home2/tajamul/Qwen3VL/images/5.jpg",
+    "categories_requested": [
+      "person",
+      "face",
+      "tattoo",
+      "blood",
+      "palm",
+      "text",
+      "weapon",
+      "keyboard",
+      "hotel room"
+    ],
+    "general_detections": [
+      {
+        "label": "blood",
+        "bbox_2d": [
+          113,
+          0,
+          526,
+          731
+        ],
+        "text_content": ""
+      }
+    ],
+    "persons": [],
+    "ocr_texts": [],
+    "raw_responses": {
+      "general_detection": "[\n  {\n    \"label\": \"blood\",\n    \"bbox_2d\": [113, 0, 526, 731]\n  }\n]",
+      "person_detection": "[]",
+      "ocr": "[]"
+    }
+  },
+  {
+    "image_path": "/home2/tajamul/Qwen3VL/images/6.jpeg",
+    "categories_requested": [
+      "person",
+      "face",
+      "tattoo",
+      "blood",
+      "palm",
+      "text",
+      "weapon",
+      "keyboard",
+      "hotel room"
+    ],
+    "general_detections": [
+      {
+        "label": "tattoo",
+        "bbox_2d": [
+          0,
+          58,
+          206,
+          515
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "tattoo",
+        "bbox_2d": [
+          0,
+          585,
+          194,
+          953
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "tattoo",
+        "bbox_2d": [
+          302,
+          58,
+          494,
+          515
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "tattoo",
+        "bbox_2d": [
+          298,
+          579,
+          506,
+          953
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "tattoo",
+        "bbox_2d": [
+          544,
+          64,
+          810,
+          634
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "tattoo",
+        "bbox_2d": [
+          798,
+          168,
+          1000,
+          832
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "tattoo",
+        "bbox_2d": [
+          496,
+          601,
+          642,
+          926
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "tattoo",
+        "bbox_2d": [
+          656,
+          590,
+          810,
+          926
+        ],
+        "text_content": ""
+      }
+    ],
+    "persons": [],
+    "ocr_texts": [],
+    "raw_responses": {
+      "general_detection": "[\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [0, 58, 206, 515]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [0, 585, 194, 953]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [302, 58, 494, 515]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [298, 579, 506, 953]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [544, 64, 810, 634]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [798, 168, 1000, 832]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [496, 601, 642, 926]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [656, 590, 810, 926]\n  }\n]",
+      "person_detection": "[]",
+      "ocr": "[]"
+    }
+  },
+  {
+    "image_path": "/home2/tajamul/Qwen3VL/images/7.jpg",
+    "categories_requested": [
+      "person",
+      "face",
+      "tattoo",
+      "blood",
+      "palm",
+      "text",
+      "weapon",
+      "keyboard",
+      "hotel room"
+    ],
+    "general_detections": [
+      {
+        "label": "keyboard",
+        "bbox_2d": [
+          162,
+          43,
+          967,
+          893
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          935,
+          821,
+          976,
+          843
+        ],
+        "text_content": ""
+      }
+    ],
+    "persons": [],
+    "ocr_texts": [
+      {
+        "label": "text",
+        "bbox_2d": [
+          534,
+          588,
+          557,
+          615
+        ],
+        "text_content": "Lang"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          624,
+          683,
+          643,
+          703
+        ],
+        "text_content": "Ctrl"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          707,
+          670,
+          727,
+          694
+        ],
+        "text_content": "Shift"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          805,
+          691,
+          829,
+          719
+        ],
+        "text_content": "Enter"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          853,
+          583,
+          895,
+          627
+        ],
+        "text_content": "Backspace"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          903,
+          578,
+          919,
+          597
+        ],
+        "text_content": "Del"
+      }
+    ],
+    "raw_responses": {
+      "general_detection": "[\n  {\n    \"label\": \"keyboard\",\n    \"bbox_2d\": [162, 43, 967, 893]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [935, 821, 976, 843]\n  }\n]",
+      "person_detection": "[]",
+      "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [534, 588, 557, 615],\n    \"text_content\": \"Lang\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [624, 683, 643, 703],\n    \"text_content\": \"Ctrl\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [707, 670, 727, 694],\n    \"text_content\": \"Shift\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [805, 691, 829, 719],\n    \"text_content\": \"Enter\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [853, 583, 895, 627],\n    \"text_content\": \"Backspace\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [903, 578, 919, 597],\n    \"text_content\": \"Del\"\n  }\n]"
+    }
+  },
+  {
+    "image_path": "/home2/tajamul/Qwen3VL/images/8.jpg",
+    "categories_requested": [
+      "person",
+      "face",
+      "tattoo",
+      "blood",
+      "palm",
+      "text",
+      "weapon",
+      "keyboard",
+      "hotel room"
+    ],
+    "general_detections": [
+      {
+        "label": "person",
+        "bbox_2d": [
+          0,
+          109,
+          536,
+          1000
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "face",
+        "bbox_2d": [
+          238,
+          278,
+          342,
+          455
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "palm",
+        "bbox_2d": [
+          317,
+          527,
+          446,
+          684
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          112,
+          203,
+          161,
+          243
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "weapon",
+        "bbox_2d": [
+          230,
+          271,
+          679,
+          608
+        ],
+        "text_content": ""
+      }
+    ],
+    "persons": [
+      {
+        "label": "person",
+        "bbox_2d": [
+          0,
+          109,
+          538,
+          1000
+        ],
+        "face_bbox_2d": [
+          224,
+          283,
+          344,
+          459
+        ],
+        "action": "aiming rifle",
+        "gender": "male",
+        "ethnicity": "white",
+        "age": "60-70",
+        "visible_clothing": [
+          "camouflage uniform",
+          "camouflage cap"
+        ],
+        "visible_accessories": [
+          "sunglasses",
+          "earplugs",
+          "name tag on cap"
+        ],
+        "tattoo_detected": false,
+        "blood_visible": false,
+        "palm_visible": true,
+        "weapon_near_person": true
+      }
+    ],
+    "ocr_texts": [
+      {
+        "label": "text",
+        "bbox_2d": [
+          114,
+          204,
+          160,
+          244
+        ],
+        "text_content": "BERRY"
+      }
+    ],
+    "raw_responses": {
+      "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [0, 109, 536, 1000]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [238, 278, 342, 455]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [317, 527, 446, 684]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [112, 203, 161, 243]\n  },\n  {\n    \"label\": \"weapon\",\n    \"bbox_2d\": [230, 271, 679, 608]\n  }\n]",
+      "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [0, 109, 538, 1000],\n    \"face_bbox_2d\": [224, 283, 344, 459],\n    \"action\": \"aiming rifle\",\n    \"gender\": \"male\",\n    \"age\": \"60-70\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\n      \"camouflage uniform\",\n      \"camouflage cap\"\n    ],\n    \"visible_accessories\": [\n      \"sunglasses\",\n      \"earplugs\",\n      \"name tag on cap\"\n    ],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": true\n  }\n]",
+      "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [114, 204, 160, 244],\n    \"text_content\": \"BERRY\"\n  }\n]"
+    }
+  }
+]

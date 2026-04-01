@@ -1,0 +1,33 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/5.jpg",
+  "categories_requested": [
+    "person",
+    "face",
+    "tattoo",
+    "blood",
+    "palm",
+    "text",
+    "weapon",
+    "keyboard",
+    "hotel room"
+  ],
+  "general_detections": [
+    {
+      "label": "blood",
+      "bbox_2d": [
+        113,
+        0,
+        526,
+        731
+      ],
+      "text_content": ""
+    }
+  ],
+  "persons": [],
+  "ocr_texts": [],
+  "raw_responses": {
+    "general_detection": "[\n  {\n    \"label\": \"blood\",\n    \"bbox_2d\": [113, 0, 526, 731]\n  }\n]",
+    "person_detection": "[]",
+    "ocr": "[]"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/4.jpg",
+  "categories_requested": [
+    "person",
+    "face",
+    "tattoo",
+    "blood",
+    "palm",
+    "text",
+    "weapon",
+    "keyboard",
+    "hotel room"
+  ],
+  "general_detections": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        96,
+        88,
+        598,
+        997
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "face",
+      "bbox_2d": [
+        164,
+        210,
+        307,
+        398
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "palm",
+      "bbox_2d": [
+        331,
+        311,
+        418,
+        434
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "weapon",
+      "bbox_2d": [
+        406,
+        229,
+        472,
+        386
+      ],
+      "text_content": ""
+    }
+  ],
+  "persons": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        99,
+        88,
+        596,
+        997
+      ],
+      "face_bbox_2d": [
+        154,
+        208,
+        306,
+        404
+      ],
+      "action": "holding beer bottle",
+      "gender": "male",
+      "ethnicity": "caucasian",
+      "age": "20-30",
+      "visible_clothing": [
+        "black t-shirt",
+        "dark pants"
+      ],
+      "visible_accessories": [],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": true,
+      "weapon_near_person": false
+    }
+  ],
+  "ocr_texts": [],
+  "raw_responses": {
+    "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [96, 88, 598, 997]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [164, 210, 307, 398]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [331, 311, 418, 434]\n  },\n  {\n    \"label\": \"weapon\",\n    \"bbox_2d\": [406, 229, 472, 386]\n  }\n]",
+    "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [99, 88, 596, 997],\n    \"face_bbox_2d\": [154, 208, 306, 404],\n    \"action\": \"holding beer bottle\",\n    \"gender\": \"male\",\n    \"age\": \"20-30\",\n    \"ethnicity\": \"caucasian\",\n    \"visible_clothing\": [\"black t-shirt\", \"dark pants\"],\n    \"visible_accessories\": [],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  }\n]",
+    "ocr": "[]"
+  }
+}
