@@ -1,0 +1,21 @@
+{
+  "worker_index": 1,
+  "physical_gpu_id": 4,
+  "visible_cuda_devices": "4",
+  "images_assigned": 1,
+  "images_succeeded": 1,
+  "images_failed": 0,
+  "model_load_wall_s": 11.7,
+  "worker_total_wall_s": 28.494,
+  "worker_inference_wall_s_estimate": 16.496,
+  "throughput_images_per_s": 0.035,
+  "per_image": [
+    {
+      "image_path": "/home2/tajamul/Qwen3VL/images/8.jpg",
+      "status": "ok",
+      "inference_latency_ms": 16496.324,
+      "amortized_inference_ms": 16496.324,
+      "image_total_wall_ms": 16793.352
+    }
+  ]
+}

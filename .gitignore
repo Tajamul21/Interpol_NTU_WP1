@@ -1,6 +1,5 @@
 # Ignore data / outputs
-images/
-qwen3vl_batch_outputs/
+
 
 # Python
 __pycache__/

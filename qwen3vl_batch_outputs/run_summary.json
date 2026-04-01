@@ -1,0 +1,189 @@
+{
+  "input_folder": "/home2/tajamul/Qwen3VL/images",
+  "output_folder": "./qwen3vl_batch_outputs",
+  "num_images_total": 8,
+  "num_images_succeeded": 8,
+  "num_images_failed": 0,
+  "gpu_ids_used": [
+    0,
+    4,
+    6,
+    7
+  ],
+  "total_wall_s": 50.489,
+  "total_amortized_inference_s": 100.038,
+  "throughput_images_per_s": 0.158,
+  "per_image": [
+    {
+      "image_path": "/home2/tajamul/Qwen3VL/images/1.jpg",
+      "status": "ok",
+      "inference_latency_ms": 33838.795,
+      "amortized_inference_ms": 33838.795,
+      "image_total_wall_ms": 34267.006
+    },
+    {
+      "image_path": "/home2/tajamul/Qwen3VL/images/2.jpg",
+      "status": "ok",
+      "inference_latency_ms": 13306.283,
+      "amortized_inference_ms": 6653.142,
+      "image_total_wall_ms": 13519.726
+    },
+    {
+      "image_path": "/home2/tajamul/Qwen3VL/images/3.jpg",
+      "status": "ok",
+      "inference_latency_ms": 14209.887,
+      "amortized_inference_ms": 7104.943,
+      "image_total_wall_ms": 14270.625
+    },
+    {
+      "image_path": "/home2/tajamul/Qwen3VL/images/4.jpg",
+      "status": "ok",
+      "inference_latency_ms": 22186.509,
+      "amortized_inference_ms": 11093.256,
+      "image_total_wall_ms": 22442.477
+    },
+    {
+      "image_path": "/home2/tajamul/Qwen3VL/images/5.jpg",
+      "status": "ok",
+      "inference_latency_ms": 13306.283,
+      "amortized_inference_ms": 6653.142,
+      "image_total_wall_ms": 13429.476
+    },
+    {
+      "image_path": "/home2/tajamul/Qwen3VL/images/6.jpeg",
+      "status": "ok",
+      "inference_latency_ms": 14209.887,
+      "amortized_inference_ms": 7104.943,
+      "image_total_wall_ms": 14297.64
+    },
+    {
+      "image_path": "/home2/tajamul/Qwen3VL/images/7.jpg",
+      "status": "ok",
+      "inference_latency_ms": 22186.509,
+      "amortized_inference_ms": 11093.256,
+      "image_total_wall_ms": 22364.002
+    },
+    {
+      "image_path": "/home2/tajamul/Qwen3VL/images/8.jpg",
+      "status": "ok",
+      "inference_latency_ms": 16496.324,
+      "amortized_inference_ms": 16496.324,
+      "image_total_wall_ms": 16793.352
+    }
+  ],
+  "worker_summaries": [
+    {
+      "worker_index": 0,
+      "physical_gpu_id": 0,
+      "visible_cuda_devices": "0",
+      "images_assigned": 1,
+      "images_succeeded": 1,
+      "images_failed": 0,
+      "model_load_wall_s": 11.942,
+      "worker_total_wall_s": 46.21,
+      "worker_inference_wall_s_estimate": 33.839,
+      "throughput_images_per_s": 0.022,
+      "per_image": [
+        {
+          "image_path": "/home2/tajamul/Qwen3VL/images/1.jpg",
+          "status": "ok",
+          "inference_latency_ms": 33838.795,
+          "amortized_inference_ms": 33838.795,
+          "image_total_wall_ms": 34267.006
+        }
+      ]
+    },
+    {
+      "worker_index": 1,
+      "physical_gpu_id": 4,
+      "visible_cuda_devices": "4",
+      "images_assigned": 1,
+      "images_succeeded": 1,
+      "images_failed": 0,
+      "model_load_wall_s": 11.7,
+      "worker_total_wall_s": 28.494,
+      "worker_inference_wall_s_estimate": 16.496,
+      "throughput_images_per_s": 0.035,
+      "per_image": [
+        {
+          "image_path": "/home2/tajamul/Qwen3VL/images/8.jpg",
+          "status": "ok",
+          "inference_latency_ms": 16496.324,
+          "amortized_inference_ms": 16496.324,
+          "image_total_wall_ms": 16793.352
+        }
+      ]
+    },
+    {
+      "worker_index": 2,
+      "physical_gpu_id": 6,
+      "visible_cuda_devices": "6",
+      "images_assigned": 2,
+      "images_succeeded": 2,
+      "images_failed": 0,
+      "model_load_wall_s": 11.762,
+      "worker_total_wall_s": 34.205,
+      "worker_inference_wall_s_estimate": 22.187,
+      "throughput_images_per_s": 0.058,
+      "per_image": [
+        {
+          "image_path": "/home2/tajamul/Qwen3VL/images/7.jpg",
+          "status": "ok",
+          "inference_latency_ms": 22186.509,
+          "amortized_inference_ms": 11093.256,
+          "image_total_wall_ms": 22364.002
+        },
+        {
+          "image_path": "/home2/tajamul/Qwen3VL/images/4.jpg",
+          "status": "ok",
+          "inference_latency_ms": 22186.509,
+          "amortized_inference_ms": 11093.256,
+          "image_total_wall_ms": 22442.477
+        }
+      ]
+    },
+    {
+      "worker_index": 3,
+      "physical_gpu_id": 7,
+      "visible_cuda_devices": "7",
+      "images_assigned": 4,
+      "images_succeeded": 4,
+      "images_failed": 0,
+      "model_load_wall_s": 12.027,
+      "worker_total_wall_s": 39.846,
+      "worker_inference_wall_s_estimate": 27.516,
+      "throughput_images_per_s": 0.1,
+      "per_image": [
+        {
+          "image_path": "/home2/tajamul/Qwen3VL/images/5.jpg",
+          "status": "ok",
+          "inference_latency_ms": 13306.283,
+          "amortized_inference_ms": 6653.142,
+          "image_total_wall_ms": 13429.476
+        },
+        {
+          "image_path": "/home2/tajamul/Qwen3VL/images/2.jpg",
+          "status": "ok",
+          "inference_latency_ms": 13306.283,
+          "amortized_inference_ms": 6653.142,
+          "image_total_wall_ms": 13519.726
+        },
+        {
+          "image_path": "/home2/tajamul/Qwen3VL/images/3.jpg",
+          "status": "ok",
+          "inference_latency_ms": 14209.887,
+          "amortized_inference_ms": 7104.943,
+          "image_total_wall_ms": 14270.625
+        },
+        {
+          "image_path": "/home2/tajamul/Qwen3VL/images/6.jpeg",
+          "status": "ok",
+          "inference_latency_ms": 14209.887,
+          "amortized_inference_ms": 7104.943,
+          "image_total_wall_ms": 14297.64
+        }
+      ]
+    }
+  ],
+  "failed_images": []
+}

@@ -1,0 +1,261 @@
+{
+  "status": "ok",
+  "image_path": "/home2/tajamul/Qwen3VL/images/1.jpg",
+  "categories_requested": [
+    "person",
+    "face",
+    "tattoo",
+    "blood",
+    "palm",
+    "text",
+    "weapon",
+    "keyboard",
+    "hotel room"
+  ],
+  "batch_info": {
+    "batch_size": 1,
+    "area": 1821600,
+    "images_in_batch": [
+      "/home2/tajamul/Qwen3VL/images/1.jpg"
+    ]
+  },
+  "general_detections": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        320,
+        121,
+        879,
+        997
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "face",
+      "bbox_2d": [
+        382,
+        159,
+        687,
+        377
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        572,
+        538,
+        768,
+        757
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        704,
+        759,
+        801,
+        823
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        626,
+        801,
+        702,
+        857
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        572,
+        870,
+        633,
+        949
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        527,
+        971,
+        561,
+        999
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        657,
+        949,
+        735,
+        999
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        346,
+        649,
+        485,
+        808
+      ],
+      "text_content": ""
+    }
+  ],
+  "persons": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        319,
+        119,
+        884,
+        997
+      ],
+      "face_bbox_2d": [
+        379,
+        157,
+        692,
+        378
+      ],
+      "action": "leaning against wall",
+      "gender": "",
+      "ethnicity": "",
+      "age": "",
+      "visible_clothing": [
+        "tank top"
+      ],
+      "visible_accessories": [
+        "nose ring",
+        "earring",
+        "necklace"
+      ],
+      "tattoo_detected": true,
+      "blood_visible": false,
+      "palm_visible": false,
+      "weapon_near_person": false
+    }
+  ],
+  "ocr_texts": [
+    {
+      "label": "text",
+      "bbox_2d": [
+        354,
+        651,
+        408,
+        679
+      ],
+      "text_content": "OF FIKEDOS"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        355,
+        673,
+        394,
+        686
+      ],
+      "text_content": "AT CAME"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        354,
+        686,
+        374,
+        701
+      ],
+      "text_content": "Pud"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        346,
+        686,
+        464,
+        785
+      ],
+      "text_content": "Ck."
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        419,
+        793,
+        468,
+        811
+      ],
+      "text_content": ".01 ENDING"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        375,
+        825,
+        433,
+        851
+      ],
+      "text_content": "a part of"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        379,
+        842,
+        438,
+        867
+      ],
+      "text_content": "16 Tattoos"
+    }
+  ],
+  "timings_ms": {
+    "general_detection": {
+      "batch_size": 1,
+      "preprocess_wall_ms": 194.197,
+      "generate_gpu_ms": 14622.381,
+      "generate_wall_ms": 14622.879,
+      "decode_wall_ms": 0.572,
+      "total_wall_ms": 14817.662,
+      "amortized_total_wall_ms": 14817.662,
+      "amortized_generate_gpu_ms": 14622.381
+    },
+    "person_detection": {
+      "batch_size": 1,
+      "preprocess_wall_ms": 76.931,
+      "generate_gpu_ms": 5769.542,
+      "generate_wall_ms": 5769.78,
+      "decode_wall_ms": 0.445,
+      "total_wall_ms": 5847.168,
+      "amortized_total_wall_ms": 5847.168,
+      "amortized_generate_gpu_ms": 5769.542
+    },
+    "ocr": {
+      "batch_size": 1,
+      "preprocess_wall_ms": 75.096,
+      "generate_gpu_ms": 13097.957,
+      "generate_wall_ms": 13098.296,
+      "decode_wall_ms": 0.553,
+      "total_wall_ms": 13173.965,
+      "amortized_total_wall_ms": 13173.965,
+      "amortized_generate_gpu_ms": 13097.957
+    },
+    "inference_latency_ms": 33838.795,
+    "amortized_inference_ms": 33838.795,
+    "generate_gpu_latency_ms": 33489.88,
+    "amortized_generate_gpu_ms": 33489.88,
+    "image_total_wall_ms": 34267.006
+  },
+  "raw_responses": {
+    "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [320, 121, 879, 997]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [382, 159, 687, 377]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [572, 538, 768, 757]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [704, 759, 801, 823]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [626, 801, 702, 857]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [572, 870, 633, 949]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [527, 971, 561, 999]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [657, 949, 735, 999]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [346, 649, 485, 808]\n  }\n]",
+    "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [319, 119, 884, 997],\n    \"face_bbox_2d\": [379, 157, 692, 378],\n    \"action\": \"leaning against wall\",\n    \"visible_clothing\": [\"tank top\"],\n    \"visible_accessories\": [\"nose ring\", \"earring\", \"necklace\"],\n    \"tattoo_detected\": true,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  }\n]",
+    "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [354, 651, 408, 679],\n    \"text_content\": \"OF FIKEDOS\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [355, 673, 394, 686],\n    \"text_content\": \"AT CAME\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [354, 686, 374, 701],\n    \"text_content\": \"Pud\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [346, 686, 464, 785],\n    \"text_content\": \"Ck.\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [419, 793, 468, 811],\n    \"text_content\": \".01 ENDING\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [375, 825, 433, 851],\n    \"text_content\": \"a part of\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [379, 842, 438, 867],\n    \"text_content\": \"16 Tattoos\"\n  }\n]"
+  }
+}

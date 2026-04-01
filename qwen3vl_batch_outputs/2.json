@@ -1,0 +1,68 @@
+{
+  "status": "ok",
+  "image_path": "/home2/tajamul/Qwen3VL/images/2.jpg",
+  "categories_requested": [
+    "person",
+    "face",
+    "tattoo",
+    "blood",
+    "palm",
+    "text",
+    "weapon",
+    "keyboard",
+    "hotel room"
+  ],
+  "batch_info": {
+    "batch_size": 2,
+    "area": 360640,
+    "images_in_batch": [
+      "/home2/tajamul/Qwen3VL/images/5.jpg",
+      "/home2/tajamul/Qwen3VL/images/2.jpg"
+    ]
+  },
+  "general_detections": [],
+  "persons": [],
+  "ocr_texts": [],
+  "timings_ms": {
+    "general_detection": {
+      "batch_size": 2,
+      "preprocess_wall_ms": 205.291,
+      "generate_gpu_ms": 2478.491,
+      "generate_wall_ms": 2478.788,
+      "decode_wall_ms": 0.48,
+      "total_wall_ms": 2684.584,
+      "amortized_total_wall_ms": 1342.292,
+      "amortized_generate_gpu_ms": 1239.246
+    },
+    "person_detection": {
+      "batch_size": 2,
+      "preprocess_wall_ms": 40.213,
+      "generate_gpu_ms": 10208.494,
+      "generate_wall_ms": 10208.734,
+      "decode_wall_ms": 0.629,
+      "total_wall_ms": 10249.59,
+      "amortized_total_wall_ms": 5124.795,
+      "amortized_generate_gpu_ms": 5104.247
+    },
+    "ocr": {
+      "batch_size": 2,
+      "preprocess_wall_ms": 42.033,
+      "generate_gpu_ms": 329.84,
+      "generate_wall_ms": 329.953,
+      "decode_wall_ms": 0.117,
+      "total_wall_ms": 372.109,
+      "amortized_total_wall_ms": 186.055,
+      "amortized_generate_gpu_ms": 164.92
+    },
+    "inference_latency_ms": 13306.283,
+    "amortized_inference_ms": 6653.142,
+    "generate_gpu_latency_ms": 13016.825,
+    "amortized_generate_gpu_ms": 6508.413,
+    "image_total_wall_ms": 13519.726
+  },
+  "raw_responses": {
+    "general_detection": "\"person\"",
+    "person_detection": "]\n[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [\n      0,\n      0,\n      1000,\n    \"face_bbox_2d\": [\n      x1,\n      y1,\n      x2,\n      y2,\n      \"action\": \"\",\n      \"visible_clothing\": [\n        \"item1\",\n        \"item2\",\n        ...\n      ]\n    }\n  }\n]\n]\n[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [\n      0,\n      0,\n      1,\n      0,\n      \"face_bbox_2d\": [\n      0,\n      0,\n      \"action\": \"\",\n      \"visible_clothing\": [\n        \"item1\",\n        \"item2\",\n        ...\n      ]\n    }\n  }\n]\n```json\n[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [\n      0,\n      0,\n      1000,\n      \"face_bbox_2d\": [\n      0,\n      0,\n      \"action\": \"\",\n      \"visible_clothing\": [\n        \"item1\",\n        \"item2\",\n        ...\n      ]\n    }\n  }\n]\n```",
+    "ocr": ""
+  }
+}

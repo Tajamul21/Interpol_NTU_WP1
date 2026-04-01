@@ -1,0 +1,180 @@
+{
+  "status": "ok",
+  "image_path": "/home2/tajamul/Qwen3VL/images/7.jpg",
+  "categories_requested": [
+    "person",
+    "face",
+    "tattoo",
+    "blood",
+    "palm",
+    "text",
+    "weapon",
+    "keyboard",
+    "hotel room"
+  ],
+  "batch_info": {
+    "batch_size": 2,
+    "area": 921600,
+    "images_in_batch": [
+      "/home2/tajamul/Qwen3VL/images/7.jpg",
+      "/home2/tajamul/Qwen3VL/images/4.jpg"
+    ]
+  },
+  "general_detections": [
+    {
+      "label": "keyboard",
+      "bbox_2d": [
+        0,
+        0,
+        1000,
+        1000
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        654,
+        798,
+        730,
+        885
+      ],
+      "text_content": ""
+    }
+  ],
+  "persons": [],
+  "ocr_texts": [
+    {
+      "label": "text",
+      "bbox_2d": [
+        103,
+        337,
+        148,
+        357
+      ],
+      "text_content": "AUTO"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        164,
+        282,
+        219,
+        342
+      ],
+      "text_content": "A"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        408,
+        264,
+        443,
+        319
+      ],
+      "text_content": "S"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        612,
+        247,
+        657,
+        298
+      ],
+      "text_content": "D"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        806,
+        226,
+        836,
+        276
+      ],
+      "text_content": "F"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        302,
+        476,
+        348,
+        557
+      ],
+      "text_content": "Y"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        560,
+        437,
+        615,
+        518
+      ],
+      "text_content": "X"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        799,
+        406,
+        859,
+        482
+      ],
+      "text_content": "C"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        650,
+        792,
+        727,
+        884
+      ],
+      "text_content": "Alt"
+    }
+  ],
+  "timings_ms": {
+    "general_detection": {
+      "batch_size": 2,
+      "preprocess_wall_ms": 136.084,
+      "generate_gpu_ms": 4318.053,
+      "generate_wall_ms": 4318.466,
+      "decode_wall_ms": 0.565,
+      "total_wall_ms": 4455.129,
+      "amortized_total_wall_ms": 2227.565,
+      "amortized_generate_gpu_ms": 2159.027
+    },
+    "person_detection": {
+      "batch_size": 2,
+      "preprocess_wall_ms": 51.545,
+      "generate_gpu_ms": 755.09,
+      "generate_wall_ms": 755.218,
+      "decode_wall_ms": 0.14,
+      "total_wall_ms": 806.911,
+      "amortized_total_wall_ms": 403.456,
+      "amortized_generate_gpu_ms": 377.545
+    },
+    "ocr": {
+      "batch_size": 2,
+      "preprocess_wall_ms": 162.041,
+      "generate_gpu_ms": 16761.488,
+      "generate_wall_ms": 16761.811,
+      "decode_wall_ms": 0.606,
+      "total_wall_ms": 16924.469,
+      "amortized_total_wall_ms": 8462.235,
+      "amortized_generate_gpu_ms": 8380.744
+    },
+    "inference_latency_ms": 22186.509,
+    "amortized_inference_ms": 11093.256,
+    "generate_gpu_latency_ms": 21834.631,
+    "amortized_generate_gpu_ms": 10917.316,
+    "image_total_wall_ms": 22364.002
+  },
+  "raw_responses": {
+    "general_detection": "[\n  {\n    \"label\": \"keyboard\",\n    \"bbox_2d\": [0, 0, 1000, 1000]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [654, 798, 730, 885]\n  }\n]",
+    "person_detection": "[]",
+    "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [103, 337, 148, 357],\n    \"text_content\": \"AUTO\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [164, 282, 219, 342],\n    \"text_content\": \"A\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [408, 264, 443, 319],\n    \"text_content\": \"S\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [612, 247, 657, 298],\n    \"text_content\": \"D\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [806, 226, 836, 276],\n    \"text_content\": \"F\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [302, 476, 348, 557],\n    \"text_content\": \"Y\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [560, 437, 615, 518],\n    \"text_content\": \"X\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [799, 406, 859, 482],\n    \"text_content\": \"C\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [650, 792, 727, 884],\n    \"text_content\": \"Alt\"\n  }\n]"
+  }
+}

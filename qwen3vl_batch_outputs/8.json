@@ -1,0 +1,162 @@
+{
+  "status": "ok",
+  "image_path": "/home2/tajamul/Qwen3VL/images/8.jpg",
+  "categories_requested": [
+    "person",
+    "face",
+    "tattoo",
+    "blood",
+    "palm",
+    "text",
+    "weapon",
+    "keyboard",
+    "hotel room"
+  ],
+  "batch_info": {
+    "batch_size": 1,
+    "area": 1063200,
+    "images_in_batch": [
+      "/home2/tajamul/Qwen3VL/images/8.jpg"
+    ]
+  },
+  "general_detections": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        0,
+        109,
+        536,
+        1000
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "face",
+      "bbox_2d": [
+        237,
+        267,
+        335,
+        454
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "palm",
+      "bbox_2d": [
+        316,
+        528,
+        447,
+        682
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        111,
+        203,
+        161,
+        242
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "weapon",
+      "bbox_2d": [
+        233,
+        271,
+        679,
+        607
+      ],
+      "text_content": ""
+    }
+  ],
+  "persons": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        0,
+        109,
+        538,
+        1000
+      ],
+      "face_bbox_2d": [
+        228,
+        278,
+        345,
+        467
+      ],
+      "action": "shooting",
+      "gender": "",
+      "ethnicity": "",
+      "age": "",
+      "visible_clothing": [
+        "camouflage uniform",
+        "camouflage cap"
+      ],
+      "visible_accessories": [
+        "sunglasses",
+        "earplugs",
+        "American flag patch"
+      ],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": true,
+      "weapon_near_person": true
+    }
+  ],
+  "ocr_texts": [
+    {
+      "label": "text",
+      "bbox_2d": [
+        113,
+        205,
+        161,
+        244
+      ],
+      "text_content": "BERRY"
+    }
+  ],
+  "timings_ms": {
+    "general_detection": {
+      "batch_size": 1,
+      "preprocess_wall_ms": 138.666,
+      "generate_gpu_ms": 8141.539,
+      "generate_wall_ms": 8141.986,
+      "decode_wall_ms": 0.598,
+      "total_wall_ms": 8281.273,
+      "amortized_total_wall_ms": 8281.273,
+      "amortized_generate_gpu_ms": 8141.539
+    },
+    "person_detection": {
+      "batch_size": 1,
+      "preprocess_wall_ms": 55.363,
+      "generate_gpu_ms": 5981.809,
+      "generate_wall_ms": 5982.077,
+      "decode_wall_ms": 0.69,
+      "total_wall_ms": 6038.143,
+      "amortized_total_wall_ms": 6038.143,
+      "amortized_generate_gpu_ms": 5981.809
+    },
+    "ocr": {
+      "batch_size": 1,
+      "preprocess_wall_ms": 51.355,
+      "generate_gpu_ms": 2125.125,
+      "generate_wall_ms": 2125.276,
+      "decode_wall_ms": 0.27,
+      "total_wall_ms": 2176.908,
+      "amortized_total_wall_ms": 2176.908,
+      "amortized_generate_gpu_ms": 2125.125
+    },
+    "inference_latency_ms": 16496.324,
+    "amortized_inference_ms": 16496.324,
+    "generate_gpu_latency_ms": 16248.473,
+    "amortized_generate_gpu_ms": 16248.473,
+    "image_total_wall_ms": 16793.352
+  },
+  "raw_responses": {
+    "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [0, 109, 536, 1000]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [237, 267, 335, 454]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [316, 528, 447, 682]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [111, 203, 161, 242]\n  },\n  {\n    \"label\": \"weapon\",\n    \"bbox_2d\": [233, 271, 679, 607]\n  }\n]",
+    "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [0, 109, 538, 1000],\n    \"face_bbox_2d\": [228, 278, 345, 467],\n    \"action\": \"shooting\",\n    \"visible_clothing\": [\n      \"camouflage uniform\",\n      \"camouflage cap\"\n    ],\n    \"visible_accessories\": [\n      \"sunglasses\",\n      \"earplugs\",\n      \"American flag patch\"\n    ],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": true\n  }\n]",
+    "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [113, 205, 161, 244],\n    \"text_content\": \"BERRY\"\n  }\n]"
+  }
+}

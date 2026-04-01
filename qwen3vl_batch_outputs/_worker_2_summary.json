@@ -1,0 +1,28 @@
+{
+  "worker_index": 2,
+  "physical_gpu_id": 6,
+  "visible_cuda_devices": "6",
+  "images_assigned": 2,
+  "images_succeeded": 2,
+  "images_failed": 0,
+  "model_load_wall_s": 11.762,
+  "worker_total_wall_s": 34.205,
+  "worker_inference_wall_s_estimate": 22.187,
+  "throughput_images_per_s": 0.058,
+  "per_image": [
+    {
+      "image_path": "/home2/tajamul/Qwen3VL/images/7.jpg",
+      "status": "ok",
+      "inference_latency_ms": 22186.509,
+      "amortized_inference_ms": 11093.256,
+      "image_total_wall_ms": 22364.002
+    },
+    {
+      "image_path": "/home2/tajamul/Qwen3VL/images/4.jpg",
+      "status": "ok",
+      "inference_latency_ms": 22186.509,
+      "amortized_inference_ms": 11093.256,
+      "image_total_wall_ms": 22442.477
+    }
+  ]
+}
