@@ -1,3 +1,4 @@
+
 # 🌟 NTU Interop WP1 — Qwen3-VL Multimodal Pipeline
 
 > ⚡ High-performance multi-GPU vision-language pipeline for detection, reasoning, and OCR using Qwen3-VL
@@ -6,130 +7,103 @@
 
 ## 🧠 Overview
 
-Multimodal pipeline using **Qwen3-VL-8B-Instruct** for:
-- Detection
-- OCR
-- Visual reasoning
-- Multi-GPU scaling
+This project implements a **scalable multimodal inference pipeline** using **Qwen3-VL-8B-Instruct**.
+
+It performs:
+
+- 🔍 Object and semantic detection
+- 🧍 Person localization
+- 🔤 OCR (text extraction)
+- ⚡ Multi-GPU parallel inference
 
 ---
 
-## ⚙️ Installation (Qwen3-VL Setup)
+## ⚙️ Installation
 
-### 1. Create Environment
-\`\`\`bash
+```bash
 conda create -n qwen3vl_py311 python=3.11 -y
 conda activate qwen3vl_py311
-\`\`\`
 
----
-
-### 2. Install PyTorch (IMPORTANT)
-
-👉 Match your CUDA version (example below = CUDA 12.1)
-
-\`\`\`bash
 pip install torch==2.6.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
-\`\`\`
-
-> Qwen3 requires **torch >= 2.6** :contentReference[oaicite:0]{index=0}
-
----
-
-### 3. Install Transformers + Core Dependencies
-
-\`\`\`bash
-pip install transformers>=4.51.0 accelerate sentencepiece
-pip install pillow tqdm
-\`\`\`
-
-> Qwen3-VL requires **new Transformers (≥4.5x)** for model support :contentReference[oaicite:1]{index=1}
-
----
-
-### 4. Install Optional Speedups (Recommended)
-
-#### Flash Attention 2 (Huge speed boost)
-\`\`\`bash
+pip install "transformers>=4.51.0" accelerate sentencepiece pillow tqdm
 pip install flash-attn --no-build-isolation
-\`\`\`
 
-- 2–4× faster attention
-- lower memory usage :contentReference[oaicite:2]{index=2}
-
----
-
-### 5. Hugging Face Login (Recommended)
-
-\`\`\`bash
 huggingface-cli login
-\`\`\`
+```
 
 ---
 
-### 6. Verify Setup
+## 🚀 Running the Pipeline
 
-\`\`\`python
-from transformers import Qwen3VLForConditionalGeneration, AutoProcessor
-import torch
+### 🖥️ Single GPU
 
-model = Qwen3VLForConditionalGeneration.from_pretrained(
-    "Qwen/Qwen3-VL-8B-Instruct",
-    torch_dtype=torch.float16,
-    device_map="auto"
-)
-print("Model loaded successfully")
-\`\`\`
-
----
-
-## 🚀 Running
-
-### Single GPU
-\`\`\`bash
+```bash
 python run.py
-\`\`\`
+```
 
----
+### ⚡ Multi-GPU Parallel
 
-### Multi-GPU
-\`\`\`bash
-python run_parallel.py \\
-  --gpu-ids 0,4,6,7 \\
-  --batch-size 4 \\
+```bash
+python run_parallel.py \
+  --gpu-ids 0,4,6,7 \
+  --batch-size 4 \
   --allow-tf32
-\`\`\`
+```
 
 ---
 
-## ⚡ Key Notes
+## 📂 Project Structure
 
-- Each GPU loads its **own model copy**
-- Each image → **3 model calls**
-- Batch size = **queue batching (NOT real batching)**
-- Flash Attention = **major speed improvement**
-
----
-
-## 🎯 Hardware
-
-- GPU required (recommended ≥16GB VRAM)
-- CUDA ≥ 11.0
-- Flash-attn requires modern GPU (Ampere+) :contentReference[oaicite:3]{index=3}
+```text
+Qwen3VL/
+├── images/
+├── qwen3vl_outputs/
+├── qwen3vl_parallel_outputs_v2/
+├── run.py
+├── run_parallel.py
+└── README.md
+```
 
 ---
 
-## 🌍 NTU Interop WP1
+## 🔍 Pipeline
 
-Multimodal AI system for scalable real-world deployment.
+```text
+Image → Resize → 3× Model Inference → JSON → Annotated Image
+```
+
+---
+
+## 📦 Outputs
+
+```text
+image.json
+image_annotated.png
+```
+
+```json
+{
+  "image_path": "images/example.jpg",
+  "general": [...],
+  "person": [...],
+  "ocr": [...],
+  "inference_time_sec": 9.54
+}
+```
+
+---
+
+## ⚠️ Batch Note
+
+```python
+for img in batch:
+    process_image(img)
+```
 
 ---
 
 ## 👨‍💻 Author
 
-Tajamul Ashraf — NTU
+Tajamul Ashraf
 
 ---
-
-🚀 Happy building with Qwen3-VL!
-EOF
