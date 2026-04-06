@@ -1,0 +1,87 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/13.jpg",
+  "categories_requested": [
+    "person",
+    "face",
+    "tattoo",
+    "blood",
+    "palm",
+    "text",
+    "weapon",
+    "keyboard",
+    "hotel room",
+    "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+    "school uniform",
+    "school logos/badges"
+  ],
+  "general_detections": [
+    {
+      "label": "school uniform",
+      "bbox_2d": [
+        19,
+        279,
+        959,
+        863
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "school logos/badges",
+      "bbox_2d": [
+        576,
+        444,
+        677,
+        537
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        557,
+        516,
+        695,
+        541
+      ],
+      "text_content": ""
+    }
+  ],
+  "persons": [],
+  "ocr_texts": [
+    {
+      "label": "text",
+      "bbox_2d": [
+        457,
+        334,
+        515,
+        345
+      ],
+      "text_content": "C.truLex"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        556,
+        519,
+        695,
+        531
+      ],
+      "text_content": "Hilnswood Primary School"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        587,
+        531,
+        664,
+        540
+      ],
+      "text_content": "and Nursery"
+    }
+  ],
+  "raw_responses": {
+    "general_detection": "[\n  {\n    \"label\": \"school uniform\",\n    \"bbox_2d\": [19, 279, 959, 863]\n  },\n  {\n    \"label\": \"school logos/badges\",\n    \"bbox_2d\": [576, 444, 677, 537]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [557, 516, 695, 541]\n  }\n]",
+    "person_detection": "[]",
+    "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [457, 334, 515, 345],\n    \"text_content\": \"C.truLex\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [556, 519, 695, 531],\n    \"text_content\": \"Hilnswood Primary School\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [587, 531, 664, 540],\n    \"text_content\": \"and Nursery\"\n  }\n]"
+  }
+}

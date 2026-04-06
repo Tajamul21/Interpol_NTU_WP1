@@ -1,0 +1,155 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/14.jpg",
+  "categories_requested": [
+    "person",
+    "face",
+    "tattoo",
+    "blood",
+    "palm",
+    "text",
+    "weapon",
+    "keyboard",
+    "hotel room",
+    "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+    "school uniform",
+    "school logos/badges"
+  ],
+  "general_detections": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        109,
+        307,
+        416,
+        837
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "person",
+      "bbox_2d": [
+        392,
+        108,
+        779,
+        713
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "face",
+      "bbox_2d": [
+        253,
+        452,
+        372,
+        618
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "face",
+      "bbox_2d": [
+        534,
+        136,
+        616,
+        287
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "palm",
+      "bbox_2d": [
+        717,
+        398,
+        779,
+        481
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "hotel room",
+      "bbox_2d": [
+        0,
+        0,
+        1000,
+        1000
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "feet",
+      "bbox_2d": [
+        170,
+        280,
+        253,
+        493
+      ],
+      "text_content": ""
+    }
+  ],
+  "persons": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        107,
+        282,
+        416,
+        839
+      ],
+      "face_bbox_2d": [
+        244,
+        455,
+        373,
+        625
+      ],
+      "action": "lying on bed, looking at phone",
+      "gender": "female",
+      "ethnicity": "caucasian",
+      "age": "25-35",
+      "visible_clothing": [
+        "light blue shirt",
+        "pants"
+      ],
+      "visible_accessories": [
+        "watch"
+      ],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": true,
+      "weapon_near_person": false
+    },
+    {
+      "label": "person",
+      "bbox_2d": [
+        392,
+        107,
+        781,
+        711
+      ],
+      "face_bbox_2d": [
+        532,
+        142,
+        616,
+        286
+      ],
+      "action": "sitting on bed, holding remote",
+      "gender": "male",
+      "ethnicity": "caucasian",
+      "age": "25-35",
+      "visible_clothing": [
+        "pink shirt",
+        "dark pants"
+      ],
+      "visible_accessories": [],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": true,
+      "weapon_near_person": false
+    }
+  ],
+  "ocr_texts": [],
+  "raw_responses": {
+    "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [109, 307, 416, 837]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [392, 108, 779, 713]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [253, 452, 372, 618]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [534, 136, 616, 287]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [717, 398, 779, 481]\n  },\n  {\n    \"label\": \"hotel room\",\n    \"bbox_2d\": [0, 0, 1000, 1000]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [170, 280, 253, 493]\n  }\n]",
+    "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [107, 282, 416, 839],\n    \"face_bbox_2d\": [244, 455, 373, 625],\n    \"action\": \"lying on bed, looking at phone\",\n    \"gender\": \"female\",\n    \"age\": \"25-35\",\n    \"ethnicity\": \"caucasian\",\n    \"visible_clothing\": [\"light blue shirt\", \"pants\"],\n    \"visible_accessories\": [\"watch\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [392, 107, 781, 711],\n    \"face_bbox_2d\": [532, 142, 616, 286],\n    \"action\": \"sitting on bed, holding remote\",\n    \"gender\": \"male\",\n    \"age\": \"25-35\",\n    \"ethnicity\": \"caucasian\",\n    \"visible_clothing\": [\"pink shirt\", \"dark pants\"],\n    \"visible_accessories\": [],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  }\n]",
+    "ocr": "[]"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "image": "/home2/tajamul/Qwen3VL/images/13.jpg",
+  "inference_time": 10.409,
+  "general": [
+    {
+      "bbox_2d": [
+        17,
+        278,
+        957,
+        863
+      ],
+      "label": "shirt"
+    },
+    {
+      "bbox_2d": [
+        573,
+        443,
+        675,
+        517
+      ],
+      "label": "logo"
+    },
+    {
+      "bbox_2d": [
+        555,
+        516,
+        696,
+        538
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        584,
+        530,
+        668,
+        542
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        455,
+        333,
+        518,
+        347
+      ],
+      "label": "text"
+    }
+  ],
+  "person": [],
+  "ocr": []
+}

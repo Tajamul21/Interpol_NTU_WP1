@@ -1,0 +1,6 @@
+{
+  "worker_gpu": 0,
+  "num_images": 4,
+  "total_inference_time_sec": 106.861,
+  "average_inference_time_sec": 26.715
+}

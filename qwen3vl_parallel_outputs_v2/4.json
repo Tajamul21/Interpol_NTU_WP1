@@ -1,0 +1,68 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/4.jpg",
+  "general": [
+    {
+      "bbox_2d": [
+        95,
+        88,
+        598,
+        998
+      ],
+      "label": "person"
+    },
+    {
+      "bbox_2d": [
+        162,
+        226,
+        305,
+        395
+      ],
+      "label": "face"
+    },
+    {
+      "bbox_2d": [
+        328,
+        312,
+        401,
+        455
+      ],
+      "label": "palm"
+    },
+    {
+      "bbox_2d": [
+        298,
+        726,
+        388,
+        852
+      ],
+      "label": "palm"
+    },
+    {
+      "bbox_2d": [
+        398,
+        224,
+        478,
+        393
+      ],
+      "label": "weapon"
+    }
+  ],
+  "person": [
+    {
+      "bbox_2d": [
+        0,
+        83,
+        596,
+        1000
+      ],
+      "label": "person"
+    }
+  ],
+  "ocr": [],
+  "raw_outputs": {
+    "general": "```json\n[\n\t{\"bbox_2d\": [95, 88, 598, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [162, 226, 305, 395], \"label\": \"face\"},\n\t{\"bbox_2d\": [328, 312, 401, 455], \"label\": \"palm\"},\n\t{\"bbox_2d\": [298, 726, 388, 852], \"label\": \"palm\"},\n\t{\"bbox_2d\": [398, 224, 478, 393], \"label\": \"weapon\"}\n]\n```",
+    "person": "```json\n[\n\t{\"bbox_2d\": [0, 83, 596, 1000], \"label\": \"person\"}\n]\n```",
+    "ocr": "There is no text in the image."
+  },
+  "inference_time_sec": 8.913
+}

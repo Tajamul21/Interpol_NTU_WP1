@@ -1,0 +1,87 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/6.jpeg",
+  "general": [
+    {
+      "bbox_2d": [
+        0,
+        57,
+        212,
+        530
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        0,
+        596,
+        194,
+        965
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        308,
+        575,
+        506,
+        965
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        312,
+        66,
+        494,
+        530
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        546,
+        58,
+        812,
+        653
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        500,
+        615,
+        656,
+        948
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        660,
+        589,
+        816,
+        948
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        804,
+        168,
+        999,
+        854
+      ],
+      "label": "tattoo"
+    }
+  ],
+  "person": [],
+  "ocr": {
+    "text": ""
+  },
+  "raw_outputs": {
+    "general": "```json\n[\n\t{\"bbox_2d\": [0, 57, 212, 530], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [0, 596, 194, 965], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [308, 575, 506, 965], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [312, 66, 494, 530], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [546, 58, 812, 653], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [500, 615, 656, 948], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [660, 589, 816, 948], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [804, 168, 999, 854], \"label\": \"tattoo\"}\n]\n```",
+    "person": "There are none.",
+    "ocr": "There is no text in the image. The image contains only stylized tribal or abstract symbols. \n\n```json\n{\n  \"text\": \"\"\n}\n```"
+  },
+  "inference_time_sec": 13.965
+}

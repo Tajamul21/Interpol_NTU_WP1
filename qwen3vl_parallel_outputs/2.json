@@ -1,0 +1,68 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/2.jpg",
+  "general": [
+    {
+      "bbox_2d": [
+        472,
+        0,
+        992,
+        999
+      ],
+      "label": "person"
+    },
+    {
+      "bbox_2d": [
+        0,
+        17,
+        521,
+        999
+      ],
+      "label": "person"
+    },
+    {
+      "bbox_2d": [
+        312,
+        87,
+        493,
+        495
+      ],
+      "label": "face"
+    },
+    {
+      "bbox_2d": [
+        586,
+        75,
+        766,
+        418
+      ],
+      "label": "face"
+    }
+  ],
+  "person": [
+    {
+      "bbox_2d": [
+        0,
+        19,
+        518,
+        1000
+      ],
+      "label": "person"
+    },
+    {
+      "bbox_2d": [
+        470,
+        0,
+        991,
+        1000
+      ],
+      "label": "person"
+    }
+  ],
+  "ocr": [],
+  "raw_outputs": {
+    "general": "```json\n[\n\t{\"bbox_2d\": [472, 0, 992, 999], \"label\": \"person\"},\n\t{\"bbox_2d\": [0, 17, 521, 999], \"label\": \"person\"},\n\t{\"bbox_2d\": [312, 87, 493, 495], \"label\": \"face\"},\n\t{\"bbox_2d\": [586, 75, 766, 418], \"label\": \"face\"}\n]\n```",
+    "person": "```json\n[\n\t{\"bbox_2d\": [0, 19, 518, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [470, 0, 991, 1000], \"label\": \"person\"}\n]\n```",
+    "ocr": "There is no text in the image."
+  },
+  "inference_time_sec": 8.954
+}

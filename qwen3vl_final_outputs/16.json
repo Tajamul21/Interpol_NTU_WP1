@@ -1,0 +1,144 @@
+{
+  "image": "/home2/tajamul/Qwen3VL/images/16.jpg",
+  "inference_time_sec": 20.672,
+  "general": [
+    {
+      "bbox_2d": [
+        393,
+        455,
+        427,
+        505
+      ],
+      "label": "phone"
+    },
+    {
+      "bbox_2d": [
+        337,
+        362,
+        506,
+        605
+      ],
+      "label": "man"
+    },
+    {
+      "bbox_2d": [
+        567,
+        486,
+        706,
+        586
+      ],
+      "label": "woman"
+    },
+    {
+      "bbox_2d": [
+        551,
+        414,
+        765,
+        623
+      ],
+      "label": "pillow"
+    },
+    {
+      "bbox_2d": [
+        278,
+        405,
+        506,
+        607
+      ],
+      "label": "pillow"
+    },
+    {
+      "bbox_2d": [
+        154,
+        528,
+        281,
+        632
+      ],
+      "label": "pillow"
+    },
+    {
+      "bbox_2d": [
+        92,
+        357,
+        202,
+        638
+      ],
+      "label": "lamp"
+    },
+    {
+      "bbox_2d": [
+        824,
+        350,
+        930,
+        628
+      ],
+      "label": "lamp"
+    },
+    {
+      "bbox_2d": [
+        91,
+        579,
+        124,
+        632
+      ],
+      "label": "cup"
+    },
+    {
+      "bbox_2d": [
+        77,
+        586,
+        162,
+        698
+      ],
+      "label": "nightstand"
+    },
+    {
+      "bbox_2d": [
+        798,
+        581,
+        953,
+        717
+      ],
+      "label": "nightstand"
+    },
+    {
+      "bbox_2d": [
+        87,
+        607,
+        973,
+        998
+      ],
+      "label": "bed"
+    },
+    {
+      "bbox_2d": [
+        909,
+        0,
+        1000,
+        877
+      ],
+      "label": "curtain"
+    }
+  ],
+  "person": [
+    {
+      "bbox_2d": [
+        335,
+        362,
+        512,
+        610
+      ],
+      "label": "persons"
+    },
+    {
+      "bbox_2d": [
+        575,
+        486,
+        705,
+        595
+      ],
+      "label": "persons"
+    }
+  ],
+  "ocr": []
+}

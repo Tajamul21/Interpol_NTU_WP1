@@ -1,0 +1,115 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/1.jpg",
+  "general": [
+    {
+      "bbox_2d": [
+        320,
+        120,
+        877,
+        998
+      ],
+      "label": "person"
+    },
+    {
+      "bbox_2d": [
+        381,
+        156,
+        687,
+        375
+      ],
+      "label": "face"
+    },
+    {
+      "bbox_2d": [
+        573,
+        536,
+        762,
+        759
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        698,
+        757,
+        797,
+        825
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        622,
+        800,
+        704,
+        858
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        574,
+        919,
+        710,
+        985
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        526,
+        970,
+        559,
+        998
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        659,
+        959,
+        707,
+        1000
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        592,
+        870,
+        631,
+        917
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        343,
+        626,
+        500,
+        975
+      ],
+      "label": "text"
+    }
+  ],
+  "person": [
+    {
+      "bbox_2d": [
+        320,
+        121,
+        883,
+        1000
+      ],
+      "label": "person"
+    }
+  ],
+  "ocr": {
+    "text": "ESPERADOS\nC. CHA\nThe\nClink.\n01\nTattoo\nI'm not a\nTattoo"
+  },
+  "raw_outputs": {
+    "general": "```json\n[\n\t{\"bbox_2d\": [320, 120, 877, 998], \"label\": \"person\"},\n\t{\"bbox_2d\": [381, 156, 687, 375], \"label\": \"face\"},\n\t{\"bbox_2d\": [573, 536, 762, 759], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [698, 757, 797, 825], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [622, 800, 704, 858], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [574, 919, 710, 985], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [526, 970, 559, 998], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [659, 959, 707, 1000], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [592, 870, 631, 917], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [343, 626, 500, 975], \"label\": \"text\"}\n]\n```",
+    "person": "```json\n[\n\t{\"bbox_2d\": [320, 121, 883, 1000], \"label\": \"person\"}\n]\n```",
+    "ocr": "```json\n{\n  \"text\": \"ESPERADOS\\nC. CHA\\nThe\\nClink.\\n01\\nTattoo\\nI'm not a\\nTattoo\"\n}\n```"
+  },
+  "inference_time_sec": 21.344
+}

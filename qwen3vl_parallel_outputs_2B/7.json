@@ -1,0 +1,14 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/7.jpg",
+  "general": [],
+  "person": [],
+  "ocr": {
+    "text": "Q @ W E R T Y U I O P A S D F G H J K L Z X C V B N M Alt"
+  },
+  "raw_outputs": {
+    "general": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"keyboard\"},\n\t{\"bbox_2d\": [283, 831, 397, 981], \"label\": \"text\"},\n\t{\"bbox_2d\": [652, 788, 727, 881], \"label\": \"text\"},\n\t{\"bbox_2d\": [322, 125, 380, 165], \"label\": \"text\"},\n\t{\"bbox_2d\": [133, 145, 179, 182], \"label\": \"text\"},\n\t{\"bbox_2d\": [252, 44, 277, 67], \"label\": \"text\"},\n\t{\"bbox_2d\": [414, 33, 436, 59], \"label\": \"text\"},\n\t{\"bbox_2d\": [526, 124, 550, 158], \"label\": \"text\"},\n\t{\"bbox_2d\": [691, 110, 722, 145], \"label\": \"text\"},\n\t{\"bbox_2d\": [805, 107, 865, 145], \"label\": \"text\"},\n\t{\"bbox_2d\": [816, 226, 845, 275], \"label\": \"text\"},\n\t{\"bbox_2d\": [585, 247, 656, 304], \"label\": \"text\"},\n\t{\"bbox_2d\": [166, 286, 221, 342], \"label\": \"text\"},\n\t{\"bbox_2d\": [410, 267, 444, 316], \"label\": \"text\"},\n\t{\"bbox_2d\": [295, 474, 347, 555], \"label\": \"text\"},\n\t{\"bbox_2d\": [563, 444, 616, 514], \"label\": \"text\"},\n\t{\"bbox_2d\": [799, 412, 858, 478], \"label\": \"text\"},\n\t{\"bbox_2d\": [655, 788, 727, 881], \"label\": \"text\"},\n\t{\"bbox_2d\": [805, 226, 845, 275], \"label\": \"text\"},\n\t{\"bbox_2d\": [585, 247, 656, 304], \"label\": \"text\"},\n\t{\"bbox_2d\": [410, 267, 444, 316], \"label\": \"text\"},\n\t{\"bbox_2d\": [295, 474, 347, 555], \"label\": \"text\"},\n\t{\"bbox_2d\": [563, 444, 616, 514], \"label\": \"text\"},\n\t{\"bbox_2d\": [799, 412, 858, 478], \"label\": \"text\"},\n\t{\"bbox_2d\": [655, 788, 727, 881], \"label\": \"text\"},\n\t{\"bbox_2d\": [805, 226, 845, 275], \"label\": \"text\"},\n\t{\"bbox_2d\": [585, 247, 656, 304], \"label\": \"text\"},\n\t{\"bbox_2d\": [410, 267, 444, 316], \"label\": \"text\"},\n\t{\"bbox_2d\": [295, 474, 347, 555], \"label\": \"text\"},\n\t{\"bbox_2d\": [563, 444, 616, 514], \"label\": \"text\"},\n\t{\"bbox_2d\": [799, 412, 858, 478], \"label\": \"text\"},\n\t{\"bbox",
+    "person": "There are none.",
+    "ocr": "```json\n{\n  \"text\": \"Q @ W E R T Y U I O P A S D F G H J K L Z X C V B N M Alt\"\n}\n```"
+  },
+  "inference_time_sec": 34.463
+}

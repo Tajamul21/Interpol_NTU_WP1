@@ -17,7 +17,7 @@ MAX_NEW_TOKENS_DET = 1024
 MAX_NEW_TOKENS_OCR = 2048
 
 INPUT_FOLDER = "/home2/tajamul/Qwen3VL/images"
-OUTPUT_FOLDER = "./qwen3vl_batch_outputs"
+OUTPUT_FOLDER = "./qwen3vl_outputs"
 
 TARGET_CATEGORIES = [
     "person",
@@ -29,6 +29,9 @@ TARGET_CATEGORIES = [
     "weapon",
     "keyboard",
     "hotel room",
+    "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+    "school uniform",
+    "school logos/badges",
 ]
 
 IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
@@ -339,11 +342,11 @@ Rules:
 - Return JSON only.
 - Use relative coordinates scaled from 0 to 1000.
 - If an item is not present, do not include it.
-- Allowed labels are only: person, face, tattoo, blood, palm, text, weapon, keyboard, hotel room.
+- Allowed labels are only: person, face, tattoo, blood, palm, text, weapon, keyboard, school uniform, school logos/badges, hotel room, nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet.
 - For text regions, use label "text".
 - For weapon-like objects, use label "weapon".
 - For visible hotel room scenes or obvious hotel-room context, use label "hotel room".
-- When a face/person is detected, infer age, gender, race, ethnicity.
+- When a face/person is detected, infer age, gender, race, ethnicity, nude body parts.
 
 Output format:
 [

@@ -1,0 +1,79 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/8.jpg",
+  "general": [
+    {
+      "bbox_2d": [
+        0,
+        107,
+        534,
+        999
+      ],
+      "label": "person"
+    },
+    {
+      "bbox_2d": [
+        224,
+        279,
+        347,
+        422
+      ],
+      "label": "face"
+    },
+    {
+      "bbox_2d": [
+        113,
+        203,
+        160,
+        241
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        233,
+        272,
+        678,
+        604
+      ],
+      "label": "weapon"
+    },
+    {
+      "bbox_2d": [
+        347,
+        499,
+        443,
+        685
+      ],
+      "label": "palm"
+    },
+    {
+      "bbox_2d": [
+        463,
+        496,
+        534,
+        555
+      ],
+      "label": "palm"
+    }
+  ],
+  "person": [
+    {
+      "bbox_2d": [
+        0,
+        106,
+        536,
+        1000
+      ],
+      "label": "person"
+    }
+  ],
+  "ocr": {
+    "text": "BERRY"
+  },
+  "raw_outputs": {
+    "general": "```json\n[\n\t{\"bbox_2d\": [0, 107, 534, 999], \"label\": \"person\"},\n\t{\"bbox_2d\": [224, 279, 347, 422], \"label\": \"face\"},\n\t{\"bbox_2d\": [113, 203, 160, 241], \"label\": \"text\"},\n\t{\"bbox_2d\": [233, 272, 678, 604], \"label\": \"weapon\"},\n\t{\"bbox_2d\": [347, 499, 443, 685], \"label\": \"palm\"},\n\t{\"bbox_2d\": [463, 496, 534, 555], \"label\": \"palm\"}\n]\n```",
+    "person": "```json\n[\n\t{\"bbox_2d\": [0, 106, 536, 1000], \"label\": \"person\"}\n]\n```",
+    "ocr": "```json\n{\n  \"text\": \"BERRY\"\n}\n```"
+  },
+  "inference_time_sec": 11.101
+}

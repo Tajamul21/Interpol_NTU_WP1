@@ -1,0 +1,33 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/5.jpg",
+  "general": [
+    {
+      "bbox_2d": [
+        117,
+        0,
+        511,
+        789
+      ],
+      "label": "blood"
+    },
+    {
+      "bbox_2d": [
+        548,
+        1,
+        785,
+        527
+      ],
+      "label": "blood"
+    }
+  ],
+  "person": [],
+  "ocr": {
+    "text": ""
+  },
+  "raw_outputs": {
+    "general": "```json\n[\n\t{\"bbox_2d\": [117, 0, 511, 789], \"label\": \"blood\"},\n\t{\"bbox_2d\": [548, 1, 785, 527], \"label\": \"blood\"}\n]\n```",
+    "person": "There are none.",
+    "ocr": "```json\n{\n  \"text\": \"\"\n}\n```"
+  },
+  "inference_time_sec": 2.813
+}

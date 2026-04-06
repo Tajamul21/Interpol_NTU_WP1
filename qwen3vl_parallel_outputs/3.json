@@ -1,0 +1,77 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/3.jpg",
+  "general": [
+    {
+      "bbox_2d": [
+        466,
+        116,
+        848,
+        912
+      ],
+      "label": "person"
+    },
+    {
+      "bbox_2d": [
+        573,
+        200,
+        728,
+        473
+      ],
+      "label": "face"
+    },
+    {
+      "bbox_2d": [
+        683,
+        628,
+        786,
+        786
+      ],
+      "label": "palm"
+    },
+    {
+      "bbox_2d": [
+        773,
+        648,
+        836,
+        757
+      ],
+      "label": "palm"
+    },
+    {
+      "bbox_2d": [
+        704,
+        867,
+        828,
+        942
+      ],
+      "label": "keyboard"
+    },
+    {
+      "bbox_2d": [
+        0,
+        0,
+        1000,
+        1000
+      ],
+      "label": "hotel room"
+    }
+  ],
+  "person": [
+    {
+      "bbox_2d": [
+        462,
+        112,
+        853,
+        912
+      ],
+      "label": "person"
+    }
+  ],
+  "ocr": [],
+  "raw_outputs": {
+    "general": "```json\n[\n\t{\"bbox_2d\": [466, 116, 848, 912], \"label\": \"person\"},\n\t{\"bbox_2d\": [573, 200, 728, 473], \"label\": \"face\"},\n\t{\"bbox_2d\": [683, 628, 786, 786], \"label\": \"palm\"},\n\t{\"bbox_2d\": [773, 648, 836, 757], \"label\": \"palm\"},\n\t{\"bbox_2d\": [704, 867, 828, 942], \"label\": \"keyboard\"},\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"hotel room\"}\n]\n```",
+    "person": "```json\n[\n\t{\"bbox_2d\": [462, 112, 853, 912], \"label\": \"person\"}\n]\n```",
+    "ocr": "There is no text in the image."
+  },
+  "inference_time_sec": 11.065
+}

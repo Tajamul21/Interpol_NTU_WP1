@@ -1,0 +1,24 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/9.jpg",
+  "general": [],
+  "person": [
+    {
+      "bbox_2d": [
+        0,
+        44,
+        978,
+        1000
+      ],
+      "label": "persons"
+    }
+  ],
+  "ocr": {
+    "text": ""
+  },
+  "raw_outputs": {
+    "general": "```json\n[\n\t{\"bbox_2d\": [0, 41, 972, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [379, 116, 525, 302], \"label\": \"face\"},\n\t{\"bbox_2d\": [317, 787, 375, 841], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [30, 880, 64, 912], \"label\": \"palm\"},\n\t{\"bbox_2d\": [529, 455, 584, 496], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [279, 422, 350, 496], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [529, 831, 570, 869], \"label\": \"genitals\"},\n\t{\"bbox_2d\": [32, 791, 280, 999], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [529, 831, 570, 869], \"label\": \"genitals\"},\n\t{\"bbox_2d\": [279, 422, 350, 496], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [30, 880, 64, 912], \"label\": \"palm\"},\n\t{\"bbox_2d\": [279, 422, 350, 496], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [529, 831, 570, 869], \"label\": \"genitals\"},\n\t{\"bbox_2d\": [529, 831, 570, 869], \"label\": \"genitals\"},\n\t{\"bbox_2d\": [32, 791, 280, 999], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [529, 831, 570, 869], \"label\": \"genitals\"},\n\t{\"bbox_2d\": [529, 831, 570, 869], \"label\": \"genitals\"},\n\t{\"bbox_2d\": [529, 831, 570, 869], \"label\": \"genitals\"},\n\t{\"bbox_2d\": [529, 831, 570, 869], \"label\": \"genitals\"},\n\t{\"bbox_2d\": [529, 831, 570, 869], \"label\": \"genitals\"},\n\t{\"bbox_2d\": [529, 831, 570, 869], \"label\": \"genitals\"},\n\t{\"bbox_2d\": [529, 831, 570, 869], \"label\": \"genitals\"},\n\t{\"bbox_2d\": [529, 831, 570, 869], \"label\": \"genitals\"},\n\t{\"bbox_2d\": [529, 831, 570, 869], \"label\": \"genitals\"},\n\t{\"bbox_2d\": [529, 831, 570, 869], \"label\": \"genitals\"},\n\t{\"bbox_2d\": [529, 831, 570, 869], \"label\": \"genitals\"},\n\t{\"bbox_2d\": [529, 831, 570, 869], \"label\": \"genitals\"},\n\t{\"bbox_2d\": [529, 831, 570, 869], \"label\": \"genitals\"},\n\t{\"bbox_2d\": [529, 831, 570, 869], \"label\": \"genitals\"},\n\t{\"bbox_2d\": [529,",
+    "person": "```json\n[\n\t{\"bbox_2d\": [0, 44, 978, 1000], \"label\": \"persons\"}\n]\n```",
+    "ocr": "```json\n{\n  \"text\": \"\"\n}\n```"
+  },
+  "inference_time_sec": 32.929
+}

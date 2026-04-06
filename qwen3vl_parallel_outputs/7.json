@@ -1,0 +1,222 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/7.jpg",
+  "general": [
+    {
+      "bbox_2d": [
+        0,
+        0,
+        1000,
+        1000
+      ],
+      "label": "keyboard"
+    },
+    {
+      "bbox_2d": [
+        107,
+        336,
+        152,
+        358
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        654,
+        793,
+        728,
+        885
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        564,
+        438,
+        616,
+        518
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        297,
+        477,
+        350,
+        559
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        163,
+        282,
+        219,
+        342
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        408,
+        266,
+        444,
+        316
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        615,
+        247,
+        657,
+        296
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        804,
+        226,
+        839,
+        276
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        797,
+        405,
+        861,
+        480
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        522,
+        119,
+        551,
+        158
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        323,
+        124,
+        380,
+        165
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        131,
+        138,
+        182,
+        182
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        687,
+        106,
+        722,
+        152
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        834,
+        102,
+        868,
+        143
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        412,
+        28,
+        442,
+        62
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        246,
+        36,
+        274,
+        70
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        80,
+        49,
+        104,
+        85
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        573,
+        27,
+        597,
+        56
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        706,
+        19,
+        731,
+        53
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        848,
+        20,
+        874,
+        50
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        956,
+        10,
+        979,
+        40
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        987,
+        106,
+        1000,
+        138
+      ],
+      "label": "text"
+    }
+  ],
+  "person": [],
+  "ocr": {
+    "text": "Q W E R T Y U I O P A S D F G H J K L Z X C V B N M < > ? 1 2 3 4 5 6 7 8 9 0 AUTO Alt"
+  },
+  "raw_outputs": {
+    "general": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"keyboard\"},\n\t{\"bbox_2d\": [107, 336, 152, 358], \"label\": \"text\"},\n\t{\"bbox_2d\": [654, 793, 728, 885], \"label\": \"text\"},\n\t{\"bbox_2d\": [564, 438, 616, 518], \"label\": \"text\"},\n\t{\"bbox_2d\": [297, 477, 350, 559], \"label\": \"text\"},\n\t{\"bbox_2d\": [163, 282, 219, 342], \"label\": \"text\"},\n\t{\"bbox_2d\": [408, 266, 444, 316], \"label\": \"text\"},\n\t{\"bbox_2d\": [615, 247, 657, 296], \"label\": \"text\"},\n\t{\"bbox_2d\": [804, 226, 839, 276], \"label\": \"text\"},\n\t{\"bbox_2d\": [797, 405, 861, 480], \"label\": \"text\"},\n\t{\"bbox_2d\": [522, 119, 551, 158], \"label\": \"text\"},\n\t{\"bbox_2d\": [323, 124, 380, 165], \"label\": \"text\"},\n\t{\"bbox_2d\": [131, 138, 182, 182], \"label\": \"text\"},\n\t{\"bbox_2d\": [687, 106, 722, 152], \"label\": \"text\"},\n\t{\"bbox_2d\": [834, 102, 868, 143], \"label\": \"text\"},\n\t{\"bbox_2d\": [412, 28, 442, 62], \"label\": \"text\"},\n\t{\"bbox_2d\": [246, 36, 274, 70], \"label\": \"text\"},\n\t{\"bbox_2d\": [80, 49, 104, 85], \"label\": \"text\"},\n\t{\"bbox_2d\": [573, 27, 597, 56], \"label\": \"text\"},\n\t{\"bbox_2d\": [706, 19, 731, 53], \"label\": \"text\"},\n\t{\"bbox_2d\": [848, 20, 874, 50], \"label\": \"text\"},\n\t{\"bbox_2d\": [956, 10, 979, 40], \"label\": \"text\"},\n\t{\"bbox_2d\": [987, 106, 1000, 138], \"label\": \"text\"}\n]\n```",
+    "person": "There are none.",
+    "ocr": "```json\n{\n  \"text\": \"Q W E R T Y U I O P A S D F G H J K L Z X C V B N M < > ? 1 2 3 4 5 6 7 8 9 0 AUTO Alt\"\n}\n```"
+  },
+  "inference_time_sec": 34.854
+}

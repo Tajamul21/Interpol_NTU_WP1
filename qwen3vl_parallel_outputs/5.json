@@ -1,0 +1,22 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/5.jpg",
+  "general": [
+    {
+      "bbox_2d": [
+        118,
+        0,
+        509,
+        715
+      ],
+      "label": "blood"
+    }
+  ],
+  "person": [],
+  "ocr": [],
+  "raw_outputs": {
+    "general": "```json\n[\n\t{\"bbox_2d\": [118, 0, 509, 715], \"label\": \"blood\"}\n]\n```",
+    "person": "There are none.",
+    "ocr": "There is no text in the image."
+  },
+  "inference_time_sec": 2.552
+}

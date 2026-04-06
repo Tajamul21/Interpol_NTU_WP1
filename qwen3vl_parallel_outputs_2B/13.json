@@ -1,0 +1,33 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/13.jpg",
+  "general": [
+    {
+      "bbox_2d": [
+        19,
+        279,
+        962,
+        861
+      ],
+      "label": "school uniform"
+    },
+    {
+      "bbox_2d": [
+        575,
+        442,
+        677,
+        521
+      ],
+      "label": "school logos/badges"
+    }
+  ],
+  "person": [],
+  "ocr": {
+    "text": "C Trullex\nHollinswood Primary School\nand Nursery"
+  },
+  "raw_outputs": {
+    "general": "```json\n[\n\t{\"bbox_2d\": [19, 279, 962, 861], \"label\": \"school uniform\"},\n\t{\"bbox_2d\": [575, 442, 677, 521], \"label\": \"school logos/badges\"}\n]\n```",
+    "person": "There are none.",
+    "ocr": "```json\n{\n  \"text\": \"C Trullex\\nHollinswood Primary School\\nand Nursery\"\n}\n```"
+  },
+  "inference_time_sec": 4.695
+}

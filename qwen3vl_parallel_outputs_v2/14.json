@@ -1,0 +1,149 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/14.jpg",
+  "general": [
+    {
+      "bbox_2d": [
+        101,
+        282,
+        418,
+        841
+      ],
+      "label": "person"
+    },
+    {
+      "bbox_2d": [
+        392,
+        108,
+        779,
+        708
+      ],
+      "label": "person"
+    },
+    {
+      "bbox_2d": [
+        254,
+        455,
+        369,
+        608
+      ],
+      "label": "face"
+    },
+    {
+      "bbox_2d": [
+        538,
+        141,
+        616,
+        282
+      ],
+      "label": "face"
+    },
+    {
+      "bbox_2d": [
+        228,
+        796,
+        247,
+        839
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        251,
+        720,
+        333,
+        838
+      ],
+      "label": "palm"
+    },
+    {
+      "bbox_2d": [
+        306,
+        740,
+        386,
+        801
+      ],
+      "label": "palm"
+    },
+    {
+      "bbox_2d": [
+        665,
+        577,
+        742,
+        656
+      ],
+      "label": "palm"
+    },
+    {
+      "bbox_2d": [
+        720,
+        395,
+        778,
+        483
+      ],
+      "label": "palm"
+    },
+    {
+      "bbox_2d": [
+        172,
+        284,
+        213,
+        374
+      ],
+      "label": "palm"
+    },
+    {
+      "bbox_2d": [
+        0,
+        0,
+        999,
+        1000
+      ],
+      "label": "hotel room"
+    },
+    {
+      "bbox_2d": [
+        172,
+        284,
+        213,
+        374
+      ],
+      "label": "feet"
+    },
+    {
+      "bbox_2d": [
+        172,
+        284,
+        213,
+        374
+      ],
+      "label": "feet"
+    }
+  ],
+  "person": [
+    {
+      "bbox_2d": [
+        390,
+        108,
+        780,
+        713
+      ],
+      "label": "person"
+    },
+    {
+      "bbox_2d": [
+        102,
+        288,
+        417,
+        842
+      ],
+      "label": "person"
+    }
+  ],
+  "ocr": [],
+  "raw_outputs": {
+    "general": "```json\n[\n\t{\"bbox_2d\": [101, 282, 418, 841], \"label\": \"person\"},\n\t{\"bbox_2d\": [392, 108, 779, 708], \"label\": \"person\"},\n\t{\"bbox_2d\": [254, 455, 369, 608], \"label\": \"face\"},\n\t{\"bbox_2d\": [538, 141, 616, 282], \"label\": \"face\"},\n\t{\"bbox_2d\": [228, 796, 247, 839], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [251, 720, 333, 838], \"label\": \"palm\"},\n\t{\"bbox_2d\": [306, 740, 386, 801], \"label\": \"palm\"},\n\t{\"bbox_2d\": [665, 577, 742, 656], \"label\": \"palm\"},\n\t{\"bbox_2d\": [720, 395, 778, 483], \"label\": \"palm\"},\n\t{\"bbox_2d\": [172, 284, 213, 374], \"label\": \"palm\"},\n\t{\"bbox_2d\": [0, 0, 999, 1000], \"label\": \"hotel room\"},\n\t{\"bbox_2d\": [172, 284, 213, 374], \"label\": \"feet\"},\n\t{\"bbox_2d\": [172, 284, 213, 374], \"label\": \"feet\"}\n]\n```",
+    "person": "```json\n[\n\t{\"bbox_2d\": [390, 108, 780, 713], \"label\": \"person\"},\n\t{\"bbox_2d\": [102, 288, 417, 842], \"label\": \"person\"}\n]\n```",
+    "ocr": "There is no text in the image."
+  },
+  "inference_time_sec": 24.794
+}

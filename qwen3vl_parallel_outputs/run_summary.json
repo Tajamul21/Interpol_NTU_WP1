@@ -1,0 +1,16 @@
+{
+  "input_folder": "/home2/tajamul/Qwen3VL/images",
+  "output_folder": "./qwen3vl_parallel_outputs",
+  "gpu_ids": [
+    0,
+    4,
+    6,
+    7
+  ],
+  "num_images": 13,
+  "batch_size": 1,
+  "attn": "auto",
+  "allow_tf32": true,
+  "resize_max": 1024,
+  "total_wall_time_sec": 87.02
+}

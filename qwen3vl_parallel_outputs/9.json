@@ -1,0 +1,86 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/9.jpg",
+  "general": [
+    {
+      "bbox_2d": [
+        2,
+        45,
+        999,
+        999
+      ],
+      "label": "person"
+    },
+    {
+      "bbox_2d": [
+        378,
+        116,
+        512,
+        300
+      ],
+      "label": "face"
+    },
+    {
+      "bbox_2d": [
+        280,
+        423,
+        361,
+        515
+      ],
+      "label": "nude body parts like exposed breasts"
+    },
+    {
+      "bbox_2d": [
+        424,
+        436,
+        625,
+        531
+      ],
+      "label": "nude body parts like exposed breasts"
+    },
+    {
+      "bbox_2d": [
+        262,
+        819,
+        362,
+        900
+      ],
+      "label": "genitals"
+    },
+    {
+      "bbox_2d": [
+        339,
+        661,
+        369,
+        694
+      ],
+      "label": "belly"
+    },
+    {
+      "bbox_2d": [
+        3,
+        874,
+        82,
+        917
+      ],
+      "label": "palm"
+    }
+  ],
+  "person": [
+    {
+      "bbox_2d": [
+        0,
+        44,
+        1000,
+        1000
+      ],
+      "label": "person"
+    }
+  ],
+  "ocr": [],
+  "raw_outputs": {
+    "general": "```json\n[\n\t{\"bbox_2d\": [2, 45, 999, 999], \"label\": \"person\"},\n\t{\"bbox_2d\": [378, 116, 512, 300], \"label\": \"face\"},\n\t{\"bbox_2d\": [280, 423, 361, 515], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [424, 436, 625, 531], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [262, 819, 362, 900], \"label\": \"genitals\"},\n\t{\"bbox_2d\": [339, 661, 369, 694], \"label\": \"belly\"},\n\t{\"bbox_2d\": [3, 874, 82, 917], \"label\": \"palm\"}\n]\n```",
+    "person": "```json\n[\n\t{\"bbox_2d\": [0, 44, 1000, 1000], \"label\": \"person\"}\n]\n```",
+    "ocr": "There is no text in the image."
+  },
+  "inference_time_sec": 13.067
+}

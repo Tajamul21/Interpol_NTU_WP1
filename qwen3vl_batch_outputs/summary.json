@@ -1,6 +1,5 @@
 [
   {
-    "status": "ok",
     "image_path": "/home2/tajamul/Qwen3VL/images/1.jpg",
     "categories_requested": [
       "person",
@@ -11,22 +10,18 @@
       "text",
       "weapon",
       "keyboard",
-      "hotel room"
+      "hotel room",
+      "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+      "school uniform",
+      "school logos/badges"
     ],
-    "batch_info": {
-      "batch_size": 1,
-      "area": 1821600,
-      "images_in_batch": [
-        "/home2/tajamul/Qwen3VL/images/1.jpg"
-      ]
-    },
     "general_detections": [
       {
         "label": "person",
         "bbox_2d": [
-          320,
-          121,
-          879,
+          317,
+          120,
+          876,
           997
         ],
         "text_content": ""
@@ -34,70 +29,70 @@
       {
         "label": "face",
         "bbox_2d": [
-          382,
-          159,
-          687,
-          377
+          381,
+          158,
+          685,
+          381
         ],
         "text_content": ""
       },
       {
         "label": "tattoo",
         "bbox_2d": [
-          572,
+          569,
           538,
-          768,
-          757
+          770,
+          762
         ],
         "text_content": ""
       },
       {
         "label": "tattoo",
         "bbox_2d": [
-          704,
-          759,
-          801,
-          823
+          625,
+          802,
+          701,
+          856
         ],
         "text_content": ""
       },
       {
         "label": "tattoo",
         "bbox_2d": [
-          626,
-          801,
-          702,
-          857
+          703,
+          758,
+          803,
+          825
         ],
         "text_content": ""
       },
       {
         "label": "tattoo",
         "bbox_2d": [
-          572,
-          870,
+          570,
+          869,
           633,
-          949
+          959
         ],
         "text_content": ""
       },
       {
         "label": "tattoo",
         "bbox_2d": [
-          527,
-          971,
-          561,
-          999
+          525,
+          973,
+          563,
+          997
         ],
         "text_content": ""
       },
       {
         "label": "tattoo",
         "bbox_2d": [
-          657,
-          949,
-          735,
-          999
+          655,
+          954,
+          729,
+          997
         ],
         "text_content": ""
       },
@@ -105,9 +100,9 @@
         "label": "text",
         "bbox_2d": [
           346,
-          649,
-          485,
-          808
+          652,
+          471,
+          793
         ],
         "text_content": ""
       }
@@ -117,27 +112,27 @@
         "label": "person",
         "bbox_2d": [
           319,
-          119,
+          120,
           884,
           997
         ],
         "face_bbox_2d": [
           379,
-          157,
-          692,
-          378
+          158,
+          689,
+          381
         ],
         "action": "leaning against wall",
-        "gender": "",
-        "ethnicity": "",
-        "age": "",
+        "gender": "female",
+        "ethnicity": "white",
+        "age": "25-35",
         "visible_clothing": [
           "tank top"
         ],
         "visible_accessories": [
           "nose ring",
           "earring",
-          "necklace"
+          "choker"
         ],
         "tattoo_detected": true,
         "blood_visible": false,
@@ -149,119 +144,1103 @@
       {
         "label": "text",
         "bbox_2d": [
-          354,
-          651,
+          356,
+          653,
           408,
           679
         ],
-        "text_content": "OF FIKEDOS"
-      },
-      {
-        "label": "text",
-        "bbox_2d": [
-          355,
-          673,
-          394,
-          686
-        ],
-        "text_content": "AT CAME"
+        "text_content": "FIRE DOS"
       },
       {
         "label": "text",
         "bbox_2d": [
           354,
-          686,
-          374,
-          701
+          672,
+          396,
+          687
         ],
-        "text_content": "Pud"
+        "text_content": "AT GANER"
       },
       {
         "label": "text",
         "bbox_2d": [
-          346,
-          686,
+          354,
+          685,
+          373,
+          700
+        ],
+        "text_content": "-Pedr-"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          351,
+          683,
+          462,
+          787
+        ],
+        "text_content": "Cocktail."
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          418,
+          790,
+          465,
+          810
+        ],
+        "text_content": ".01"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          418,
+          802,
           464,
-          785
+          817
         ],
-        "text_content": "Ck."
+        "text_content": "ENDING"
       },
       {
         "label": "text",
         "bbox_2d": [
-          419,
-          793,
-          468,
-          811
+          374,
+          821,
+          429,
+          854
         ],
-        "text_content": ".01 ENDING"
+        "text_content": "a pool of"
       },
       {
         "label": "text",
         "bbox_2d": [
-          375,
-          825,
-          433,
-          851
+          376,
+          840,
+          427,
+          864
         ],
-        "text_content": "a part of"
+        "text_content": "Tattoos"
       },
       {
         "label": "text",
         "bbox_2d": [
-          379,
-          842,
-          438,
-          867
+          574,
+          925,
+          707,
+          963
         ],
-        "text_content": "16 Tattoos"
+        "text_content": "never forget"
       }
     ],
-    "timings_ms": {
-      "general_detection": {
-        "batch_size": 1,
-        "preprocess_wall_ms": 194.196,
-        "generate_gpu_ms": 14622.381,
-        "generate_wall_ms": 14622.879,
-        "decode_wall_ms": 0.572,
-        "total_wall_ms": 14817.662,
-        "amortized_total_wall_ms": 14817.662,
-        "amortized_generate_gpu_ms": 14622.381
-      },
-      "person_detection": {
-        "batch_size": 1,
-        "preprocess_wall_ms": 76.931,
-        "generate_gpu_ms": 5769.542,
-        "generate_wall_ms": 5769.78,
-        "decode_wall_ms": 0.445,
-        "total_wall_ms": 5847.168,
-        "amortized_total_wall_ms": 5847.168,
-        "amortized_generate_gpu_ms": 5769.542
-      },
-      "ocr": {
-        "batch_size": 1,
-        "preprocess_wall_ms": 75.096,
-        "generate_gpu_ms": 13097.957,
-        "generate_wall_ms": 13098.296,
-        "decode_wall_ms": 0.553,
-        "total_wall_ms": 13173.965,
-        "amortized_total_wall_ms": 13173.965,
-        "amortized_generate_gpu_ms": 13097.957
-      },
-      "inference_latency_ms": 33838.795,
-      "amortized_inference_ms": 33838.795,
-      "generate_gpu_latency_ms": 33489.88,
-      "amortized_generate_gpu_ms": 33489.88,
-      "image_total_wall_ms": 34267.006
-    },
     "raw_responses": {
-      "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [320, 121, 879, 997]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [382, 159, 687, 377]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [572, 538, 768, 757]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [704, 759, 801, 823]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [626, 801, 702, 857]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [572, 870, 633, 949]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [527, 971, 561, 999]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [657, 949, 735, 999]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [346, 649, 485, 808]\n  }\n]",
-      "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [319, 119, 884, 997],\n    \"face_bbox_2d\": [379, 157, 692, 378],\n    \"action\": \"leaning against wall\",\n    \"visible_clothing\": [\"tank top\"],\n    \"visible_accessories\": [\"nose ring\", \"earring\", \"necklace\"],\n    \"tattoo_detected\": true,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  }\n]",
-      "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [354, 651, 408, 679],\n    \"text_content\": \"OF FIKEDOS\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [355, 673, 394, 686],\n    \"text_content\": \"AT CAME\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [354, 686, 374, 701],\n    \"text_content\": \"Pud\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [346, 686, 464, 785],\n    \"text_content\": \"Ck.\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [419, 793, 468, 811],\n    \"text_content\": \".01 ENDING\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [375, 825, 433, 851],\n    \"text_content\": \"a part of\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [379, 842, 438, 867],\n    \"text_content\": \"16 Tattoos\"\n  }\n]"
+      "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [317, 120, 876, 997]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [381, 158, 685, 381]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [569, 538, 770, 762]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [625, 802, 701, 856]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [703, 758, 803, 825]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [570, 869, 633, 959]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [525, 973, 563, 997]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [655, 954, 729, 997]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [346, 652, 471, 793]\n  }\n]",
+      "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [319, 120, 884, 997],\n    \"face_bbox_2d\": [379, 158, 689, 381],\n    \"action\": \"leaning against wall\",\n    \"gender\": \"female\",\n    \"age\": \"25-35\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"tank top\"],\n    \"visible_accessories\": [\"nose ring\", \"earring\", \"choker\"],\n    \"tattoo_detected\": true,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  }\n]",
+      "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [356, 653, 408, 679],\n    \"text_content\": \"FIRE DOS\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [354, 672, 396, 687],\n    \"text_content\": \"AT GANER\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [354, 685, 373, 700],\n    \"text_content\": \"-Pedr-\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [351, 683, 462, 787],\n    \"text_content\": \"Cocktail.\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [418, 790, 465, 810],\n    \"text_content\": \".01\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [418, 802, 464, 817],\n    \"text_content\": \"ENDING\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [374, 821, 429, 854],\n    \"text_content\": \"a pool of\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [376, 840, 427, 864],\n    \"text_content\": \"Tattoos\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [574, 925, 707, 963],\n    \"text_content\": \"never forget\"\n  }\n]"
     }
   },
   {
-    "status": "ok",
+    "image_path": "/home2/tajamul/Qwen3VL/images/10.jpg",
+    "categories_requested": [
+      "person",
+      "face",
+      "tattoo",
+      "blood",
+      "palm",
+      "text",
+      "weapon",
+      "keyboard",
+      "hotel room",
+      "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+      "school uniform",
+      "school logos/badges"
+    ],
+    "general_detections": [],
+    "persons": [
+      {
+        "label": "person",
+        "bbox_2d": [
+          79,
+          51,
+          285,
+          982
+        ],
+        "face_bbox_2d": [
+          177,
+          79,
+          239,
+          185
+        ],
+        "action": "standing",
+        "gender": "male",
+        "ethnicity": "white",
+        "age": "12-15",
+        "visible_clothing": [
+          "blazer",
+          "tie",
+          "shirt",
+          "pants",
+          "shoes"
+        ],
+        "visible_accessories": [],
+        "tattoo_detected": false,
+        "blood_visible": false,
+        "palm_visible": false,
+        "weapon_near_person": false
+      },
+      {
+        "label": "person",
+        "bbox_2d": [
+          293,
+          121,
+          443,
+          961
+        ],
+        "face_bbox_2d": [
+          329,
+          139,
+          397,
+          234
+        ],
+        "action": "standing",
+        "gender": "male",
+        "ethnicity": "white",
+        "age": "12-15",
+        "visible_clothing": [
+          "sweater",
+          "tie",
+          "shirt",
+          "pants",
+          "shoes"
+        ],
+        "visible_accessories": [
+          "glasses"
+        ],
+        "tattoo_detected": false,
+        "blood_visible": false,
+        "palm_visible": true,
+        "weapon_near_person": false
+      },
+      {
+        "label": "person",
+        "bbox_2d": [
+          455,
+          162,
+          600,
+          927
+        ],
+        "face_bbox_2d": [
+          499,
+          176,
+          555,
+          265
+        ],
+        "action": "standing",
+        "gender": "female",
+        "ethnicity": "white",
+        "age": "12-15",
+        "visible_clothing": [
+          "shirt",
+          "skirt",
+          "socks",
+          "shoes"
+        ],
+        "visible_accessories": [],
+        "tattoo_detected": false,
+        "blood_visible": false,
+        "palm_visible": true,
+        "weapon_near_person": false
+      },
+      {
+        "label": "person",
+        "bbox_2d": [
+          588,
+          97,
+          749,
+          905
+        ],
+        "face_bbox_2d": [
+          639,
+          132,
+          694,
+          213
+        ],
+        "action": "standing",
+        "gender": "female",
+        "ethnicity": "white",
+        "age": "12-15",
+        "visible_clothing": [
+          "sweater",
+          "shirt",
+          "skirt",
+          "socks",
+          "shoes"
+        ],
+        "visible_accessories": [],
+        "tattoo_detected": false,
+        "blood_visible": false,
+        "palm_visible": true,
+        "weapon_near_person": false
+      },
+      {
+        "label": "person",
+        "bbox_2d": [
+          754,
+          100,
+          920,
+          915
+        ],
+        "face_bbox_2d": [
+          810,
+          116,
+          859,
+          214
+        ],
+        "action": "standing",
+        "gender": "female",
+        "ethnicity": "white",
+        "age": "12-15",
+        "visible_clothing": [
+          "sweater",
+          "shirt",
+          "skirt",
+          "socks",
+          "shoes"
+        ],
+        "visible_accessories": [],
+        "tattoo_detected": false,
+        "blood_visible": false,
+        "palm_visible": true,
+        "weapon_near_person": false
+      }
+    ],
+    "ocr_texts": [
+      {
+        "label": "text",
+        "bbox_2d": [
+          66,
+          278,
+          123,
+          315
+        ],
+        "text_content": "Winchmorn"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          75,
+          297,
+          116,
+          316
+        ],
+        "text_content": "School"
+      }
+    ],
+    "raw_responses": {
+      "general_detection": "```json\n[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [754, 100, 919, 915]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [586, 97, 747, 903]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [456, 161, 598, 926]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [294, 122, 442, 960]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [80, 52, 285, 980]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [179, 82, 236, 181]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [332, 145, 396, 231]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [501, 175, 553, 262]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [638, 126, 693, 208]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [808, 115, 860, 212]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [338, 501, 394, 547]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [353, 512, 394, 553]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [514, 541, 550, 584]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [642, 464, 695, 533]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [692, 255, 712, 265]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [79, 903, 152, 983]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [181, 898, 229, 974]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [306, 885, 371, 958]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [383, 884, 442, 959]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [468, 862, 512, 927]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [506, 859, 561, 921]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [635, 827, 674, 901]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [670, 827, 712, 901]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [814, 835, 856, 912]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [847, 835, 888, 912]\n  },\n  {\n    \"label\": \"school uniform\",\n    \"bbox_2d\": [754, 235, 919, 620]\n  },\n  {\n    \"label\": \"school uniform\",\n    \"bbox_2d\": [586,",
+      "person_detection": "```json\n[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [79, 51, 285, 982],\n    \"face_bbox_2d\": [177, 79, 239, 185],\n    \"action\": \"standing\",\n    \"gender\": \"male\",\n    \"age\": \"12-15\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"blazer\", \"tie\", \"shirt\", \"pants\", \"shoes\"],\n    \"visible_accessories\": [],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [293, 121, 443, 961],\n    \"face_bbox_2d\": [329, 139, 397, 234],\n    \"action\": \"standing\",\n    \"gender\": \"male\",\n    \"age\": \"12-15\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"sweater\", \"tie\", \"shirt\", \"pants\", \"shoes\"],\n    \"visible_accessories\": [\"glasses\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [455, 162, 600, 927],\n    \"face_bbox_2d\": [499, 176, 555, 265],\n    \"action\": \"standing\",\n    \"gender\": \"female\",\n    \"age\": \"12-15\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"shirt\", \"skirt\", \"socks\", \"shoes\"],\n    \"visible_accessories\": [],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [588, 97, 749, 905],\n    \"face_bbox_2d\": [639, 132, 694, 213],\n    \"action\": \"standing\",\n    \"gender\": \"female\",\n    \"age\": \"12-15\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"sweater\", \"shirt\", \"skirt\", \"socks\", \"shoes\"],\n    \"visible_accessories\": [],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [754, 100, 920, 915],\n    \"face_bbox_2d\": [810, 116, 859, 214],\n    \"action\": \"standing\",\n    \"gender\": \"female\",\n    \"age\": \"12-15\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"sweater\", \"shirt\", \"skirt\", \"socks\", \"shoes\"],\n    \"visible_accessories\": [],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  }\n]\n```",
+      "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [66, 278, 123, 315],\n    \"text_content\": \"Winchmorn\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [75, 297, 116, 316],\n    \"text_content\": \"School\"\n  }\n]"
+    }
+  },
+  {
+    "image_path": "/home2/tajamul/Qwen3VL/images/11.jpeg",
+    "categories_requested": [
+      "person",
+      "face",
+      "tattoo",
+      "blood",
+      "palm",
+      "text",
+      "weapon",
+      "keyboard",
+      "hotel room",
+      "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+      "school uniform",
+      "school logos/badges"
+    ],
+    "general_detections": [],
+    "persons": [],
+    "ocr_texts": [],
+    "raw_responses": {
+      "general_detection": "```json\n[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [0, 299, 188, 998]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [166, 272, 287, 998]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [225, 228, 405, 998]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [395, 194, 570, 998]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [548, 291, 744, 998]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [715, 247, 870, 998]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [814, 246, 1000, 998]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [41, 348, 101, 460]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [211, 328, 266, 442]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [297, 267, 357, 380]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [445, 260, 507, 391]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [653, 320, 714, 440]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [755, 271, 815, 396]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [875, 288, 941, 414]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [400, 572, 438, 646]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [497, 706, 539, 758]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [555, 734, 592, 834]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [680, 798, 723, 883]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [806, 784, 847, 865]\n  },\n  {\n    \"label\": \"school uniform\",\n    \"bbox_2d\": [0, 428, 188, 998]\n  },\n  {\n    \"label\": \"school uniform\",\n    \"bbox_2d\": [166, 428, 287, 998]\n  },\n  {\n    \"label\": \"school uniform\",\n    \"bbox_2d\": [225, 373, 405, 998]\n  },\n  {\n    \"label\": \"school uniform\",\n    \"bbox_2d\": [395, 370, 570, 998]\n  },\n  {\n    \"label\": \"school uniform\",\n    \"bbox_2d\": [548, 408, 744, 998]\n  },\n  {\n    \"label\": \"school uniform\",\n    \"bbox_2d\": [715, 382, 870, 998]\n  },\n  {\n    \"label\": \"school uniform\",\n    \"bbox_2d\": [814, 400, 1000, 998]\n  },\n  {\n    \"label\": \"school logos/badges\",\n    \"bbox_2d\": [41",
+      "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [0, 300, 188, 998],\n    \"face_bbox_2d\": [38, 335, 104, 459],\n    \"action\": \"smiling, holding backpack straps\",\n    \"gender\": \"male\",\n    \"age\": \"10-12\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"white shirt\", \"dark trousers\", \"grey skirt\"],\n    \"visible_accessories\": [\"blue striped tie\", \"backpack\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [166, 272, 285, 998],\n    \"face_bbox_2d\": [209, 326, 267, 443],\n    \"action\": \"smiling, adjusting backpack\",\n    \"gender\": \"female\",\n    \"age\": \"10-12\",\n    \"ethnicity\": \"black\",\n    \"visible_clothing\": [\"white shirt\", \"dark trousers\", \"grey skirt\"],\n    \"visible_accessories\": [\"blue striped tie\", \"backpack\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [225, 228, 407, 998],\n    \"face_bbox_2d\": [295, 270, 355, 383],\n    \"action\": \"smiling, adjusting backpack\",\n    \"gender\": \"male\",\n    \"age\": \"10-12\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"white shirt\", \"dark trousers\", \"grey skirt\"],\n    \"visible_accessories\": [\"blue striped tie\", \"backpack\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [395, 194, 571, 998],\n    \"face_bbox_2d\": [445, 260, 508, 393],\n    \"action\": \"laughing, hand in pocket\",\n    \"gender\": \"male\",\n    \"age\": \"10-12\",\n    \"ethnicity\": \"black\",\n    \"visible_clothing\": [\"white shirt\", \"dark trousers\", \"grey skirt\"],\n    \"visible_accessories\": [\"blue striped tie\", \"backpack\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [547, 290, 745, 998],\n    \"face_bbox_2d\": [654, 320, 717, 443],\n    \"action\": \"laughing, hand on hip\",\n    \"gender\": \"female\",\n    \"age\": \"10-12\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"white shirt\", \"dark trousers\", \"grey skirt\"],\n    \"visible_accessories\": [\"blue striped tie\", \"backpack\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [712, 248, 870, 998],\n    \"face_bbox_2d\": [756, 270, 815, 398],\n    \"action\": \"smiling, hand on shoulder\",\n    \"gender\": \"female\",\n    \"age\": \"10-12\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"white shirt\", \"dark trousers\", \"grey skirt\"],\n    \"visible_accessories\": [\"blue striped tie\", \"backpack\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\":",
+      "ocr": "[]"
+    }
+  },
+  {
+    "image_path": "/home2/tajamul/Qwen3VL/images/12.jpg",
+    "categories_requested": [
+      "person",
+      "face",
+      "tattoo",
+      "blood",
+      "palm",
+      "text",
+      "weapon",
+      "keyboard",
+      "hotel room",
+      "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+      "school uniform",
+      "school logos/badges"
+    ],
+    "general_detections": [],
+    "persons": [
+      {
+        "label": "person",
+        "bbox_2d": [
+          37,
+          239,
+          277,
+          958
+        ],
+        "face_bbox_2d": [
+          132,
+          262,
+          198,
+          355
+        ],
+        "action": "standing with hands on hips",
+        "gender": "female",
+        "ethnicity": "white",
+        "age": "8-10",
+        "visible_clothing": [
+          "white shirt",
+          "plaid skirt",
+          "grey socks",
+          "brown shoes"
+        ],
+        "visible_accessories": [
+          "dark blue tie",
+          "bracelet"
+        ],
+        "tattoo_detected": false,
+        "blood_visible": false,
+        "palm_visible": false,
+        "weapon_near_person": false
+      },
+      {
+        "label": "person",
+        "bbox_2d": [
+          244,
+          42,
+          527,
+          943
+        ],
+        "face_bbox_2d": [
+          348,
+          96,
+          428,
+          183
+        ],
+        "action": "standing with hands by sides",
+        "gender": "male",
+        "ethnicity": "white",
+        "age": "10-12",
+        "visible_clothing": [
+          "white shirt",
+          "grey trousers",
+          "brown shoes"
+        ],
+        "visible_accessories": [
+          "dark green tie"
+        ],
+        "tattoo_detected": false,
+        "blood_visible": false,
+        "palm_visible": false,
+        "weapon_near_person": false
+      },
+      {
+        "label": "person",
+        "bbox_2d": [
+          473,
+          217,
+          688,
+          967
+        ],
+        "face_bbox_2d": [
+          547,
+          243,
+          623,
+          335
+        ],
+        "action": "standing with hands open",
+        "gender": "female",
+        "ethnicity": "white",
+        "age": "6-8",
+        "visible_clothing": [
+          "white shirt",
+          "plaid skirt",
+          "dark socks",
+          "brown shoes"
+        ],
+        "visible_accessories": [],
+        "tattoo_detected": false,
+        "blood_visible": false,
+        "palm_visible": true,
+        "weapon_near_person": false
+      },
+      {
+        "label": "person",
+        "bbox_2d": [
+          666,
+          106,
+          962,
+          953
+        ],
+        "face_bbox_2d": [
+          757,
+          148,
+          850,
+          249
+        ],
+        "action": "standing with hands in pockets",
+        "gender": "male",
+        "ethnicity": "white",
+        "age": "8-10",
+        "visible_clothing": [
+          "white shirt",
+          "grey trousers",
+          "black shoes"
+        ],
+        "visible_accessories": [
+          "dark green tie"
+        ],
+        "tattoo_detected": false,
+        "blood_visible": false,
+        "palm_visible": false,
+        "weapon_near_person": false
+      }
+    ],
+    "ocr_texts": [
+      {
+        "label": "text",
+        "bbox_2d": [
+          0,
+          15,
+          186,
+          115
+        ],
+        "text_content": "ay sol"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          0,
+          154,
+          185,
+          192
+        ],
+        "text_content": "umamos"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          23,
+          244,
+          64,
+          300
+        ],
+        "text_content": "7"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          46,
+          339,
+          81,
+          386
+        ],
+        "text_content": "2"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          535,
+          5,
+          757,
+          66
+        ],
+        "text_content": "2+0=2"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          542,
+          87,
+          763,
+          144
+        ],
+        "text_content": "2+1=3"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          546,
+          169,
+          714,
+          227
+        ],
+        "text_content": "2+2="
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          638,
+          260,
+          680,
+          314
+        ],
+        "text_content": "3"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          957,
+          1,
+          1000,
+          55
+        ],
+        "text_content": "2"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          961,
+          73,
+          1000,
+          126
+        ],
+        "text_content": "2"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          970,
+          163,
+          1000,
+          217
+        ],
+        "text_content": "2"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          967,
+          250,
+          997,
+          306
+        ],
+        "text_content": "2"
+      }
+    ],
+    "raw_responses": {
+      "general_detection": "```json\n[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [37, 240, 278, 958]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [244, 43, 527, 943]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [472, 218, 688, 968]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [667, 107, 962, 953]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [130, 263, 200, 357]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [351, 99, 429, 184]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [548, 242, 624, 335]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [757, 147, 853, 248]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [544, 445, 596, 491]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [576, 524, 651, 568]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [0, 15, 186, 112]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [0, 156, 186, 192]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [530, 8, 759, 65]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [541, 88, 763, 146]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [547, 169, 715, 225]\n  },\n  {\n    \"label\": \"school uniform\",\n    \"bbox_2d\": [37, 350, 278, 758]\n  },\n  {\n    \"label\": \"school uniform\",\n    \"bbox_2d\": [244, 170, 527, 900]\n  },\n  {\n    \"label\": \"school uniform\",\n    \"bbox_2d\": [472, 328, 688, 730]\n  },\n  {\n    \"label\": \"school uniform\",\n    \"bbox_2d\": [667, 233, 962, 906]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [137, 887, 192, 958]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [183, 799, 247, 907]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [274, 874, 370, 943]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [423, 865, 495, 932]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [524, 903, 579, 968]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [570, 896, 620, 961]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [719, 894, 784, 952]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [814, 882, 890,",
+      "person_detection": "```json\n[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [37, 239, 277, 958],\n    \"face_bbox_2d\": [132, 262, 198, 355],\n    \"action\": \"standing with hands on hips\",\n    \"gender\": \"female\",\n    \"age\": \"8-10\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"white shirt\", \"plaid skirt\", \"grey socks\", \"brown shoes\"],\n    \"visible_accessories\": [\"dark blue tie\", \"bracelet\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [244, 42, 527, 943],\n    \"face_bbox_2d\": [348, 96, 428, 183],\n    \"action\": \"standing with hands by sides\",\n    \"gender\": \"male\",\n    \"age\": \"10-12\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"white shirt\", \"grey trousers\", \"brown shoes\"],\n    \"visible_accessories\": [\"dark green tie\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [473, 217, 688, 967],\n    \"face_bbox_2d\": [547, 243, 623, 335],\n    \"action\": \"standing with hands open\",\n    \"gender\": \"female\",\n    \"age\": \"6-8\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"white shirt\", \"plaid skirt\", \"dark socks\", \"brown shoes\"],\n    \"visible_accessories\": [],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [666, 106, 962, 953],\n    \"face_bbox_2d\": [757, 148, 850, 249],\n    \"action\": \"standing with hands in pockets\",\n    \"gender\": \"male\",\n    \"age\": \"8-10\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"white shirt\", \"grey trousers\", \"black shoes\"],\n    \"visible_accessories\": [\"dark green tie\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  }\n]\n```",
+      "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [0, 15, 186, 115],\n    \"text_content\": \"ay sol\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [0, 154, 185, 192],\n    \"text_content\": \"umamos\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [23, 244, 64, 300],\n    \"text_content\": \"7\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [46, 339, 81, 386],\n    \"text_content\": \"2\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [535, 5, 757, 66],\n    \"text_content\": \"2+0=2\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [542, 87, 763, 144],\n    \"text_content\": \"2+1=3\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [546, 169, 714, 227],\n    \"text_content\": \"2+2=\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [638, 260, 680, 314],\n    \"text_content\": \"3\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [957, 1, 1000, 55],\n    \"text_content\": \"2\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [961, 73, 1000, 126],\n    \"text_content\": \"2\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [970, 163, 1000, 217],\n    \"text_content\": \"2\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [967, 250, 997, 306],\n    \"text_content\": \"2\"\n  }\n]"
+    }
+  },
+  {
+    "image_path": "/home2/tajamul/Qwen3VL/images/13.jpg",
+    "categories_requested": [
+      "person",
+      "face",
+      "tattoo",
+      "blood",
+      "palm",
+      "text",
+      "weapon",
+      "keyboard",
+      "hotel room",
+      "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+      "school uniform",
+      "school logos/badges"
+    ],
+    "general_detections": [
+      {
+        "label": "school uniform",
+        "bbox_2d": [
+          19,
+          279,
+          959,
+          863
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "school logos/badges",
+        "bbox_2d": [
+          576,
+          444,
+          677,
+          537
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          557,
+          516,
+          695,
+          541
+        ],
+        "text_content": ""
+      }
+    ],
+    "persons": [],
+    "ocr_texts": [
+      {
+        "label": "text",
+        "bbox_2d": [
+          457,
+          334,
+          515,
+          345
+        ],
+        "text_content": "C.truLex"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          556,
+          519,
+          695,
+          531
+        ],
+        "text_content": "Hilnswood Primary School"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          587,
+          531,
+          664,
+          540
+        ],
+        "text_content": "and Nursery"
+      }
+    ],
+    "raw_responses": {
+      "general_detection": "[\n  {\n    \"label\": \"school uniform\",\n    \"bbox_2d\": [19, 279, 959, 863]\n  },\n  {\n    \"label\": \"school logos/badges\",\n    \"bbox_2d\": [576, 444, 677, 537]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [557, 516, 695, 541]\n  }\n]",
+      "person_detection": "[]",
+      "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [457, 334, 515, 345],\n    \"text_content\": \"C.truLex\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [556, 519, 695, 531],\n    \"text_content\": \"Hilnswood Primary School\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [587, 531, 664, 540],\n    \"text_content\": \"and Nursery\"\n  }\n]"
+    }
+  },
+  {
+    "image_path": "/home2/tajamul/Qwen3VL/images/14.jpg",
+    "categories_requested": [
+      "person",
+      "face",
+      "tattoo",
+      "blood",
+      "palm",
+      "text",
+      "weapon",
+      "keyboard",
+      "hotel room",
+      "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+      "school uniform",
+      "school logos/badges"
+    ],
+    "general_detections": [
+      {
+        "label": "person",
+        "bbox_2d": [
+          109,
+          307,
+          416,
+          837
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "person",
+        "bbox_2d": [
+          392,
+          108,
+          779,
+          713
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "face",
+        "bbox_2d": [
+          253,
+          452,
+          372,
+          618
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "face",
+        "bbox_2d": [
+          534,
+          136,
+          616,
+          287
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "palm",
+        "bbox_2d": [
+          717,
+          398,
+          779,
+          481
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "hotel room",
+        "bbox_2d": [
+          0,
+          0,
+          1000,
+          1000
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "feet",
+        "bbox_2d": [
+          170,
+          280,
+          253,
+          493
+        ],
+        "text_content": ""
+      }
+    ],
+    "persons": [
+      {
+        "label": "person",
+        "bbox_2d": [
+          107,
+          282,
+          416,
+          839
+        ],
+        "face_bbox_2d": [
+          244,
+          455,
+          373,
+          625
+        ],
+        "action": "lying on bed, looking at phone",
+        "gender": "female",
+        "ethnicity": "caucasian",
+        "age": "25-35",
+        "visible_clothing": [
+          "light blue shirt",
+          "pants"
+        ],
+        "visible_accessories": [
+          "watch"
+        ],
+        "tattoo_detected": false,
+        "blood_visible": false,
+        "palm_visible": true,
+        "weapon_near_person": false
+      },
+      {
+        "label": "person",
+        "bbox_2d": [
+          392,
+          107,
+          781,
+          711
+        ],
+        "face_bbox_2d": [
+          532,
+          142,
+          616,
+          286
+        ],
+        "action": "sitting on bed, holding remote",
+        "gender": "male",
+        "ethnicity": "caucasian",
+        "age": "25-35",
+        "visible_clothing": [
+          "pink shirt",
+          "dark pants"
+        ],
+        "visible_accessories": [],
+        "tattoo_detected": false,
+        "blood_visible": false,
+        "palm_visible": true,
+        "weapon_near_person": false
+      }
+    ],
+    "ocr_texts": [],
+    "raw_responses": {
+      "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [109, 307, 416, 837]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [392, 108, 779, 713]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [253, 452, 372, 618]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [534, 136, 616, 287]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [717, 398, 779, 481]\n  },\n  {\n    \"label\": \"hotel room\",\n    \"bbox_2d\": [0, 0, 1000, 1000]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [170, 280, 253, 493]\n  }\n]",
+      "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [107, 282, 416, 839],\n    \"face_bbox_2d\": [244, 455, 373, 625],\n    \"action\": \"lying on bed, looking at phone\",\n    \"gender\": \"female\",\n    \"age\": \"25-35\",\n    \"ethnicity\": \"caucasian\",\n    \"visible_clothing\": [\"light blue shirt\", \"pants\"],\n    \"visible_accessories\": [\"watch\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [392, 107, 781, 711],\n    \"face_bbox_2d\": [532, 142, 616, 286],\n    \"action\": \"sitting on bed, holding remote\",\n    \"gender\": \"male\",\n    \"age\": \"25-35\",\n    \"ethnicity\": \"caucasian\",\n    \"visible_clothing\": [\"pink shirt\", \"dark pants\"],\n    \"visible_accessories\": [],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  }\n]",
+      "ocr": "[]"
+    }
+  },
+  {
+    "image_path": "/home2/tajamul/Qwen3VL/images/15.jpeg",
+    "categories_requested": [
+      "person",
+      "face",
+      "tattoo",
+      "blood",
+      "palm",
+      "text",
+      "weapon",
+      "keyboard",
+      "hotel room",
+      "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+      "school uniform",
+      "school logos/badges"
+    ],
+    "general_detections": [
+      {
+        "label": "school uniform",
+        "bbox_2d": [
+          0,
+          0,
+          1000,
+          1000
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "school logos/badges",
+        "bbox_2d": [
+          406,
+          350,
+          798,
+          906
+        ],
+        "text_content": ""
+      }
+    ],
+    "persons": [
+      {
+        "label": "person",
+        "bbox_2d": [
+          0,
+          0,
+          1000,
+          1000
+        ],
+        "face_bbox_2d": null,
+        "action": "",
+        "gender": "other",
+        "ethnicity": "",
+        "age": "",
+        "visible_clothing": [
+          "blazer",
+          "shirt"
+        ],
+        "visible_accessories": [
+          "lanyard"
+        ],
+        "tattoo_detected": false,
+        "blood_visible": false,
+        "palm_visible": false,
+        "weapon_near_person": false
+      }
+    ],
+    "ocr_texts": [
+      {
+        "label": "text",
+        "bbox_2d": [
+          607,
+          370,
+          773,
+          886
+        ],
+        "text_content": "A"
+      }
+    ],
+    "raw_responses": {
+      "general_detection": "[\n  {\n    \"label\": \"school uniform\",\n    \"bbox_2d\": [0, 0, 1000, 1000]\n  },\n  {\n    \"label\": \"school logos/badges\",\n    \"bbox_2d\": [406, 350, 798, 906]\n  }\n]",
+      "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [0, 0, 1000, 1000],\n    \"face_bbox_2d\": [],\n    \"action\": \"\",\n    \"gender\": \"other\",\n    \"age\": \"\",\n    \"ethnicity\": \"\",\n    \"visible_clothing\": [\n      \"blazer\",\n      \"shirt\"\n    ],\n    \"visible_accessories\": [\n      \"lanyard\"\n    ],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  }\n]",
+      "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [607, 370, 773, 886], \"text_content\": \"A\"\n  }\n]"
+    }
+  },
+  {
+    "image_path": "/home2/tajamul/Qwen3VL/images/16.jpg",
+    "categories_requested": [
+      "person",
+      "face",
+      "tattoo",
+      "blood",
+      "palm",
+      "text",
+      "weapon",
+      "keyboard",
+      "hotel room",
+      "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+      "school uniform",
+      "school logos/badges"
+    ],
+    "general_detections": [
+      {
+        "label": "person",
+        "bbox_2d": [
+          342,
+          363,
+          511,
+          608
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "person",
+        "bbox_2d": [
+          567,
+          487,
+          700,
+          582
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "face",
+        "bbox_2d": [
+          405,
+          382,
+          460,
+          487
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "face",
+        "bbox_2d": [
+          630,
+          504,
+          682,
+          575
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "hotel room",
+        "bbox_2d": [
+          0,
+          0,
+          1000,
+          1000
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "nude body parts like exposed breasts, genitals, or buttocks",
+        "bbox_2d": [
+          342,
+          487,
+          511,
+          608
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "nude body parts like exposed breasts, genitals, or buttocks",
+        "bbox_2d": [
+          567,
+          504,
+          700,
+          582
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "belly",
+        "bbox_2d": [
+          382,
+          508,
+          498,
+          580
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "armpits",
+        "bbox_2d": [
+          351,
+          504,
+          429,
+          580
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "armpits",
+        "bbox_2d": [
+          578,
+          508,
+          643,
+          580
+        ],
+        "text_content": ""
+      }
+    ],
+    "persons": [
+      {
+        "label": "person",
+        "bbox_2d": [
+          335,
+          360,
+          511,
+          610
+        ],
+        "face_bbox_2d": [
+          400,
+          380,
+          462,
+          487
+        ],
+        "action": "holding phone",
+        "gender": "male",
+        "ethnicity": "caucasian",
+        "age": "30-40",
+        "visible_clothing": [],
+        "visible_accessories": [],
+        "tattoo_detected": false,
+        "blood_visible": false,
+        "palm_visible": false,
+        "weapon_near_person": false
+      },
+      {
+        "label": "person",
+        "bbox_2d": [
+          570,
+          484,
+          703,
+          593
+        ],
+        "face_bbox_2d": [
+          630,
+          500,
+          692,
+          567
+        ],
+        "action": "sleeping",
+        "gender": "female",
+        "ethnicity": "caucasian",
+        "age": "25-35",
+        "visible_clothing": [],
+        "visible_accessories": [],
+        "tattoo_detected": false,
+        "blood_visible": false,
+        "palm_visible": false,
+        "weapon_near_person": false
+      }
+    ],
+    "ocr_texts": [],
+    "raw_responses": {
+      "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [342, 363, 511, 608]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [567, 487, 700, 582]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [405, 382, 460, 487]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [630, 504, 682, 575]\n  },\n  {\n    \"label\": \"hotel room\",\n    \"bbox_2d\": [0, 0, 1000, 1000]\n  },\n  {\n    \"label\": \"nude body parts like exposed breasts, genitals, or buttocks\",\n    \"bbox_2d\": [342, 487, 511, 608]\n  },\n  {\n    \"label\": \"nude body parts like exposed breasts, genitals, or buttocks\",\n    \"bbox_2d\": [567, 504, 700, 582]\n  },\n  {\n    \"label\": \"belly\",\n    \"bbox_2d\": [382, 508, 498, 580]\n  },\n  {\n    \"label\": \"armpits\",\n    \"bbox_2d\": [351, 504, 429, 580]\n  },\n  {\n    \"label\": \"armpits\",\n    \"bbox_2d\": [578, 508, 643, 580]\n  }\n]",
+      "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [335, 360, 511, 610],\n    \"face_bbox_2d\": [400, 380, 462, 487],\n    \"action\": \"holding phone\",\n    \"gender\": \"male\",\n    \"age\": \"30-40\",\n    \"ethnicity\": \"caucasian\",\n    \"visible_clothing\": [],\n    \"visible_accessories\": [],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [570, 484, 703, 593],\n    \"face_bbox_2d\": [630, 500, 692, 567],\n    \"action\": \"sleeping\",\n    \"gender\": \"female\",\n    \"age\": \"25-35\",\n    \"ethnicity\": \"caucasian\",\n    \"visible_clothing\": [],\n    \"visible_accessories\": [],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  }\n]",
+      "ocr": "[]"
+    }
+  },
+  {
     "image_path": "/home2/tajamul/Qwen3VL/images/2.jpg",
     "categories_requested": [
       "person",
@@ -272,64 +1251,144 @@
       "text",
       "weapon",
       "keyboard",
-      "hotel room"
+      "hotel room",
+      "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+      "school uniform",
+      "school logos/badges"
     ],
-    "batch_info": {
-      "batch_size": 2,
-      "area": 360640,
-      "images_in_batch": [
-        "/home2/tajamul/Qwen3VL/images/5.jpg",
-        "/home2/tajamul/Qwen3VL/images/2.jpg"
-      ]
-    },
-    "general_detections": [],
-    "persons": [],
-    "ocr_texts": [],
-    "timings_ms": {
-      "general_detection": {
-        "batch_size": 2,
-        "preprocess_wall_ms": 205.291,
-        "generate_gpu_ms": 2478.491,
-        "generate_wall_ms": 2478.788,
-        "decode_wall_ms": 0.48,
-        "total_wall_ms": 2684.584,
-        "amortized_total_wall_ms": 1342.292,
-        "amortized_generate_gpu_ms": 1239.246
+    "general_detections": [
+      {
+        "label": "person",
+        "bbox_2d": [
+          0,
+          17,
+          520,
+          997
+        ],
+        "text_content": ""
       },
-      "person_detection": {
-        "batch_size": 2,
-        "preprocess_wall_ms": 40.213,
-        "generate_gpu_ms": 10208.494,
-        "generate_wall_ms": 10208.734,
-        "decode_wall_ms": 0.629,
-        "total_wall_ms": 10249.59,
-        "amortized_total_wall_ms": 5124.795,
-        "amortized_generate_gpu_ms": 5104.247
+      {
+        "label": "person",
+        "bbox_2d": [
+          472,
+          0,
+          992,
+          997
+        ],
+        "text_content": ""
       },
-      "ocr": {
-        "batch_size": 2,
-        "preprocess_wall_ms": 42.033,
-        "generate_gpu_ms": 329.84,
-        "generate_wall_ms": 329.953,
-        "decode_wall_ms": 0.117,
-        "total_wall_ms": 372.109,
-        "amortized_total_wall_ms": 186.055,
-        "amortized_generate_gpu_ms": 164.92
+      {
+        "label": "face",
+        "bbox_2d": [
+          306,
+          95,
+          494,
+          493
+        ],
+        "text_content": ""
       },
-      "inference_latency_ms": 13306.283,
-      "amortized_inference_ms": 6653.142,
-      "generate_gpu_latency_ms": 13016.825,
-      "amortized_generate_gpu_ms": 6508.413,
-      "image_total_wall_ms": 13519.726
-    },
+      {
+        "label": "face",
+        "bbox_2d": [
+          578,
+          95,
+          765,
+          419
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "palm",
+        "bbox_2d": [
+          218,
+          908,
+          315,
+          1000
+        ],
+        "text_content": ""
+      }
+    ],
+    "persons": [
+      {
+        "label": "person",
+        "bbox_2d": [
+          0,
+          17,
+          520,
+          997
+        ],
+        "face_bbox_2d": [
+          299,
+          98,
+          488,
+          494
+        ],
+        "action": "smiling and leaning forward",
+        "gender": "female",
+        "ethnicity": "white",
+        "age": "30-40",
+        "visible_clothing": [
+          "denim jacket",
+          "black top"
+        ],
+        "visible_accessories": [
+          "necklace"
+        ],
+        "tattoo_detected": false,
+        "blood_visible": false,
+        "palm_visible": true,
+        "weapon_near_person": false
+      },
+      {
+        "label": "person",
+        "bbox_2d": [
+          473,
+          5,
+          991,
+          997
+        ],
+        "face_bbox_2d": [
+          574,
+          101,
+          766,
+          435
+        ],
+        "action": "smiling and sitting",
+        "gender": "female",
+        "ethnicity": "white",
+        "age": "50-60",
+        "visible_clothing": [
+          "grey cardigan",
+          "black top"
+        ],
+        "visible_accessories": [
+          "necklace"
+        ],
+        "tattoo_detected": false,
+        "blood_visible": false,
+        "palm_visible": false,
+        "weapon_near_person": false
+      }
+    ],
+    "ocr_texts": [
+      {
+        "label": "text",
+        "bbox_2d": [
+          367,
+          589,
+          383,
+          627
+        ],
+        "text_content": "V"
+      }
+    ],
     "raw_responses": {
-      "general_detection": "\"person\"",
-      "person_detection": "]\n[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [\n      0,\n      0,\n      1000,\n    \"face_bbox_2d\": [\n      x1,\n      y1,\n      x2,\n      y2,\n      \"action\": \"\",\n      \"visible_clothing\": [\n        \"item1\",\n        \"item2\",\n        ...\n      ]\n    }\n  }\n]\n]\n[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [\n      0,\n      0,\n      1,\n      0,\n      \"face_bbox_2d\": [\n      0,\n      0,\n      \"action\": \"\",\n      \"visible_clothing\": [\n        \"item1\",\n        \"item2\",\n        ...\n      ]\n    }\n  }\n]\n```json\n[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [\n      0,\n      0,\n      1000,\n      \"face_bbox_2d\": [\n      0,\n      0,\n      \"action\": \"\",\n      \"visible_clothing\": [\n        \"item1\",\n        \"item2\",\n        ...\n      ]\n    }\n  }\n]\n```",
-      "ocr": ""
+      "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [0, 17, 520, 997]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [472, 0, 992, 997]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [306, 95, 494, 493]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [578, 95, 765, 419]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [218, 908, 315, 1000]\n  }\n]",
+      "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [0, 17, 520, 997],\n    \"face_bbox_2d\": [299, 98, 488, 494],\n    \"action\": \"smiling and leaning forward\",\n    \"gender\": \"female\",\n    \"age\": \"30-40\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"denim jacket\", \"black top\"],\n    \"visible_accessories\": [\"necklace\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [473, 5, 991, 997],\n    \"face_bbox_2d\": [574, 101, 766, 435],\n    \"action\": \"smiling and sitting\",\n    \"gender\": \"female\",\n    \"age\": \"50-60\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"grey cardigan\", \"black top\"],\n    \"visible_accessories\": [\"necklace\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  }\n]",
+      "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [367, 589, 383, 627],\n    \"text_content\": \"V\"\n  }\n]"
     }
   },
   {
-    "status": "ok",
     "image_path": "/home2/tajamul/Qwen3VL/images/3.jpg",
     "categories_requested": [
       "person",
@@ -340,33 +1399,28 @@
       "text",
       "weapon",
       "keyboard",
-      "hotel room"
+      "hotel room",
+      "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+      "school uniform",
+      "school logos/badges"
     ],
-    "batch_info": {
-      "batch_size": 2,
-      "area": 249696,
-      "images_in_batch": [
-        "/home2/tajamul/Qwen3VL/images/3.jpg",
-        "/home2/tajamul/Qwen3VL/images/6.jpeg"
-      ]
-    },
     "general_detections": [
       {
         "label": "person",
         "bbox_2d": [
           464,
-          117,
-          853,
-          912
+          118,
+          852,
+          916
         ],
         "text_content": ""
       },
       {
         "label": "face",
         "bbox_2d": [
-          573,
-          188,
-          728,
+          582,
+          202,
+          727,
           477
         ],
         "text_content": ""
@@ -375,29 +1429,29 @@
         "label": "palm",
         "bbox_2d": [
           675,
-          629,
-          787,
-          786
+          631,
+          789,
+          784
         ],
         "text_content": ""
       },
       {
         "label": "palm",
         "bbox_2d": [
-          756,
-          632,
-          845,
-          750
+          755,
+          638,
+          839,
+          768
         ],
         "text_content": ""
       },
       {
         "label": "keyboard",
         "bbox_2d": [
-          694,
-          863,
-          835,
-          958
+          700,
+          862,
+          834,
+          947
         ],
         "text_content": ""
       },
@@ -417,25 +1471,25 @@
         "label": "person",
         "bbox_2d": [
           467,
-          119,
-          860,
-          919
+          117,
+          859,
+          917
         ],
         "face_bbox_2d": [
-          570,
-          197,
-          731,
-          479
+          567,
+          185,
+          733,
+          485
         ],
-        "action": "smiling while looking at phone",
-        "gender": "",
-        "ethnicity": "",
-        "age": "",
+        "action": "looking at phone",
+        "gender": "male",
+        "ethnicity": "white",
+        "age": "30-40",
         "visible_clothing": [
           "white shirt"
         ],
         "visible_accessories": [
-          "black glasses"
+          "glasses"
         ],
         "tattoo_detected": false,
         "blood_visible": false,
@@ -444,51 +1498,13 @@
       }
     ],
     "ocr_texts": [],
-    "timings_ms": {
-      "general_detection": {
-        "batch_size": 2,
-        "preprocess_wall_ms": 29.981,
-        "generate_gpu_ms": 8747.115,
-        "generate_wall_ms": 8747.332,
-        "decode_wall_ms": 0.393,
-        "total_wall_ms": 8777.717,
-        "amortized_total_wall_ms": 4388.858,
-        "amortized_generate_gpu_ms": 4373.558
-      },
-      "person_detection": {
-        "batch_size": 2,
-        "preprocess_wall_ms": 35.182,
-        "generate_gpu_ms": 5103.555,
-        "generate_wall_ms": 5103.723,
-        "decode_wall_ms": 0.294,
-        "total_wall_ms": 5139.208,
-        "amortized_total_wall_ms": 2569.604,
-        "amortized_generate_gpu_ms": 2551.777
-      },
-      "ocr": {
-        "batch_size": 2,
-        "preprocess_wall_ms": 32.802,
-        "generate_gpu_ms": 259.921,
-        "generate_wall_ms": 260.02,
-        "decode_wall_ms": 0.135,
-        "total_wall_ms": 292.962,
-        "amortized_total_wall_ms": 146.481,
-        "amortized_generate_gpu_ms": 129.961
-      },
-      "inference_latency_ms": 14209.887,
-      "amortized_inference_ms": 7104.943,
-      "generate_gpu_latency_ms": 14110.591,
-      "amortized_generate_gpu_ms": 7055.296,
-      "image_total_wall_ms": 14270.625
-    },
     "raw_responses": {
-      "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [464, 117, 853, 912]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [573, 188, 728, 477]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [675, 629, 787, 786]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [756, 632, 845, 750]\n  },\n  {\n    \"label\": \"keyboard\",\n    \"bbox_2d\": [694, 863, 835, 958]\n  },\n  {\n    \"label\": \"hotel room\",\n    \"bbox_2d\": [0, 0, 1000, 1000]\n  }\n]",
-      "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [467, 119, 860, 919],\n    \"face_bbox_2d\": [570, 197, 731, 479],\n    \"action\": \"smiling while looking at phone\",\n    \"visible_clothing\": [\"white shirt\"],\n    \"visible_accessories\": [\"black glasses\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  }\n]",
+      "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [464, 118, 852, 916]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [582, 202, 727, 477]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [675, 631, 789, 784]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [755, 638, 839, 768]\n  },\n  {\n    \"label\": \"keyboard\",\n    \"bbox_2d\": [700, 862, 834, 947]\n  },\n  {\n    \"label\": \"hotel room\",\n    \"bbox_2d\": [0, 0, 1000, 1000]\n  }\n]",
+      "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [467, 117, 859, 917],\n    \"face_bbox_2d\": [567, 185, 733, 485],\n    \"action\": \"looking at phone\",\n    \"gender\": \"male\",\n    \"age\": \"30-40\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\n      \"white shirt\"\n    ],\n    \"visible_accessories\": [\n      \"glasses\"\n    ],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  }\n]",
       "ocr": "[]"
     }
   },
   {
-    "status": "ok",
     "image_path": "/home2/tajamul/Qwen3VL/images/4.jpg",
     "categories_requested": [
       "person",
@@ -499,64 +1515,91 @@
       "text",
       "weapon",
       "keyboard",
-      "hotel room"
+      "hotel room",
+      "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+      "school uniform",
+      "school logos/badges"
     ],
-    "batch_info": {
-      "batch_size": 2,
-      "area": 249696,
-      "images_in_batch": [
-        "/home2/tajamul/Qwen3VL/images/7.jpg",
-        "/home2/tajamul/Qwen3VL/images/4.jpg"
-      ]
-    },
-    "general_detections": [],
-    "persons": [],
+    "general_detections": [
+      {
+        "label": "person",
+        "bbox_2d": [
+          95,
+          88,
+          595,
+          997
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "face",
+        "bbox_2d": [
+          156,
+          204,
+          306,
+          395
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "palm",
+        "bbox_2d": [
+          328,
+          310,
+          411,
+          428
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "weapon",
+        "bbox_2d": [
+          402,
+          228,
+          474,
+          390
+        ],
+        "text_content": ""
+      }
+    ],
+    "persons": [
+      {
+        "label": "person",
+        "bbox_2d": [
+          99,
+          88,
+          598,
+          998
+        ],
+        "face_bbox_2d": [
+          156,
+          174,
+          306,
+          402
+        ],
+        "action": "holding beer bottle, looking down",
+        "gender": "male",
+        "ethnicity": "caucasian",
+        "age": "20-30",
+        "visible_clothing": [
+          "black t-shirt",
+          "dark pants"
+        ],
+        "visible_accessories": [],
+        "tattoo_detected": false,
+        "blood_visible": false,
+        "palm_visible": true,
+        "weapon_near_person": false
+      }
+    ],
     "ocr_texts": [],
-    "timings_ms": {
-      "general_detection": {
-        "batch_size": 2,
-        "preprocess_wall_ms": 136.084,
-        "generate_gpu_ms": 4318.053,
-        "generate_wall_ms": 4318.466,
-        "decode_wall_ms": 0.565,
-        "total_wall_ms": 4455.129,
-        "amortized_total_wall_ms": 2227.565,
-        "amortized_generate_gpu_ms": 2159.027
-      },
-      "person_detection": {
-        "batch_size": 2,
-        "preprocess_wall_ms": 51.545,
-        "generate_gpu_ms": 755.09,
-        "generate_wall_ms": 755.218,
-        "decode_wall_ms": 0.14,
-        "total_wall_ms": 806.911,
-        "amortized_total_wall_ms": 403.456,
-        "amortized_generate_gpu_ms": 377.545
-      },
-      "ocr": {
-        "batch_size": 2,
-        "preprocess_wall_ms": 162.041,
-        "generate_gpu_ms": 16761.488,
-        "generate_wall_ms": 16761.811,
-        "decode_wall_ms": 0.606,
-        "total_wall_ms": 16924.469,
-        "amortized_total_wall_ms": 8462.235,
-        "amortized_generate_gpu_ms": 8380.744
-      },
-      "inference_latency_ms": 22186.509,
-      "amortized_inference_ms": 11093.256,
-      "generate_gpu_latency_ms": 21834.631,
-      "amortized_generate_gpu_ms": 10917.316,
-      "image_total_wall_ms": 22442.477
-    },
     "raw_responses": {
-      "general_detection": "",
-      "person_detection": "]",
-      "ocr": "-1000, 0, 0, 0"
+      "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [95, 88, 595, 997]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [156, 204, 306, 395]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [328, 310, 411, 428]\n  },\n  {\n    \"label\": \"weapon\",\n    \"bbox_2d\": [402, 228, 474, 390]\n  }\n]",
+      "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [99, 88, 598, 998],\n    \"face_bbox_2d\": [156, 174, 306, 402],\n    \"action\": \"holding beer bottle, looking down\",\n    \"gender\": \"male\",\n    \"age\": \"20-30\",\n    \"ethnicity\": \"caucasian\",\n    \"visible_clothing\": [\"black t-shirt\", \"dark pants\"],\n    \"visible_accessories\": [],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  }\n]",
+      "ocr": "[]"
     }
   },
   {
-    "status": "ok",
     "image_path": "/home2/tajamul/Qwen3VL/images/5.jpg",
     "categories_requested": [
       "person",
@@ -567,23 +1610,18 @@
       "text",
       "weapon",
       "keyboard",
-      "hotel room"
+      "hotel room",
+      "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+      "school uniform",
+      "school logos/badges"
     ],
-    "batch_info": {
-      "batch_size": 2,
-      "area": 388800,
-      "images_in_batch": [
-        "/home2/tajamul/Qwen3VL/images/5.jpg",
-        "/home2/tajamul/Qwen3VL/images/2.jpg"
-      ]
-    },
     "general_detections": [
       {
         "label": "blood",
         "bbox_2d": [
-          116,
+          115,
           0,
-          514,
+          526,
           819
         ],
         "text_content": ""
@@ -591,51 +1629,13 @@
     ],
     "persons": [],
     "ocr_texts": [],
-    "timings_ms": {
-      "general_detection": {
-        "batch_size": 2,
-        "preprocess_wall_ms": 205.291,
-        "generate_gpu_ms": 2478.491,
-        "generate_wall_ms": 2478.788,
-        "decode_wall_ms": 0.48,
-        "total_wall_ms": 2684.584,
-        "amortized_total_wall_ms": 1342.292,
-        "amortized_generate_gpu_ms": 1239.246
-      },
-      "person_detection": {
-        "batch_size": 2,
-        "preprocess_wall_ms": 40.213,
-        "generate_gpu_ms": 10208.494,
-        "generate_wall_ms": 10208.734,
-        "decode_wall_ms": 0.629,
-        "total_wall_ms": 10249.59,
-        "amortized_total_wall_ms": 5124.795,
-        "amortized_generate_gpu_ms": 5104.247
-      },
-      "ocr": {
-        "batch_size": 2,
-        "preprocess_wall_ms": 42.033,
-        "generate_gpu_ms": 329.84,
-        "generate_wall_ms": 329.953,
-        "decode_wall_ms": 0.117,
-        "total_wall_ms": 372.109,
-        "amortized_total_wall_ms": 186.055,
-        "amortized_generate_gpu_ms": 164.92
-      },
-      "inference_latency_ms": 13306.283,
-      "amortized_inference_ms": 6653.142,
-      "generate_gpu_latency_ms": 13016.825,
-      "amortized_generate_gpu_ms": 6508.413,
-      "image_total_wall_ms": 13429.476
-    },
     "raw_responses": {
-      "general_detection": "[\n  {\n    \"label\": \"blood\",\n    \"bbox_2d\": [116, 0, 514, 819]\n  }\n]",
+      "general_detection": "[\n  {\n    \"label\": \"blood\",\n    \"bbox_2d\": [115, 0, 526, 819]\n  }\n]",
       "person_detection": "[]",
       "ocr": "[]"
     }
   },
   {
-    "status": "ok",
     "image_path": "/home2/tajamul/Qwen3VL/images/6.jpeg",
     "categories_requested": [
       "person",
@@ -646,64 +1646,102 @@
       "text",
       "weapon",
       "keyboard",
-      "hotel room"
+      "hotel room",
+      "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+      "school uniform",
+      "school logos/badges"
     ],
-    "batch_info": {
-      "batch_size": 2,
-      "area": 224676,
-      "images_in_batch": [
-        "/home2/tajamul/Qwen3VL/images/3.jpg",
-        "/home2/tajamul/Qwen3VL/images/6.jpeg"
-      ]
-    },
-    "general_detections": [],
+    "general_detections": [
+      {
+        "label": "tattoo",
+        "bbox_2d": [
+          0,
+          54,
+          206,
+          518
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "tattoo",
+        "bbox_2d": [
+          0,
+          580,
+          194,
+          948
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "tattoo",
+        "bbox_2d": [
+          306,
+          572,
+          508,
+          956
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "tattoo",
+        "bbox_2d": [
+          306,
+          62,
+          494,
+          520
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "tattoo",
+        "bbox_2d": [
+          542,
+          59,
+          812,
+          637
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "tattoo",
+        "bbox_2d": [
+          492,
+          606,
+          658,
+          934
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "tattoo",
+        "bbox_2d": [
+          662,
+          588,
+          816,
+          934
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "tattoo",
+        "bbox_2d": [
+          796,
+          158,
+          1000,
+          834
+        ],
+        "text_content": ""
+      }
+    ],
     "persons": [],
     "ocr_texts": [],
-    "timings_ms": {
-      "general_detection": {
-        "batch_size": 2,
-        "preprocess_wall_ms": 29.981,
-        "generate_gpu_ms": 8747.115,
-        "generate_wall_ms": 8747.332,
-        "decode_wall_ms": 0.393,
-        "total_wall_ms": 8777.717,
-        "amortized_total_wall_ms": 4388.858,
-        "amortized_generate_gpu_ms": 4373.558
-      },
-      "person_detection": {
-        "batch_size": 2,
-        "preprocess_wall_ms": 35.182,
-        "generate_gpu_ms": 5103.555,
-        "generate_wall_ms": 5103.723,
-        "decode_wall_ms": 0.294,
-        "total_wall_ms": 5139.208,
-        "amortized_total_wall_ms": 2569.604,
-        "amortized_generate_gpu_ms": 2551.777
-      },
-      "ocr": {
-        "batch_size": 2,
-        "preprocess_wall_ms": 32.802,
-        "generate_gpu_ms": 259.921,
-        "generate_wall_ms": 260.02,
-        "decode_wall_ms": 0.135,
-        "total_wall_ms": 292.962,
-        "amortized_total_wall_ms": 146.481,
-        "amortized_generate_gpu_ms": 129.961
-      },
-      "inference_latency_ms": 14209.887,
-      "amortized_inference_ms": 7104.943,
-      "generate_gpu_latency_ms": 14110.591,
-      "amortized_generate_gpu_ms": 7055.296,
-      "image_total_wall_ms": 14297.64
-    },
     "raw_responses": {
-      "general_detection": "",
-      "person_detection": "",
-      "ocr": ""
+      "general_detection": "[\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [0, 54, 206, 518]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [0, 580, 194, 948]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [306, 572, 508, 956]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [306, 62, 494, 520]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [542, 59, 812, 637]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [492, 606, 658, 934]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [662, 588, 816, 934]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [796, 158, 1000, 834]\n  }\n]",
+      "person_detection": "[]",
+      "ocr": "[]"
     }
   },
   {
-    "status": "ok",
     "image_path": "/home2/tajamul/Qwen3VL/images/7.jpg",
     "categories_requested": [
       "person",
@@ -714,16 +1752,11 @@
       "text",
       "weapon",
       "keyboard",
-      "hotel room"
+      "hotel room",
+      "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+      "school uniform",
+      "school logos/badges"
     ],
-    "batch_info": {
-      "batch_size": 2,
-      "area": 921600,
-      "images_in_batch": [
-        "/home2/tajamul/Qwen3VL/images/7.jpg",
-        "/home2/tajamul/Qwen3VL/images/4.jpg"
-      ]
-    },
     "general_detections": [
       {
         "label": "keyboard",
@@ -738,10 +1771,20 @@
       {
         "label": "text",
         "bbox_2d": [
-          654,
-          798,
-          730,
-          885
+          653,
+          794,
+          731,
+          884
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          107,
+          338,
+          146,
+          356
         ],
         "text_content": ""
       }
@@ -752,8 +1795,8 @@
         "label": "text",
         "bbox_2d": [
           103,
-          337,
-          148,
+          338,
+          144,
           357
         ],
         "text_content": "AUTO"
@@ -761,8 +1804,8 @@
       {
         "label": "text",
         "bbox_2d": [
-          164,
-          282,
+          165,
+          283,
           219,
           342
         ],
@@ -771,9 +1814,9 @@
       {
         "label": "text",
         "bbox_2d": [
-          408,
-          264,
-          443,
+          405,
+          260,
+          444,
           319
         ],
         "text_content": "S"
@@ -781,40 +1824,80 @@
       {
         "label": "text",
         "bbox_2d": [
-          612,
-          247,
-          657,
-          298
+          611,
+          244,
+          656,
+          302
         ],
         "text_content": "D"
       },
       {
         "label": "text",
         "bbox_2d": [
-          806,
-          226,
-          836,
-          276
+          805,
+          222,
+          837,
+          278
         ],
         "text_content": "F"
       },
       {
         "label": "text",
         "bbox_2d": [
-          302,
-          476,
-          348,
-          557
+          321,
+          125,
+          381,
+          170
+        ],
+        "text_content": "W"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          521,
+          116,
+          552,
+          162
+        ],
+        "text_content": "E"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          686,
+          106,
+          723,
+          151
+        ],
+        "text_content": "R"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          834,
+          101,
+          867,
+          147
+        ],
+        "text_content": "T"
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          300,
+          477,
+          349,
+          556
         ],
         "text_content": "Y"
       },
       {
         "label": "text",
         "bbox_2d": [
-          560,
+          561,
           437,
-          615,
-          518
+          616,
+          517
         ],
         "text_content": "X"
       },
@@ -822,68 +1905,30 @@
         "label": "text",
         "bbox_2d": [
           799,
-          406,
+          401,
           859,
-          482
+          483
         ],
         "text_content": "C"
       },
       {
         "label": "text",
         "bbox_2d": [
-          650,
-          792,
-          727,
-          884
+          651,
+          796,
+          728,
+          883
         ],
         "text_content": "Alt"
       }
     ],
-    "timings_ms": {
-      "general_detection": {
-        "batch_size": 2,
-        "preprocess_wall_ms": 136.084,
-        "generate_gpu_ms": 4318.053,
-        "generate_wall_ms": 4318.466,
-        "decode_wall_ms": 0.565,
-        "total_wall_ms": 4455.129,
-        "amortized_total_wall_ms": 2227.565,
-        "amortized_generate_gpu_ms": 2159.027
-      },
-      "person_detection": {
-        "batch_size": 2,
-        "preprocess_wall_ms": 51.545,
-        "generate_gpu_ms": 755.09,
-        "generate_wall_ms": 755.218,
-        "decode_wall_ms": 0.14,
-        "total_wall_ms": 806.911,
-        "amortized_total_wall_ms": 403.456,
-        "amortized_generate_gpu_ms": 377.545
-      },
-      "ocr": {
-        "batch_size": 2,
-        "preprocess_wall_ms": 162.041,
-        "generate_gpu_ms": 16761.488,
-        "generate_wall_ms": 16761.811,
-        "decode_wall_ms": 0.606,
-        "total_wall_ms": 16924.469,
-        "amortized_total_wall_ms": 8462.235,
-        "amortized_generate_gpu_ms": 8380.744
-      },
-      "inference_latency_ms": 22186.509,
-      "amortized_inference_ms": 11093.256,
-      "generate_gpu_latency_ms": 21834.631,
-      "amortized_generate_gpu_ms": 10917.316,
-      "image_total_wall_ms": 22364.002
-    },
     "raw_responses": {
-      "general_detection": "[\n  {\n    \"label\": \"keyboard\",\n    \"bbox_2d\": [0, 0, 1000, 1000]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [654, 798, 730, 885]\n  }\n]",
+      "general_detection": "[\n  {\n    \"label\": \"keyboard\",\n    \"bbox_2d\": [0, 0, 1000, 1000]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [653, 794, 731, 884]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [107, 338, 146, 356]\n  }\n]",
       "person_detection": "[]",
-      "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [103, 337, 148, 357],\n    \"text_content\": \"AUTO\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [164, 282, 219, 342],\n    \"text_content\": \"A\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [408, 264, 443, 319],\n    \"text_content\": \"S\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [612, 247, 657, 298],\n    \"text_content\": \"D\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [806, 226, 836, 276],\n    \"text_content\": \"F\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [302, 476, 348, 557],\n    \"text_content\": \"Y\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [560, 437, 615, 518],\n    \"text_content\": \"X\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [799, 406, 859, 482],\n    \"text_content\": \"C\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [650, 792, 727, 884],\n    \"text_content\": \"Alt\"\n  }\n]"
+      "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [103, 338, 144, 357],\n    \"text_content\": \"AUTO\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [165, 283, 219, 342],\n    \"text_content\": \"A\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [405, 260, 444, 319],\n    \"text_content\": \"S\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [611, 244, 656, 302],\n    \"text_content\": \"D\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [805, 222, 837, 278],\n    \"text_content\": \"F\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [321, 125, 381, 170],\n    \"text_content\": \"W\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [521, 116, 552, 162],\n    \"text_content\": \"E\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [686, 106, 723, 151],\n    \"text_content\": \"R\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [834, 101, 867, 147],\n    \"text_content\": \"T\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [300, 477, 349, 556],\n    \"text_content\": \"Y\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [561, 437, 616, 517],\n    \"text_content\": \"X\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [799, 401, 859, 483],\n    \"text_content\": \"C\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [651, 796, 728, 883],\n    \"text_content\": \"Alt\"\n  }\n]"
     }
   },
   {
-    "status": "ok",
     "image_path": "/home2/tajamul/Qwen3VL/images/8.jpg",
     "categories_requested": [
       "person",
@@ -894,15 +1939,11 @@
       "text",
       "weapon",
       "keyboard",
-      "hotel room"
+      "hotel room",
+      "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+      "school uniform",
+      "school logos/badges"
     ],
-    "batch_info": {
-      "batch_size": 1,
-      "area": 1063200,
-      "images_in_batch": [
-        "/home2/tajamul/Qwen3VL/images/8.jpg"
-      ]
-    },
     "general_detections": [
       {
         "label": "person",
@@ -910,17 +1951,37 @@
           0,
           109,
           536,
-          1000
+          997
         ],
         "text_content": ""
       },
       {
         "label": "face",
         "bbox_2d": [
-          237,
-          267,
-          335,
-          454
+          242,
+          274,
+          337,
+          445
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "text",
+        "bbox_2d": [
+          112,
+          203,
+          161,
+          244
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "weapon",
+        "bbox_2d": [
+          231,
+          270,
+          678,
+          607
         ],
         "text_content": ""
       },
@@ -928,29 +1989,19 @@
         "label": "palm",
         "bbox_2d": [
           316,
-          528,
-          447,
+          527,
+          446,
           682
         ],
         "text_content": ""
       },
       {
-        "label": "text",
+        "label": "palm",
         "bbox_2d": [
-          111,
-          203,
-          161,
-          242
-        ],
-        "text_content": ""
-      },
-      {
-        "label": "weapon",
-        "bbox_2d": [
-          233,
-          271,
-          679,
-          607
+          472,
+          495,
+          536,
+          557
         ],
         "text_content": ""
       }
@@ -960,20 +2011,20 @@
         "label": "person",
         "bbox_2d": [
           0,
-          109,
-          538,
+          108,
+          537,
           1000
         ],
         "face_bbox_2d": [
-          228,
-          278,
-          345,
-          467
+          232,
+          283,
+          343,
+          468
         ],
-        "action": "shooting",
-        "gender": "",
-        "ethnicity": "",
-        "age": "",
+        "action": "aiming",
+        "gender": "male",
+        "ethnicity": "white",
+        "age": "60-70",
         "visible_clothing": [
           "camouflage uniform",
           "camouflage cap"
@@ -993,55 +2044,150 @@
       {
         "label": "text",
         "bbox_2d": [
-          113,
+          111,
           205,
           161,
-          244
+          243
         ],
         "text_content": "BERRY"
       }
     ],
-    "timings_ms": {
-      "general_detection": {
-        "batch_size": 1,
-        "preprocess_wall_ms": 138.666,
-        "generate_gpu_ms": 8141.539,
-        "generate_wall_ms": 8141.986,
-        "decode_wall_ms": 0.598,
-        "total_wall_ms": 8281.273,
-        "amortized_total_wall_ms": 8281.273,
-        "amortized_generate_gpu_ms": 8141.539
-      },
-      "person_detection": {
-        "batch_size": 1,
-        "preprocess_wall_ms": 55.363,
-        "generate_gpu_ms": 5981.809,
-        "generate_wall_ms": 5982.077,
-        "decode_wall_ms": 0.69,
-        "total_wall_ms": 6038.143,
-        "amortized_total_wall_ms": 6038.143,
-        "amortized_generate_gpu_ms": 5981.809
-      },
-      "ocr": {
-        "batch_size": 1,
-        "preprocess_wall_ms": 51.355,
-        "generate_gpu_ms": 2125.125,
-        "generate_wall_ms": 2125.276,
-        "decode_wall_ms": 0.27,
-        "total_wall_ms": 2176.908,
-        "amortized_total_wall_ms": 2176.908,
-        "amortized_generate_gpu_ms": 2125.125
-      },
-      "inference_latency_ms": 16496.324,
-      "amortized_inference_ms": 16496.324,
-      "generate_gpu_latency_ms": 16248.473,
-      "amortized_generate_gpu_ms": 16248.473,
-      "image_total_wall_ms": 16793.352
-    },
     "raw_responses": {
-      "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [0, 109, 536, 1000]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [237, 267, 335, 454]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [316, 528, 447, 682]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [111, 203, 161, 242]\n  },\n  {\n    \"label\": \"weapon\",\n    \"bbox_2d\": [233, 271, 679, 607]\n  }\n]",
-      "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [0, 109, 538, 1000],\n    \"face_bbox_2d\": [228, 278, 345, 467],\n    \"action\": \"shooting\",\n    \"visible_clothing\": [\n      \"camouflage uniform\",\n      \"camouflage cap\"\n    ],\n    \"visible_accessories\": [\n      \"sunglasses\",\n      \"earplugs\",\n      \"American flag patch\"\n    ],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": true\n  }\n]",
-      "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [113, 205, 161, 244],\n    \"text_content\": \"BERRY\"\n  }\n]"
+      "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [0, 109, 536, 997]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [242, 274, 337, 445]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [112, 203, 161, 244]\n  },\n  {\n    \"label\": \"weapon\",\n    \"bbox_2d\": [231, 270, 678, 607]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [316, 527, 446, 682]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [472, 495, 536, 557]\n  }\n]",
+      "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [0, 108, 537, 1000],\n    \"face_bbox_2d\": [232, 283, 343, 468],\n    \"action\": \"aiming\",\n    \"gender\": \"male\",\n    \"age\": \"60-70\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\n      \"camouflage uniform\",\n      \"camouflage cap\"\n    ],\n    \"visible_accessories\": [\n      \"sunglasses\",\n      \"earplugs\",\n      \"American flag patch\"\n    ],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": true\n  }\n]",
+      "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [111, 205, 161, 243],\n    \"text_content\": \"BERRY\"\n  }\n]"
+    }
+  },
+  {
+    "image_path": "/home2/tajamul/Qwen3VL/images/9.jpg",
+    "categories_requested": [
+      "person",
+      "face",
+      "tattoo",
+      "blood",
+      "palm",
+      "text",
+      "weapon",
+      "keyboard",
+      "hotel room",
+      "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+      "school uniform",
+      "school logos/badges"
+    ],
+    "general_detections": [
+      {
+        "label": "person",
+        "bbox_2d": [
+          6,
+          44,
+          1000,
+          999
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "face",
+        "bbox_2d": [
+          375,
+          116,
+          517,
+          300
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "nude body parts like exposed breasts",
+        "bbox_2d": [
+          279,
+          388,
+          631,
+          535
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "genitals",
+        "bbox_2d": [
+          276,
+          832,
+          347,
+          898
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "anus",
+        "bbox_2d": [
+          278,
+          832,
+          347,
+          898
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "armpits",
+        "bbox_2d": [
+          328,
+          308,
+          458,
+          374
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "belly",
+        "bbox_2d": [
+          238,
+          594,
+          532,
+          785
+        ],
+        "text_content": ""
+      },
+      {
+        "label": "palm",
+        "bbox_2d": [
+          886,
+          830,
+          1000,
+          878
+        ],
+        "text_content": ""
+      }
+    ],
+    "persons": [
+      {
+        "label": "person",
+        "bbox_2d": [
+          1,
+          44,
+          999,
+          1000
+        ],
+        "face_bbox_2d": [
+          375,
+          114,
+          525,
+          300
+        ],
+        "action": "sitting on driftwood",
+        "gender": "female",
+        "ethnicity": "caucasian",
+        "age": "20-30",
+        "visible_clothing": [],
+        "visible_accessories": [],
+        "tattoo_detected": false,
+        "blood_visible": false,
+        "palm_visible": true,
+        "weapon_near_person": false
+      }
+    ],
+    "ocr_texts": [],
+    "raw_responses": {
+      "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [6, 44, 1000, 999]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [375, 116, 517, 300]\n  },\n  {\n    \"label\": \"nude body parts like exposed breasts\",\n    \"bbox_2d\": [279, 388, 631, 535]\n  },\n  {\n    \"label\": \"genitals\",\n    \"bbox_2d\": [276, 832, 347, 898]\n  },\n  {\n    \"label\": \"anus\",\n    \"bbox_2d\": [278, 832, 347, 898]\n  },\n  {\n    \"label\": \"armpits\",\n    \"bbox_2d\": [328, 308, 458, 374]\n  },\n  {\n    \"label\": \"belly\",\n    \"bbox_2d\": [238, 594, 532, 785]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [886, 830, 1000, 878]\n  }\n]",
+      "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [1, 44, 999, 1000],\n    \"face_bbox_2d\": [375, 114, 525, 300],\n    \"action\": \"sitting on driftwood\",\n    \"gender\": \"female\",\n    \"age\": \"20-30\",\n    \"ethnicity\": \"caucasian\",\n    \"visible_clothing\": [],\n    \"visible_accessories\": [],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  }\n]",
+      "ocr": "[]"
     }
   }
 ]

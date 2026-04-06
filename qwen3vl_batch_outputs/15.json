@@ -1,0 +1,83 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/15.jpeg",
+  "categories_requested": [
+    "person",
+    "face",
+    "tattoo",
+    "blood",
+    "palm",
+    "text",
+    "weapon",
+    "keyboard",
+    "hotel room",
+    "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+    "school uniform",
+    "school logos/badges"
+  ],
+  "general_detections": [
+    {
+      "label": "school uniform",
+      "bbox_2d": [
+        0,
+        0,
+        1000,
+        1000
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "school logos/badges",
+      "bbox_2d": [
+        406,
+        350,
+        798,
+        906
+      ],
+      "text_content": ""
+    }
+  ],
+  "persons": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        0,
+        0,
+        1000,
+        1000
+      ],
+      "face_bbox_2d": null,
+      "action": "",
+      "gender": "other",
+      "ethnicity": "",
+      "age": "",
+      "visible_clothing": [
+        "blazer",
+        "shirt"
+      ],
+      "visible_accessories": [
+        "lanyard"
+      ],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": false,
+      "weapon_near_person": false
+    }
+  ],
+  "ocr_texts": [
+    {
+      "label": "text",
+      "bbox_2d": [
+        607,
+        370,
+        773,
+        886
+      ],
+      "text_content": "A"
+    }
+  ],
+  "raw_responses": {
+    "general_detection": "[\n  {\n    \"label\": \"school uniform\",\n    \"bbox_2d\": [0, 0, 1000, 1000]\n  },\n  {\n    \"label\": \"school logos/badges\",\n    \"bbox_2d\": [406, 350, 798, 906]\n  }\n]",
+    "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [0, 0, 1000, 1000],\n    \"face_bbox_2d\": [],\n    \"action\": \"\",\n    \"gender\": \"other\",\n    \"age\": \"\",\n    \"ethnicity\": \"\",\n    \"visible_clothing\": [\n      \"blazer\",\n      \"shirt\"\n    ],\n    \"visible_accessories\": [\n      \"lanyard\"\n    ],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  }\n]",
+    "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [607, 370, 773, 886], \"text_content\": \"A\"\n  }\n]"
+  }
+}

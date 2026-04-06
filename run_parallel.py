@@ -4,150 +4,99 @@ import os
 import subprocess
 import sys
 import time
-import traceback
-from typing import Any, Dict, List, Optional, Tuple, Union
+from queue import Queue
+import threading
+from typing import List, Optional, Any
 
 import torch
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw
 from transformers import AutoProcessor, Qwen3VLForConditionalGeneration
 
 
 # =========================================================
-# INTERPOL WP1
+# CONFIG
 # =========================================================
 MODEL_NAME = "Qwen/Qwen3-VL-8B-Instruct"
-TORCH_DTYPE = "auto"
-MAX_NEW_TOKENS_DET = 1024
-MAX_NEW_TOKENS_OCR = 2048
-
 INPUT_FOLDER = "/home2/tajamul/Qwen3VL/images"
-OUTPUT_FOLDER = "./qwen3vl_batch_outputs"
+OUTPUT_FOLDER = "./qwen3vl_parallel_outputs_v2"
 DEFAULT_GPU_IDS = "0,4,6,7"
-DEFAULT_BATCH_SIZE = 2
-DEFAULT_ATTN = "auto"  # auto | sdpa | flash_attention_2 | none
+DEFAULT_BATCH_SIZE = 4
+DEFAULT_ATTN = "auto"  # auto | flash_attention_2 | sdpa | none
 
 TARGET_CATEGORIES = [
-    "person",
-    "face",
-    "tattoo",
-    "blood",
-    "palm",
-    "text",
-    "weapon",
-    "keyboard",
-    "hotel room",
+    "person", "face", "tattoo", "blood", "palm", "text", "weapon", "keyboard", "hotel room",
+    "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet",
+    "school uniform", "school logos/badges",
 ]
 
 IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
 
+os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
 
-# =========================================================
-# Process-local globals
-# =========================================================
 model = None
 processor = None
 
 
 # =========================================================
-# Helpers
+# ARGUMENTS
+# =========================================================
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--input-folder", type=str, default=INPUT_FOLDER)
+    parser.add_argument("--output-folder", type=str, default=OUTPUT_FOLDER)
+    parser.add_argument("--gpu-ids", type=str, default=DEFAULT_GPU_IDS)
+    parser.add_argument("--batch-size", type=int, default=DEFAULT_BATCH_SIZE)
+    parser.add_argument("--attn", type=str, default=DEFAULT_ATTN)
+    parser.add_argument("--allow-tf32", action="store_true")
+    parser.add_argument("--resize-max", type=int, default=1024)
+
+    # internal worker args
+    parser.add_argument("--worker", action="store_true")
+    parser.add_argument("--worker-gpu", type=int, default=None)
+    parser.add_argument("--worker-shard-file", type=str, default=None)
+    return parser.parse_args()
+
+
+# =========================================================
+# HELPERS
 # =========================================================
 def ensure_dir(path: str) -> None:
     os.makedirs(path, exist_ok=True)
 
 
-def write_json(path: str, data: Any) -> None:
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-
-
-def read_json(path: str) -> Any:
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-
-def is_image_file(filename: str) -> bool:
-    return os.path.splitext(filename.lower())[1] in IMAGE_EXTS
-
-
-def round_num(value: Optional[float], ndigits: int = 3) -> Optional[float]:
-    if value is None:
-        return None
-    return round(float(value), ndigits)
-
-
 def parse_gpu_ids(gpu_ids_text: str) -> List[int]:
     ids: List[int] = []
-    for item in gpu_ids_text.split(","):
-        item = item.strip()
-        if not item:
-            continue
-        ids.append(int(item))
+    for x in gpu_ids_text.split(","):
+        x = x.strip()
+        if x:
+            ids.append(int(x))
     if not ids:
-        raise ValueError("No GPU ids were provided.")
+        raise ValueError("No valid GPU ids found.")
     return ids
 
 
-def load_pil_image(image_path: str) -> Image.Image:
-    with Image.open(image_path) as im:
-        return im.convert("RGB")
+def is_real_input_image(filename: str) -> bool:
+    base = os.path.basename(filename)
+    ext = os.path.splitext(base.lower())[1]
+    if ext not in IMAGE_EXTS:
+        return False
+    if base.endswith("_annotated.png"):
+        return False
+    if "_resized" in base:
+        return False
+    return True
 
 
-def get_image_area(image_path: str) -> int:
-    try:
-        with Image.open(image_path) as im:
-            w, h = im.size
-        return int(w) * int(h)
-    except Exception:
-        return 0
-
-
-def list_image_records(input_folder: str) -> List[Dict[str, Any]]:
-    if not os.path.isdir(input_folder):
-        return []
-
-    image_files = [
-        os.path.join(input_folder, f)
-        for f in sorted(os.listdir(input_folder))
-        if is_image_file(f)
-    ]
-
-    records = []
-    for image_path in image_files:
-        records.append({
-            "image_path": image_path,
-            "area": get_image_area(image_path),
-        })
-    return records
-
-
-def greedy_balance_by_area(image_records: List[Dict[str, Any]], num_shards: int) -> List[List[Dict[str, Any]]]:
-    shards: List[List[Dict[str, Any]]] = [[] for _ in range(num_shards)]
-    loads: List[int] = [0 for _ in range(num_shards)]
-
-    items = sorted(image_records, key=lambda x: int(x.get("area", 0)), reverse=True)
-    for record in items:
-        shard_idx = min(range(num_shards), key=lambda i: loads[i])
-        shards[shard_idx].append(record)
-        loads[shard_idx] += max(1, int(record.get("area", 0)))
-
-    return shards
-
-
-def chunk_list(items: List[Any], chunk_size: int) -> List[List[Any]]:
-    return [items[i:i + chunk_size] for i in range(0, len(items), chunk_size)]
-
-
-def resolve_attn_implementation(requested: str) -> Optional[str]:
-    requested = (requested or "auto").strip().lower()
-
-    if requested in {"none", "null", "off"}:
+def resolve_attn(attn: str) -> Optional[str]:
+    attn = (attn or "auto").strip().lower()
+    if attn in {"none", "off", "null"}:
         return None
-    if requested == "sdpa":
+    if attn == "sdpa":
         return "sdpa"
-    if requested == "flash_attention_2":
+    if attn == "flash_attention_2":
         return "flash_attention_2"
-    if requested != "auto":
-        raise ValueError(f"Unsupported --attn value: {requested}")
+    if attn != "auto":
+        raise ValueError(f"Unsupported --attn value: {attn}")
 
     try:
         import flash_attn  # noqa: F401
@@ -156,16 +105,43 @@ def resolve_attn_implementation(requested: str) -> Optional[str]:
         return "sdpa"
 
 
+def load_image_rgb(image_path: str) -> Image.Image:
+    with Image.open(image_path) as img:
+        return img.convert("RGB")
+
+
+def resize_image_in_memory(image_path: str, max_size: int = 1024) -> Image.Image:
+    img = load_image_rgb(image_path)
+    w, h = img.size
+
+    if max(w, h) <= max_size:
+        return img
+
+    scale = max_size / max(w, h)
+    new_w, new_h = int(w * scale), int(h * scale)
+    return img.resize((new_w, new_h))
+
+
+def build_messages(image_input: Any, prompt: str):
+    return [{
+        "role": "user",
+        "content": [
+            {"type": "image", "image": image_input},
+            {"type": "text", "text": prompt},
+        ],
+    }]
+
+
 # =========================================================
-# Load model + processor
+# MODEL
 # =========================================================
-def load_model(attn: str, allow_tf32: bool = False) -> None:
+def load_model(attn: str = "auto", allow_tf32: bool = False) -> None:
     global model, processor
 
     if model is not None and processor is not None:
         return
 
-    os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
+    print(f"[PID {os.getpid()}] Loading model...", flush=True)
 
     if torch.cuda.is_available():
         torch.cuda.set_device(0)
@@ -178,17 +154,11 @@ def load_model(attn: str, allow_tf32: bool = False) -> None:
         torch.backends.cuda.matmul.allow_tf32 = True
         torch.backends.cudnn.allow_tf32 = True
 
-    attn_impl = resolve_attn_implementation(attn)
+    attn_impl = resolve_attn(attn)
 
-    visible = os.environ.get("CUDA_VISIBLE_DEVICES", "ALL")
-    print(
-        f"Loading model... CUDA_VISIBLE_DEVICES={visible} attn={attn_impl} allow_tf32={allow_tf32}",
-        flush=True,
-    )
-
-    model_kwargs: Dict[str, Any] = {
-        "torch_dtype": TORCH_DTYPE,
-        "device_map": "auto",
+    model_kwargs = {
+        "torch_dtype": "auto",
+        "device_map": {"": 0},
         "low_cpu_mem_usage": True,
     }
     if attn_impl is not None:
@@ -198,1065 +168,342 @@ def load_model(attn: str, allow_tf32: bool = False) -> None:
         MODEL_NAME,
         **model_kwargs,
     )
-    model.eval()
-
     processor = AutoProcessor.from_pretrained(MODEL_NAME)
 
     print(
-        f"Model loaded. model.device={getattr(model, 'device', 'unknown')}",
+        f"[PID {os.getpid()}] Model loaded. CUDA_VISIBLE_DEVICES={os.environ.get('CUDA_VISIBLE_DEVICES', '')}",
         flush=True,
     )
 
 
 # =========================================================
-# Messages + inference
+# INFERENCE
 # =========================================================
-def build_messages(image_input: Any, prompt: str) -> List[Dict[str, Any]]:
-    return [
-        {
-            "role": "user",
-            "content": [
-                {"type": "image", "image": image_input},
-                {"type": "text", "text": prompt},
-            ],
-        }
-    ]
-
-
 @torch.inference_mode()
-def run_qwen3_vl_batch(
-    image_inputs: List[Any],
-    prompt: str,
-    max_new_tokens: int,
-) -> Tuple[List[str], Dict[str, Optional[float]]]:
-    if model is None or processor is None:
-        raise RuntimeError("Model and processor are not loaded.")
+def run_model(image_input: Any, prompt: str, max_new_tokens: int = 1024) -> str:
+    messages = build_messages(image_input, prompt)
 
-    batch_size = len(image_inputs)
-    total_wall_start = time.perf_counter()
-
-    batch_messages = [build_messages(img, prompt) for img in image_inputs]
-
-    preprocess_start = time.perf_counter()
     inputs = processor.apply_chat_template(
-        batch_messages,
+        messages,
         tokenize=True,
         add_generation_prompt=True,
         return_tensors="pt",
         return_dict=True,
-        padding=True,
     )
-    inputs.pop("token_type_ids", None)
-    inputs = inputs.to(model.device)
-    preprocess_wall_ms = (time.perf_counter() - preprocess_start) * 1000.0
 
-    generate_gpu_ms: Optional[float] = None
-    generate_wall_start = time.perf_counter()
+    inputs = {k: v.to(model.device) for k, v in inputs.items()}
 
-    if torch.cuda.is_available():
-        torch.cuda.synchronize()
-        start_event = torch.cuda.Event(enable_timing=True)
-        end_event = torch.cuda.Event(enable_timing=True)
+    outputs = model.generate(**inputs, max_new_tokens=max_new_tokens)
 
-        start_event.record()
-        generated_ids = model.generate(
-            **inputs,
-            max_new_tokens=max_new_tokens,
-        )
-        end_event.record()
-        torch.cuda.synchronize()
-        generate_gpu_ms = float(start_event.elapsed_time(end_event))
-    else:
-        generated_ids = model.generate(
-            **inputs,
-            max_new_tokens=max_new_tokens,
-        )
+    input_len = inputs["input_ids"].shape[1]
+    outputs = outputs[:, input_len:]
 
-    generate_wall_ms = (time.perf_counter() - generate_wall_start) * 1000.0
-
-    decode_start = time.perf_counter()
-    input_ids = inputs["input_ids"]
-    generated_ids_trimmed = [
-        out_ids[len(in_ids):].cpu()
-        for in_ids, out_ids in zip(input_ids, generated_ids)
-    ]
-    output_texts = processor.batch_decode(
-        generated_ids_trimmed,
-        skip_special_tokens=True,
-        clean_up_tokenization_spaces=False,
-    )
-    decode_wall_ms = (time.perf_counter() - decode_start) * 1000.0
-
-    total_wall_ms = (time.perf_counter() - total_wall_start) * 1000.0
-
-    timing = {
-        "batch_size": batch_size,
-        "preprocess_wall_ms": round_num(preprocess_wall_ms),
-        "generate_gpu_ms": round_num(generate_gpu_ms),
-        "generate_wall_ms": round_num(generate_wall_ms),
-        "decode_wall_ms": round_num(decode_wall_ms),
-        "total_wall_ms": round_num(total_wall_ms),
-        "amortized_total_wall_ms": round_num(total_wall_ms / max(1, batch_size)),
-        "amortized_generate_gpu_ms": round_num(
-            (generate_gpu_ms / max(1, batch_size)) if generate_gpu_ms is not None else None
-        ),
-    }
-
-    return [text.strip() for text in output_texts], timing
+    return processor.batch_decode(outputs, skip_special_tokens=True)[0].strip()
 
 
 # =========================================================
-# JSON extraction
+# PROMPTS
 # =========================================================
-def strip_markdown_fence(text: str) -> str:
-    text = text.strip()
-    if text.startswith("```json"):
-        text = text[len("```json"):].strip()
-    elif text.startswith("```"):
-        text = text[len("```"):].strip()
+def general_prompt() -> str:
+    cat = ", ".join(TARGET_CATEGORIES)
+    return f"""
+Locate every visible instance in the image that belongs to these categories:
+"{cat}"
 
-    if text.endswith("```"):
-        text = text[:-3].strip()
-
-    return text
+Return JSON only with bbox_2d.
+"""
 
 
-def extract_json_from_text(text: str) -> Union[List[Any], Dict[str, Any], None]:
-    text = strip_markdown_fence(text)
+def person_prompt() -> str:
+    return """
+Detect persons and return JSON.
+"""
 
+
+def ocr_prompt() -> str:
+    return """
+Extract all text and return JSON.
+"""
+
+
+# =========================================================
+# JSON PARSE
+# =========================================================
+def extract_json(text: str):
     try:
         return json.loads(text)
     except Exception:
-        pass
-
-    start = text.find("[")
-    end = text.rfind("]")
-    if start != -1 and end != -1 and end > start:
-        chunk = text[start:end + 1]
         try:
-            return json.loads(chunk)
+            start = text.find("[")
+            end = text.rfind("]")
+            if start != -1 and end != -1 and end > start:
+                return json.loads(text[start:end + 1])
         except Exception:
             pass
-
-    start = text.find("{")
-    end = text.rfind("}")
-    if start != -1 and end != -1 and end > start:
-        chunk = text[start:end + 1]
         try:
-            return json.loads(chunk)
+            start = text.find("{")
+            end = text.rfind("}")
+            if start != -1 and end != -1 and end > start:
+                return json.loads(text[start:end + 1])
         except Exception:
             pass
+        return []
 
-    return None
+def merged_detections_for_drawing(gen_json, per_json, ocr_json):
+    merged = []
 
+    if isinstance(gen_json, list):
+        for obj in gen_json:
+            if not isinstance(obj, dict):
+                continue
+            if obj.get("label") == "person":
+                continue
+            merged.append(obj)
 
+    if isinstance(per_json, list):
+        merged.extend([obj for obj in per_json if isinstance(obj, dict)])
+
+    if isinstance(ocr_json, list):
+        merged.extend([obj for obj in ocr_json if isinstance(obj, dict)])
+
+    return merged
 # =========================================================
-# Geometry + drawing
+# DRAW
 # =========================================================
-def scale_bbox_1000_to_pixels(bbox: List[float], width: int, height: int) -> List[int]:
-    if len(bbox) != 4:
-        raise ValueError(f"Invalid bbox length: {bbox}")
-
+def scale_bbox(bbox, w: int, h: int):
     x1, y1, x2, y2 = bbox
-
-    x1 = int(round((x1 / 1000.0) * width))
-    y1 = int(round((y1 / 1000.0) * height))
-    x2 = int(round((x2 / 1000.0) * width))
-    y2 = int(round((y2 / 1000.0) * height))
-
-    x1 = max(0, min(width - 1, x1))
-    y1 = max(0, min(height - 1, y1))
-    x2 = max(0, min(width - 1, x2))
-    y2 = max(0, min(height - 1, y2))
-
-    if x1 > x2:
-        x1, x2 = x2, x1
-    if y1 > y2:
-        y1, y2 = y2, y1
-
-    return [x1, y1, x2, y2]
-
-
-def get_font(size: int = 16) -> Optional[ImageFont.ImageFont]:
-    for font_name in ["DejaVuSans.ttf", "Arial.ttf"]:
-        try:
-            return ImageFont.truetype(font_name, size=size)
-        except Exception:
-            pass
-    try:
-        return ImageFont.load_default()
-    except Exception:
-        return None
-
-
-# =========================================================
-# Normalization
-# =========================================================
-def normalize_general_detection_output(
-    parsed: Union[List[Any], Dict[str, Any], None]
-) -> List[Dict[str, Any]]:
-    if parsed is None:
-        return []
-
-    if isinstance(parsed, dict):
-        if isinstance(parsed.get("objects"), list):
-            items = parsed["objects"]
-        else:
-            items = [parsed]
-    elif isinstance(parsed, list):
-        items = parsed
-    else:
-        return []
-
-    normalized = []
-    for item in items:
-        if not isinstance(item, dict):
-            continue
-
-        bbox = item.get("bbox_2d") or item.get("bbox") or item.get("box")
-        if not isinstance(bbox, list) or len(bbox) != 4:
-            continue
-
-        label = item.get("label") or item.get("category") or item.get("name") or ""
-        text_content = item.get("text_content", "")
-
-        normalized.append({
-            "label": str(label).strip(),
-            "bbox_2d": bbox,
-            "text_content": str(text_content).strip() if text_content is not None else "",
-        })
-
-    return normalized
-
-
-def normalize_person_output(
-    parsed: Union[List[Any], Dict[str, Any], None]
-) -> List[Dict[str, Any]]:
-    if parsed is None:
-        return []
-
-    if isinstance(parsed, dict):
-        if isinstance(parsed.get("persons"), list):
-            items = parsed["persons"]
-        else:
-            items = [parsed]
-    elif isinstance(parsed, list):
-        items = parsed
-    else:
-        return []
-
-    normalized = []
-    for item in items:
-        if not isinstance(item, dict):
-            continue
-
-        person_bbox = item.get("bbox_2d") or item.get("person_bbox_2d") or item.get("bbox")
-        if not isinstance(person_bbox, list) or len(person_bbox) != 4:
-            continue
-
-        face_bbox = item.get("face_bbox_2d")
-        if not (isinstance(face_bbox, list) and len(face_bbox) == 4):
-            face_bbox = None
-
-        action = item.get("action", "")
-        clothing = item.get("visible_clothing", [])
-        accessories = item.get("visible_accessories", [])
-        tattoo_detected = item.get("tattoo_detected", False)
-        blood_visible = item.get("blood_visible", False)
-        palm_visible = item.get("palm_visible", False)
-        weapon_near_person = item.get("weapon_near_person", False)
-
-        if not isinstance(clothing, list):
-            clothing = [str(clothing)]
-        if not isinstance(accessories, list):
-            accessories = [str(accessories)]
-
-        normalized.append({
-            "label": "person",
-            "bbox_2d": person_bbox,
-            "face_bbox_2d": face_bbox,
-            "action": str(action).strip(),
-            "gender": "",
-            "ethnicity": "",
-            "age": "",
-            "visible_clothing": [str(x).strip() for x in clothing if str(x).strip()],
-            "visible_accessories": [str(x).strip() for x in accessories if str(x).strip()],
-            "tattoo_detected": bool(tattoo_detected),
-            "blood_visible": bool(blood_visible),
-            "palm_visible": bool(palm_visible),
-            "weapon_near_person": bool(weapon_near_person),
-        })
-
-    return normalized
-
-
-def normalize_ocr_output(
-    parsed: Union[List[Any], Dict[str, Any], None]
-) -> List[Dict[str, Any]]:
-    if parsed is None:
-        return []
-
-    if isinstance(parsed, dict):
-        if isinstance(parsed.get("texts"), list):
-            items = parsed["texts"]
-        elif isinstance(parsed.get("objects"), list):
-            items = parsed["objects"]
-        else:
-            items = [parsed]
-    elif isinstance(parsed, list):
-        items = parsed
-    else:
-        return []
-
-    normalized = []
-    for item in items:
-        if not isinstance(item, dict):
-            continue
-
-        bbox = item.get("bbox_2d") or item.get("bbox") or item.get("box")
-        if not isinstance(bbox, list) or len(bbox) != 4:
-            continue
-
-        text_content = item.get("text_content") or item.get("text") or item.get("label") or ""
-
-        normalized.append({
-            "label": "text",
-            "bbox_2d": bbox,
-            "text_content": str(text_content).strip(),
-        })
-
-    return normalized
-
-
-# =========================================================
-# Prompts
-# =========================================================
-def build_general_detection_prompt(categories: List[str]) -> str:
-    cat_str = ", ".join(categories)
-    return f'''
-Locate every visible instance in the image that belongs to these categories:
-"{cat_str}"
-
-Rules:
-- Return JSON only.
-- Use relative coordinates scaled from 0 to 1000.
-- If an item is not present, do not include it.
-- Allowed labels are only: person, face, tattoo, blood, palm, text, weapon, keyboard, hotel room.
-- For text regions, use label "text".
-- For weapon-like objects, use label "weapon".
-- For visible hotel room scenes or obvious hotel-room context, use label "hotel room".
-
-Output format:
-[
-  {{
-    "label": "category_name",
-    "bbox_2d": [x1, y1, x2, y2]
-  }}
-]
-'''.strip()
-
-
-def build_person_prompt() -> str:
-    return '''
-Detect all visible persons in the image.
-
-For each detected person, return JSON only in this format:
-[
-  {
-    "label": "person",
-    "bbox_2d": [x1, y1, x2, y2],
-    "face_bbox_2d": [x1, y1, x2, y2],
-    "action": "short visible action if clear, else empty string",
-    "visible_clothing": ["item1", "item2"],
-    "visible_accessories": ["item1", "item2"],
-    "tattoo_detected": true,
-    "blood_visible": false,
-    "palm_visible": true,
-    "weapon_near_person": false
-  }
-]
-
-Rules:
-- Use relative coordinates scaled from 0 to 1000.
-- Include face_bbox_2d only if a face is visible.
-- visible_clothing and visible_accessories must be arrays.
-- tattoo_detected on body, blood_visible, palm_visible, weapon_near_person must be true or false.
-- Return JSON only, no markdown.
-'''.strip()
-
-
-def build_ocr_prompt() -> str:
-    return '''
-Spot all readable text in the image and return JSON only.
-
-Rules:
-- Use relative coordinates scaled from 0 to 1000.
-- Return line-level text regions.
-- If no text is visible, return [].
-- Do not return markdown.
-
-Output format:
-[
-  {
-    "label": "text",
-    "bbox_2d": [x1, y1, x2, y2],
-    "text_content": "recognized text"
-  }
-]
-'''.strip()
-
-
-# =========================================================
-# Drawing
-# =========================================================
-def flatten_for_drawing(result: Dict[str, Any]) -> List[Dict[str, Any]]:
-    draw_items: List[Dict[str, Any]] = []
-
-    for item in result.get("general_detections", []):
-        label = item.get("label", "")
-        if label in {"face", "person"}:
-            continue
-        draw_items.append({
-            "label": label,
-            "bbox_2d": item.get("bbox_2d"),
-            "text_content": item.get("text_content", ""),
-        })
-
-    for person_item in result.get("persons", []):
-        draw_items.append({
-            "label": "person",
-            "bbox_2d": person_item.get("bbox_2d"),
-            "text_content": person_item.get("action", ""),
-        })
-
-        face_bbox = person_item.get("face_bbox_2d")
-        if face_bbox:
-            draw_items.append({
-                "label": "face",
-                "bbox_2d": face_bbox,
-                "text_content": "",
-            })
-
-    for item in result.get("ocr_texts", []):
-        draw_items.append({
-            "label": "text",
-            "bbox_2d": item.get("bbox_2d"),
-            "text_content": item.get("text_content", ""),
-        })
-
-    return draw_items
-
-
-def draw_bboxes_from_pil(
-    source_image: Image.Image,
-    result: Dict[str, Any],
-    output_path: str,
-) -> str:
-    image = source_image.copy()
-    draw = ImageDraw.Draw(image)
-    width, height = image.size
-    font = get_font(16)
-
-    draw_items = flatten_for_drawing(result)
-
-    for item in draw_items:
-        bbox = item.get("bbox_2d")
-        if not bbox:
-            continue
-
-        try:
-            x1, y1, x2, y2 = scale_bbox_1000_to_pixels(bbox, width, height)
-        except Exception:
-            continue
-
-        label = item.get("label", "").strip()
-        text_content = item.get("text_content", "").strip()
-
-        draw.rectangle([x1, y1, x2, y2], outline="blue", width=3)
-
-        caption = label
-        if text_content:
-            caption = f"{label}: {text_content}" if label else text_content
-
-        if caption:
-            text_y = max(0, y1 - 18)
-            draw.text((x1, text_y), caption, fill="blue", font=font)
-
-    image.save(output_path)
-    return output_path
-
-
-# =========================================================
-# Batched per-image pipeline
-# =========================================================
-def process_one_batch(
-    batch_records: List[Dict[str, Any]],
-    output_folder: str,
-    categories: List[str],
-    worker_tag: str = "",
-) -> List[Dict[str, Any]]:
-    batch_start = time.perf_counter()
-
-    batch_records = sorted(batch_records, key=lambda x: int(x.get("area", 0)), reverse=True)
-    image_paths = [item["image_path"] for item in batch_records]
-    pil_images = [load_pil_image(path) for path in image_paths]
-
-    print(
-        f"{worker_tag} Batch start | batch_size={len(batch_records)} | "
-        f"images={[os.path.basename(p) for p in image_paths]}",
-        flush=True,
-    )
-
-    general_prompt = build_general_detection_prompt(categories)
-    person_prompt = build_person_prompt()
-    ocr_prompt = build_ocr_prompt()
-
-    general_raws, general_timing = run_qwen3_vl_batch(
-        image_inputs=pil_images,
-        prompt=general_prompt,
-        max_new_tokens=MAX_NEW_TOKENS_DET,
-    )
-    general_items_list = [
-        normalize_general_detection_output(extract_json_from_text(text))
-        for text in general_raws
+    return [
+        int(x1 / 1000 * w),
+        int(y1 / 1000 * h),
+        int(x2 / 1000 * w),
+        int(y2 / 1000 * h),
     ]
 
-    person_raws, person_timing = run_qwen3_vl_batch(
-        image_inputs=pil_images,
-        prompt=person_prompt,
-        max_new_tokens=MAX_NEW_TOKENS_DET,
-    )
-    persons_list = [
-        normalize_person_output(extract_json_from_text(text))
-        for text in person_raws
-    ]
 
-    ocr_raws, ocr_timing = run_qwen3_vl_batch(
-        image_inputs=pil_images,
-        prompt=ocr_prompt,
-        max_new_tokens=MAX_NEW_TOKENS_OCR,
-    )
-    ocr_items_list = [
-        normalize_ocr_output(extract_json_from_text(text))
-        for text in ocr_raws
-    ]
+def draw_boxes(image_path: str, detections, output_path: str) -> None:
+    with Image.open(image_path).convert("RGB") as img:
+        draw = ImageDraw.Draw(img)
+        w, h = img.size
 
-    shared_inference_latency_ms = (
-        (general_timing.get("total_wall_ms") or 0.0) +
-        (person_timing.get("total_wall_ms") or 0.0) +
-        (ocr_timing.get("total_wall_ms") or 0.0)
-    )
-    amortized_inference_ms = (
-        (general_timing.get("amortized_total_wall_ms") or 0.0) +
-        (person_timing.get("amortized_total_wall_ms") or 0.0) +
-        (ocr_timing.get("amortized_total_wall_ms") or 0.0)
-    )
-    shared_generate_gpu_ms = (
-        (general_timing.get("generate_gpu_ms") or 0.0) +
-        (person_timing.get("generate_gpu_ms") or 0.0) +
-        (ocr_timing.get("generate_gpu_ms") or 0.0)
-    )
-    amortized_generate_gpu_ms = (
-        (general_timing.get("amortized_generate_gpu_ms") or 0.0) +
-        (person_timing.get("amortized_generate_gpu_ms") or 0.0) +
-        (ocr_timing.get("amortized_generate_gpu_ms") or 0.0)
-    )
+        for obj in detections:
+            if not isinstance(obj, dict) or "bbox_2d" not in obj:
+                continue
 
-    results: List[Dict[str, Any]] = []
+            try:
+                x1, y1, x2, y2 = scale_bbox(obj["bbox_2d"], w, h)
+            except Exception:
+                continue
 
-    for idx, image_path in enumerate(image_paths):
-        base_name = os.path.splitext(os.path.basename(image_path))[0]
-        annotated_path = os.path.join(output_folder, f"{base_name}_annotated.png")
-        json_path = os.path.join(output_folder, f"{base_name}.json")
+            label = obj.get("label", "")
+            draw.rectangle([x1, y1, x2, y2], outline="blue", width=3)
+            draw.text((x1, max(0, y1 - 15)), str(label), fill="blue")
 
-        result = {
-            "status": "ok",
-            "image_path": image_path,
-            "categories_requested": categories,
-            "batch_info": {
-                "batch_size": len(batch_records),
-                "area": batch_records[idx].get("area", 0),
-                "images_in_batch": image_paths,
-            },
-            "general_detections": general_items_list[idx],
-            "persons": persons_list[idx],
-            "ocr_texts": ocr_items_list[idx],
-            "timings_ms": {
-                "general_detection": general_timing,
-                "person_detection": person_timing,
-                "ocr": ocr_timing,
-                "inference_latency_ms": round_num(shared_inference_latency_ms),
-                "amortized_inference_ms": round_num(amortized_inference_ms),
-                "generate_gpu_latency_ms": round_num(shared_generate_gpu_ms),
-                "amortized_generate_gpu_ms": round_num(amortized_generate_gpu_ms),
-                "image_total_wall_ms": None,
-            },
-            "raw_responses": {
-                "general_detection": general_raws[idx],
-                "person_detection": person_raws[idx],
-                "ocr": ocr_raws[idx],
-            },
-        }
-
-        draw_bboxes_from_pil(
-            source_image=pil_images[idx],
-            result=result,
-            output_path=annotated_path,
-        )
-
-        result["timings_ms"]["image_total_wall_ms"] = round_num(
-            (time.perf_counter() - batch_start) * 1000.0
-        )
-
-        write_json(json_path, result)
-        results.append(result)
-
-    batch_total_wall_ms = (time.perf_counter() - batch_start) * 1000.0
-    print(
-        f"{worker_tag} Batch done | batch_size={len(batch_records)} | "
-        f"batch_total={batch_total_wall_ms / 1000.0:.3f}s | "
-        f"inference_latency={shared_inference_latency_ms / 1000.0:.3f}s | "
-        f"amortized_per_image={amortized_inference_ms / 1000.0:.3f}s",
-        flush=True,
-    )
-
-    return results
-
-
-def process_batch_recursive(
-    batch_records: List[Dict[str, Any]],
-    output_folder: str,
-    categories: List[str],
-    worker_tag: str = "",
-) -> List[Dict[str, Any]]:
-    try:
-        return process_one_batch(
-            batch_records=batch_records,
-            output_folder=output_folder,
-            categories=categories,
-            worker_tag=worker_tag,
-        )
-    except RuntimeError as e:
-        message = str(e).lower()
-        if "out of memory" in message and len(batch_records) > 1:
-            print(
-                f"{worker_tag} CUDA OOM on batch_size={len(batch_records)}. Splitting batch.",
-                flush=True,
-            )
-            if torch.cuda.is_available():
-                torch.cuda.empty_cache()
-            mid = len(batch_records) // 2
-            left = process_batch_recursive(
-                batch_records=batch_records[:mid],
-                output_folder=output_folder,
-                categories=categories,
-                worker_tag=worker_tag,
-            )
-            right = process_batch_recursive(
-                batch_records=batch_records[mid:],
-                output_folder=output_folder,
-                categories=categories,
-                worker_tag=worker_tag,
-            )
-            return left + right
-        raise
-
-
-def process_record_list(
-    image_records: List[Dict[str, Any]],
-    output_folder: str,
-    categories: List[str],
-    batch_size: int,
-    worker_tag: str = "",
-) -> List[Dict[str, Any]]:
-    ensure_dir(output_folder)
-
-    if not image_records:
-        print(f"{worker_tag} No images assigned to this worker.", flush=True)
-        return []
-
-    ordered = sorted(image_records, key=lambda x: int(x.get("area", 0)), reverse=True)
-    record_batches = chunk_list(ordered, max(1, batch_size))
-
-    all_results: List[Dict[str, Any]] = []
-    for batch_records in record_batches:
-        try:
-            results = process_batch_recursive(
-                batch_records=batch_records,
-                output_folder=output_folder,
-                categories=categories,
-                worker_tag=worker_tag,
-            )
-            all_results.extend(results)
-        except Exception as e:
-            for record in batch_records:
-                image_path = record["image_path"]
-                base_name = os.path.splitext(os.path.basename(image_path))[0]
-                json_path = os.path.join(output_folder, f"{base_name}.json")
-                error_result = {
-                    "status": "failed",
-                    "image_path": image_path,
-                    "error": str(e),
-                    "traceback": traceback.format_exc(),
-                    "timings_ms": {
-                        "general_detection": {},
-                        "person_detection": {},
-                        "ocr": {},
-                        "inference_latency_ms": None,
-                        "amortized_inference_ms": None,
-                        "generate_gpu_latency_ms": None,
-                        "amortized_generate_gpu_ms": None,
-                        "image_total_wall_ms": None,
-                    },
-                }
-                write_json(json_path, error_result)
-                all_results.append(error_result)
-                print(f"{worker_tag} Failed on {image_path}: {e}", flush=True)
-
-    return all_results
+        img.save(output_path)
 
 
 # =========================================================
-# Worker summary + parent aggregation
+# PROCESS ONE IMAGE
 # =========================================================
-def build_worker_summary(
-    worker_index: int,
-    physical_gpu_id: int,
-    image_records: List[Dict[str, Any]],
-    results: List[Dict[str, Any]],
-    model_load_wall_s: float,
-    worker_total_wall_s: float,
-) -> Dict[str, Any]:
-    success_results = [r for r in results if r.get("status") == "ok"]
-    failed_results = [r for r in results if r.get("status") != "ok"]
+def process_image(img_path: str, out_dir: str, resize_max: int) -> float:
+    name = os.path.splitext(os.path.basename(img_path))[0]
 
-    worker_inference_wall_s_estimate = sum(
-        (r.get("timings_ms", {}).get("amortized_inference_ms") or 0.0)
-        for r in success_results
-    ) / 1000.0
+    # resize only in memory, not saved to disk
+    resized_img = resize_image_in_memory(img_path, max_size=resize_max)
 
-    return {
-        "worker_index": worker_index,
-        "physical_gpu_id": physical_gpu_id,
-        "visible_cuda_devices": os.environ.get("CUDA_VISIBLE_DEVICES", ""),
-        "images_assigned": len(image_records),
-        "images_succeeded": len(success_results),
-        "images_failed": len(failed_results),
-        "model_load_wall_s": round_num(model_load_wall_s),
-        "worker_total_wall_s": round_num(worker_total_wall_s),
-        "worker_inference_wall_s_estimate": round_num(worker_inference_wall_s_estimate),
-        "throughput_images_per_s": round_num(
-            len(success_results) / worker_total_wall_s if worker_total_wall_s > 0 else 0.0
-        ),
-        "per_image": [
-            {
-                "image_path": r.get("image_path"),
-                "status": r.get("status"),
-                "inference_latency_ms": r.get("timings_ms", {}).get("inference_latency_ms"),
-                "amortized_inference_ms": r.get("timings_ms", {}).get("amortized_inference_ms"),
-                "image_total_wall_ms": r.get("timings_ms", {}).get("image_total_wall_ms"),
-            }
-            for r in results
-        ],
+    t0 = time.time()
+
+    gen_raw = run_model(resized_img, general_prompt())
+    per_raw = run_model(resized_img, person_prompt())
+    ocr_raw = run_model(resized_img, ocr_prompt())
+
+    inference_time = time.time() - t0
+
+    gen_json = extract_json(gen_raw)
+    per_json = extract_json(per_raw)
+    ocr_json = extract_json(ocr_raw)
+
+    result = {
+        "image_path": img_path,
+        "general": gen_json,
+        "person": per_json,
+        "ocr": ocr_json,
+        "raw_outputs": {
+            "general": gen_raw,
+            "person": per_raw,
+            "ocr": ocr_raw,
+        },
+        "inference_time_sec": round(inference_time, 3),
     }
 
+    json_path = os.path.join(out_dir, f"{name}.json")
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(result, f, ensure_ascii=False, indent=2)
 
-def run_worker_mode(
-    worker_index: int,
-    worker_gpu: int,
-    input_list_json: str,
-    output_folder: str,
-    batch_size: int,
-    attn: str,
-    allow_tf32: bool,
-) -> None:
-    ensure_dir(output_folder)
-
-    image_records = read_json(input_list_json)
-    if not isinstance(image_records, list):
-        raise ValueError(f"Invalid worker input list in {input_list_json}")
-
-    worker_tag = f"[worker={worker_index} gpu={worker_gpu}]"
-    print(
-        f"{worker_tag} Starting worker. assigned_images={len(image_records)} "
-        f"batch_size={batch_size} visible_cuda_devices={os.environ.get('CUDA_VISIBLE_DEVICES', 'ALL')}",
-        flush=True,
+    draw_boxes(
+    img_path,
+    merged_detections_for_drawing(gen_json, per_json, ocr_json),
+    os.path.join(out_dir, f"{name}_annotated.png"),
     )
 
-    worker_start = time.perf_counter()
+    resized_img.close()
 
-    load_start = time.perf_counter()
+    print(f"{os.path.basename(img_path)} | inference: {round(inference_time, 2)}s", flush=True)
+    return inference_time
+
+
+# =========================================================
+# WORKER
+# =========================================================
+def worker(worker_gpu: int, shard_file: str, out_dir: str, batch_size: int, attn: str, allow_tf32: bool, resize_max: int) -> None:
+    ensure_dir(out_dir)
+
+    with open(shard_file, "r", encoding="utf-8") as f:
+        images = json.load(f)
+
     load_model(attn=attn, allow_tf32=allow_tf32)
-    model_load_wall_s = time.perf_counter() - load_start
 
-    results = process_record_list(
-        image_records=image_records,
-        output_folder=output_folder,
-        categories=TARGET_CATEGORIES,
-        batch_size=batch_size,
-        worker_tag=worker_tag,
-    )
+    q: Queue = Queue(maxsize=max(2, batch_size * 2))
 
-    worker_total_wall_s = time.perf_counter() - worker_start
-    worker_summary = build_worker_summary(
-        worker_index=worker_index,
-        physical_gpu_id=worker_gpu,
-        image_records=image_records,
-        results=results,
-        model_load_wall_s=model_load_wall_s,
-        worker_total_wall_s=worker_total_wall_s,
-    )
+    def producer():
+        for img in images:
+            q.put(img)
+        q.put(None)
 
-    worker_summary_path = os.path.join(output_folder, f"_worker_{worker_index}_summary.json")
-    write_json(worker_summary_path, worker_summary)
+    threading.Thread(target=producer, daemon=True).start()
 
-    print(
-        f"{worker_tag} Done. model_load={model_load_wall_s:.3f}s | "
-        f"worker_total={worker_total_wall_s:.3f}s | summary={worker_summary_path}",
-        flush=True,
-    )
+    total = 0.0
+    processed = 0
 
-
-def launch_worker_subprocess(
-    script_path: str,
-    worker_index: int,
-    physical_gpu_id: int,
-    image_records: List[Dict[str, Any]],
-    output_folder: str,
-    batch_size: int,
-    attn: str,
-    allow_tf32: bool,
-) -> subprocess.Popen:
-    input_list_json = os.path.join(output_folder, f"_worker_{worker_index}_inputs.json")
-    write_json(input_list_json, image_records)
-
-    env = os.environ.copy()
-    env["CUDA_VISIBLE_DEVICES"] = str(physical_gpu_id)
-
-    cmd = [
-        sys.executable,
-        script_path,
-        "--worker-gpu", str(physical_gpu_id),
-        "--worker-index", str(worker_index),
-        "--input-list-json", input_list_json,
-        "--output-folder", output_folder,
-        "--batch-size", str(batch_size),
-        "--attn", attn,
-    ]
-    if allow_tf32:
-        cmd.append("--allow-tf32")
-
-    print(
-        f"[parent] Launching worker={worker_index} on physical_gpu={physical_gpu_id} "
-        f"with {len(image_records)} images | batch_size={batch_size}",
-        flush=True,
-    )
-
-    return subprocess.Popen(cmd, env=env)
-
-
-def aggregate_final_outputs(
-    image_records: List[Dict[str, Any]],
-    output_folder: str,
-    gpu_ids_used: List[int],
-    total_wall_s: float,
-) -> Dict[str, Any]:
-    all_results: List[Dict[str, Any]] = []
-    per_image: List[Dict[str, Any]] = []
-    failed_images: List[str] = []
-
-    for record in image_records:
-        image_path = record["image_path"]
-        base_name = os.path.splitext(os.path.basename(image_path))[0]
-        json_path = os.path.join(output_folder, f"{base_name}.json")
-
-        if not os.path.exists(json_path):
-            failed_images.append(image_path)
-            continue
-
-        item = read_json(json_path)
-        all_results.append(item)
-
-        timings = item.get("timings_ms", {})
-        per_image.append({
-            "image_path": item.get("image_path", image_path),
-            "status": item.get("status", "unknown"),
-            "inference_latency_ms": timings.get("inference_latency_ms"),
-            "amortized_inference_ms": timings.get("amortized_inference_ms"),
-            "image_total_wall_ms": timings.get("image_total_wall_ms"),
-        })
-
-        if item.get("status") != "ok":
-            failed_images.append(image_path)
-
-    all_results = sorted(all_results, key=lambda x: x.get("image_path", ""))
-    per_image = sorted(per_image, key=lambda x: x.get("image_path", ""))
-
-    summary_path = os.path.join(output_folder, "summary.json")
-    write_json(summary_path, all_results)
-
-    worker_summaries: List[Dict[str, Any]] = []
-    worker_index = 0
     while True:
-        worker_summary_path = os.path.join(output_folder, f"_worker_{worker_index}_summary.json")
-        if not os.path.exists(worker_summary_path):
+        batch: List[str] = []
+        item = None
+
+        while len(batch) < batch_size:
+            item = q.get()
+            if item is None:
+                break
+            batch.append(item)
+
+        if not batch:
             break
-        worker_summaries.append(read_json(worker_summary_path))
-        worker_index += 1
 
-    success_images = [x for x in per_image if x.get("status") == "ok"]
-    total_amortized_inference_s = sum(
-        (x.get("amortized_inference_ms") or 0.0) for x in success_images
-    ) / 1000.0
+        for img in batch:
+            total += process_image(img, out_dir, resize_max)
+            processed += 1
 
-    run_summary = {
-        "input_folder": INPUT_FOLDER,
-        "output_folder": output_folder,
-        "num_images_total": len(image_records),
-        "num_images_succeeded": len(success_images),
-        "num_images_failed": len(per_image) - len(success_images),
-        "gpu_ids_used": gpu_ids_used,
-        "total_wall_s": round_num(total_wall_s),
-        "total_amortized_inference_s": round_num(total_amortized_inference_s),
-        "throughput_images_per_s": round_num(
-            len(success_images) / total_wall_s if total_wall_s > 0 else 0.0
-        ),
-        "per_image": per_image,
-        "worker_summaries": worker_summaries,
-        "failed_images": failed_images,
+        if item is None:
+            break
+
+    summary = {
+        "worker_gpu": worker_gpu,
+        "num_images": processed,
+        "total_inference_time_sec": round(total, 3),
+        "average_inference_time_sec": round(total / processed, 3) if processed else 0.0,
     }
 
-    run_summary_path = os.path.join(output_folder, "run_summary.json")
-    write_json(run_summary_path, run_summary)
+    summary_path = os.path.join(out_dir, f"_worker_gpu_{worker_gpu}_summary.json")
+    with open(summary_path, "w", encoding="utf-8") as f:
+        json.dump(summary, f, indent=2)
 
-    print(f"[parent] Saved folder summary: {summary_path}", flush=True)
-    print(f"[parent] Saved run summary: {run_summary_path}", flush=True)
-
-    return run_summary
+    print(f"[GPU {worker_gpu}] total inference: {round(total, 2)}s", flush=True)
 
 
-def run_parent_mode(
-    input_folder: str,
-    output_folder: str,
-    gpu_ids: List[int],
-    batch_size: int,
-    attn: str,
-    allow_tf32: bool,
-) -> None:
-    ensure_dir(output_folder)
+# =========================================================
+# MAIN
+# =========================================================
+def main() -> None:
+    args = parse_args()
+    ensure_dir(args.output_folder)
 
-    image_records = list_image_records(input_folder)
-    if not image_records:
-        print(f"No images found in: {input_folder}", flush=True)
+    if args.worker:
+        if args.worker_gpu is None or args.worker_shard_file is None:
+            raise ValueError("Worker mode requires --worker-gpu and --worker-shard-file")
+        worker(
+            worker_gpu=args.worker_gpu,
+            shard_file=args.worker_shard_file,
+            out_dir=args.output_folder,
+            batch_size=max(1, args.batch_size),
+            attn=args.attn,
+            allow_tf32=args.allow_tf32,
+            resize_max=args.resize_max,
+        )
         return
 
-    shards = greedy_balance_by_area(image_records, len(gpu_ids))
-    active = [
-        (idx, gpu_ids[idx], shard)
-        for idx, shard in enumerate(shards)
-        if shard
+    images = [
+        os.path.join(args.input_folder, f)
+        for f in sorted(os.listdir(args.input_folder))
+        if is_real_input_image(f)
     ]
 
-    print(
-        f"[parent] Found {len(image_records)} images | gpu_ids={gpu_ids} | batch_size={batch_size}",
-        flush=True,
-    )
+    gpu_ids = parse_gpu_ids(args.gpu_ids)
 
-    script_path = os.path.abspath(__file__)
-    total_start = time.perf_counter()
+    shards = [[] for _ in gpu_ids]
+    for i, img in enumerate(images):
+        shards[i % len(gpu_ids)].append(img)
 
-    procs: List[Tuple[int, int, subprocess.Popen]] = []
-    for worker_index, physical_gpu_id, shard in active:
-        proc = launch_worker_subprocess(
-            script_path=script_path,
-            worker_index=worker_index,
-            physical_gpu_id=physical_gpu_id,
-            image_records=shard,
-            output_folder=output_folder,
-            batch_size=batch_size,
-            attn=attn,
-            allow_tf32=allow_tf32,
+    shard_dir = os.path.join(args.output_folder, "_worker_shards")
+    ensure_dir(shard_dir)
+
+    total_start = time.time()
+    procs = []
+
+    for i, gpu in enumerate(gpu_ids):
+        if not shards[i]:
+            continue
+
+        shard_file = os.path.join(shard_dir, f"gpu_{gpu}.json")
+        with open(shard_file, "w", encoding="utf-8") as f:
+            json.dump(shards[i], f)
+
+        env = os.environ.copy()
+        env["CUDA_VISIBLE_DEVICES"] = str(gpu)
+
+        p = subprocess.Popen(
+            [
+                sys.executable,
+                __file__,
+                "--worker",
+                "--worker-gpu",
+                str(gpu),
+                "--worker-shard-file",
+                shard_file,
+                "--output-folder",
+                args.output_folder,
+                "--batch-size",
+                str(max(1, args.batch_size)),
+                "--attn",
+                args.attn,
+                "--resize-max",
+                str(args.resize_max),
+            ] + (["--allow-tf32"] if args.allow_tf32 else []),
+            env=env,
         )
-        procs.append((worker_index, physical_gpu_id, proc))
+        procs.append(p)
 
-    failed_workers: List[Dict[str, Any]] = []
-    for worker_index, physical_gpu_id, proc in procs:
-        return_code = proc.wait()
-        print(
-            f"[parent] worker={worker_index} physical_gpu={physical_gpu_id} exit_code={return_code}",
-            flush=True,
-        )
-        if return_code != 0:
-            failed_workers.append({
-                "worker_index": worker_index,
-                "physical_gpu_id": physical_gpu_id,
-                "exit_code": return_code,
-            })
+    for p in procs:
+        p.wait()
 
-    total_wall_s = time.perf_counter() - total_start
-    run_summary = aggregate_final_outputs(
-        image_records=image_records,
-        output_folder=output_folder,
-        gpu_ids_used=[gpu_id for _, gpu_id, _ in active],
-        total_wall_s=total_wall_s,
-    )
+    total_time = time.time() - total_start
 
-    if failed_workers:
-        run_summary["failed_workers"] = failed_workers
-        run_summary_path = os.path.join(output_folder, "run_summary.json")
-        write_json(run_summary_path, run_summary)
+    run_summary = {
+        "input_folder": args.input_folder,
+        "output_folder": args.output_folder,
+        "gpu_ids": gpu_ids,
+        "num_images": len(images),
+        "batch_size": max(1, args.batch_size),
+        "attn": args.attn,
+        "allow_tf32": bool(args.allow_tf32),
+        "resize_max": args.resize_max,
+        "total_wall_time_sec": round(total_time, 3),
+    }
 
-    print(
-        f"[parent] Done. total_wall={total_wall_s:.3f}s | "
-        f"images={run_summary['num_images_total']} | "
-        f"succeeded={run_summary['num_images_succeeded']} | "
-        f"failed={run_summary['num_images_failed']}",
-        flush=True,
-    )
+    with open(os.path.join(args.output_folder, "run_summary.json"), "w", encoding="utf-8") as f:
+        json.dump(run_summary, f, indent=2)
+
+    print("\n==============================")
+    print(f"TOTAL TIME (ALL IMAGES): {round(total_time, 2)} sec")
+    print("==============================")
 
 
-# =========================================================
-# CLI
-# =========================================================
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--input-folder", type=str, default=INPUT_FOLDER)
-    parser.add_argument("--output-folder", type=str, default=OUTPUT_FOLDER)
-    parser.add_argument("--gpu-ids", type=str, default=DEFAULT_GPU_IDS)
-    parser.add_argument("--batch-size", type=int, default=DEFAULT_BATCH_SIZE)
-    parser.add_argument("--attn", type=str, default=DEFAULT_ATTN)
-    parser.add_argument("--allow-tf32", action="store_true")
-
-    parser.add_argument("--worker-gpu", type=int, default=None)
-    parser.add_argument("--worker-index", type=int, default=None)
-    parser.add_argument("--input-list-json", type=str, default=None)
-    return parser.parse_args()
-
-
-# =========================================================
-# Main
-# =========================================================
 if __name__ == "__main__":
-    args = parse_args()
-
-    if args.worker_gpu is not None:
-        if args.worker_index is None or args.input_list_json is None:
-            raise ValueError("Worker mode requires --worker-index and --input-list-json")
-        run_worker_mode(
-            worker_index=args.worker_index,
-            worker_gpu=args.worker_gpu,
-            input_list_json=args.input_list_json,
-            output_folder=args.output_folder,
-            batch_size=max(1, args.batch_size),
-            attn=args.attn,
-            allow_tf32=args.allow_tf32,
-        )
-    else:
-        run_parent_mode(
-            input_folder=args.input_folder,
-            output_folder=args.output_folder,
-            gpu_ids=parse_gpu_ids(args.gpu_ids),
-            batch_size=max(1, args.batch_size),
-            attn=args.attn,
-            allow_tf32=args.allow_tf32,
-        )
+    main()

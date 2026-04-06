@@ -1,5 +1,4 @@
 {
-  "status": "ok",
   "image_path": "/home2/tajamul/Qwen3VL/images/6.jpeg",
   "categories_requested": [
     "person",
@@ -10,59 +9,98 @@
     "text",
     "weapon",
     "keyboard",
-    "hotel room"
+    "hotel room",
+    "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+    "school uniform",
+    "school logos/badges"
   ],
-  "batch_info": {
-    "batch_size": 2,
-    "area": 224676,
-    "images_in_batch": [
-      "/home2/tajamul/Qwen3VL/images/3.jpg",
-      "/home2/tajamul/Qwen3VL/images/6.jpeg"
-    ]
-  },
-  "general_detections": [],
+  "general_detections": [
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        0,
+        54,
+        206,
+        518
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        0,
+        580,
+        194,
+        948
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        306,
+        572,
+        508,
+        956
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        306,
+        62,
+        494,
+        520
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        542,
+        59,
+        812,
+        637
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        492,
+        606,
+        658,
+        934
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        662,
+        588,
+        816,
+        934
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "tattoo",
+      "bbox_2d": [
+        796,
+        158,
+        1000,
+        834
+      ],
+      "text_content": ""
+    }
+  ],
   "persons": [],
   "ocr_texts": [],
-  "timings_ms": {
-    "general_detection": {
-      "batch_size": 2,
-      "preprocess_wall_ms": 29.981,
-      "generate_gpu_ms": 8747.115,
-      "generate_wall_ms": 8747.332,
-      "decode_wall_ms": 0.393,
-      "total_wall_ms": 8777.717,
-      "amortized_total_wall_ms": 4388.858,
-      "amortized_generate_gpu_ms": 4373.558
-    },
-    "person_detection": {
-      "batch_size": 2,
-      "preprocess_wall_ms": 35.182,
-      "generate_gpu_ms": 5103.555,
-      "generate_wall_ms": 5103.723,
-      "decode_wall_ms": 0.294,
-      "total_wall_ms": 5139.208,
-      "amortized_total_wall_ms": 2569.604,
-      "amortized_generate_gpu_ms": 2551.777
-    },
-    "ocr": {
-      "batch_size": 2,
-      "preprocess_wall_ms": 32.802,
-      "generate_gpu_ms": 259.921,
-      "generate_wall_ms": 260.02,
-      "decode_wall_ms": 0.135,
-      "total_wall_ms": 292.962,
-      "amortized_total_wall_ms": 146.481,
-      "amortized_generate_gpu_ms": 129.961
-    },
-    "inference_latency_ms": 14209.887,
-    "amortized_inference_ms": 7104.943,
-    "generate_gpu_latency_ms": 14110.591,
-    "amortized_generate_gpu_ms": 7055.296,
-    "image_total_wall_ms": 14297.64
-  },
   "raw_responses": {
-    "general_detection": "",
-    "person_detection": "",
-    "ocr": ""
+    "general_detection": "[\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [0, 54, 206, 518]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [0, 580, 194, 948]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [306, 572, 508, 956]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [306, 62, 494, 520]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [542, 59, 812, 637]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [492, 606, 658, 934]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [662, 588, 816, 934]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [796, 158, 1000, 834]\n  }\n]",
+    "person_detection": "[]",
+    "ocr": "[]"
   }
 }

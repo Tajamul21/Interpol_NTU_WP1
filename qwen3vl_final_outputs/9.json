@@ -1,0 +1,27 @@
+{
+  "image": "/home2/tajamul/Qwen3VL/images/9.jpg",
+  "inference_time_sec": 4.256,
+  "general": [
+    {
+      "bbox_2d": [
+        2,
+        43,
+        998,
+        998
+      ],
+      "label": "person"
+    }
+  ],
+  "person": [
+    {
+      "bbox_2d": [
+        0,
+        43,
+        1000,
+        1000
+      ],
+      "label": "person"
+    }
+  ],
+  "ocr": []
+}

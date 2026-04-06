@@ -1,0 +1,203 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/10.jpg",
+  "categories_requested": [
+    "person",
+    "face",
+    "tattoo",
+    "blood",
+    "palm",
+    "text",
+    "weapon",
+    "keyboard",
+    "hotel room",
+    "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+    "school uniform",
+    "school logos/badges"
+  ],
+  "general_detections": [],
+  "persons": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        79,
+        51,
+        285,
+        982
+      ],
+      "face_bbox_2d": [
+        177,
+        79,
+        239,
+        185
+      ],
+      "action": "standing",
+      "gender": "male",
+      "ethnicity": "white",
+      "age": "12-15",
+      "visible_clothing": [
+        "blazer",
+        "tie",
+        "shirt",
+        "pants",
+        "shoes"
+      ],
+      "visible_accessories": [],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": false,
+      "weapon_near_person": false
+    },
+    {
+      "label": "person",
+      "bbox_2d": [
+        293,
+        121,
+        443,
+        961
+      ],
+      "face_bbox_2d": [
+        329,
+        139,
+        397,
+        234
+      ],
+      "action": "standing",
+      "gender": "male",
+      "ethnicity": "white",
+      "age": "12-15",
+      "visible_clothing": [
+        "sweater",
+        "tie",
+        "shirt",
+        "pants",
+        "shoes"
+      ],
+      "visible_accessories": [
+        "glasses"
+      ],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": true,
+      "weapon_near_person": false
+    },
+    {
+      "label": "person",
+      "bbox_2d": [
+        455,
+        162,
+        600,
+        927
+      ],
+      "face_bbox_2d": [
+        499,
+        176,
+        555,
+        265
+      ],
+      "action": "standing",
+      "gender": "female",
+      "ethnicity": "white",
+      "age": "12-15",
+      "visible_clothing": [
+        "shirt",
+        "skirt",
+        "socks",
+        "shoes"
+      ],
+      "visible_accessories": [],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": true,
+      "weapon_near_person": false
+    },
+    {
+      "label": "person",
+      "bbox_2d": [
+        588,
+        97,
+        749,
+        905
+      ],
+      "face_bbox_2d": [
+        639,
+        132,
+        694,
+        213
+      ],
+      "action": "standing",
+      "gender": "female",
+      "ethnicity": "white",
+      "age": "12-15",
+      "visible_clothing": [
+        "sweater",
+        "shirt",
+        "skirt",
+        "socks",
+        "shoes"
+      ],
+      "visible_accessories": [],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": true,
+      "weapon_near_person": false
+    },
+    {
+      "label": "person",
+      "bbox_2d": [
+        754,
+        100,
+        920,
+        915
+      ],
+      "face_bbox_2d": [
+        810,
+        116,
+        859,
+        214
+      ],
+      "action": "standing",
+      "gender": "female",
+      "ethnicity": "white",
+      "age": "12-15",
+      "visible_clothing": [
+        "sweater",
+        "shirt",
+        "skirt",
+        "socks",
+        "shoes"
+      ],
+      "visible_accessories": [],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": true,
+      "weapon_near_person": false
+    }
+  ],
+  "ocr_texts": [
+    {
+      "label": "text",
+      "bbox_2d": [
+        66,
+        278,
+        123,
+        315
+      ],
+      "text_content": "Winchmorn"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        75,
+        297,
+        116,
+        316
+      ],
+      "text_content": "School"
+    }
+  ],
+  "raw_responses": {
+    "general_detection": "```json\n[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [754, 100, 919, 915]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [586, 97, 747, 903]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [456, 161, 598, 926]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [294, 122, 442, 960]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [80, 52, 285, 980]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [179, 82, 236, 181]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [332, 145, 396, 231]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [501, 175, 553, 262]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [638, 126, 693, 208]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [808, 115, 860, 212]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [338, 501, 394, 547]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [353, 512, 394, 553]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [514, 541, 550, 584]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [642, 464, 695, 533]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [692, 255, 712, 265]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [79, 903, 152, 983]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [181, 898, 229, 974]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [306, 885, 371, 958]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [383, 884, 442, 959]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [468, 862, 512, 927]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [506, 859, 561, 921]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [635, 827, 674, 901]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [670, 827, 712, 901]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [814, 835, 856, 912]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [847, 835, 888, 912]\n  },\n  {\n    \"label\": \"school uniform\",\n    \"bbox_2d\": [754, 235, 919, 620]\n  },\n  {\n    \"label\": \"school uniform\",\n    \"bbox_2d\": [586,",
+    "person_detection": "```json\n[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [79, 51, 285, 982],\n    \"face_bbox_2d\": [177, 79, 239, 185],\n    \"action\": \"standing\",\n    \"gender\": \"male\",\n    \"age\": \"12-15\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"blazer\", \"tie\", \"shirt\", \"pants\", \"shoes\"],\n    \"visible_accessories\": [],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [293, 121, 443, 961],\n    \"face_bbox_2d\": [329, 139, 397, 234],\n    \"action\": \"standing\",\n    \"gender\": \"male\",\n    \"age\": \"12-15\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"sweater\", \"tie\", \"shirt\", \"pants\", \"shoes\"],\n    \"visible_accessories\": [\"glasses\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [455, 162, 600, 927],\n    \"face_bbox_2d\": [499, 176, 555, 265],\n    \"action\": \"standing\",\n    \"gender\": \"female\",\n    \"age\": \"12-15\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"shirt\", \"skirt\", \"socks\", \"shoes\"],\n    \"visible_accessories\": [],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [588, 97, 749, 905],\n    \"face_bbox_2d\": [639, 132, 694, 213],\n    \"action\": \"standing\",\n    \"gender\": \"female\",\n    \"age\": \"12-15\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"sweater\", \"shirt\", \"skirt\", \"socks\", \"shoes\"],\n    \"visible_accessories\": [],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [754, 100, 920, 915],\n    \"face_bbox_2d\": [810, 116, 859, 214],\n    \"action\": \"standing\",\n    \"gender\": \"female\",\n    \"age\": \"12-15\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"sweater\", \"shirt\", \"skirt\", \"socks\", \"shoes\"],\n    \"visible_accessories\": [],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  }\n]\n```",
+    "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [66, 278, 123, 315],\n    \"text_content\": \"Winchmorn\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [75, 297, 116, 316],\n    \"text_content\": \"School\"\n  }\n]"
+  }
+}

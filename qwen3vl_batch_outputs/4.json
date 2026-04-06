@@ -1,5 +1,4 @@
 {
-  "status": "ok",
   "image_path": "/home2/tajamul/Qwen3VL/images/4.jpg",
   "categories_requested": [
     "person",
@@ -10,59 +9,87 @@
     "text",
     "weapon",
     "keyboard",
-    "hotel room"
+    "hotel room",
+    "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+    "school uniform",
+    "school logos/badges"
   ],
-  "batch_info": {
-    "batch_size": 2,
-    "area": 249696,
-    "images_in_batch": [
-      "/home2/tajamul/Qwen3VL/images/7.jpg",
-      "/home2/tajamul/Qwen3VL/images/4.jpg"
-    ]
-  },
-  "general_detections": [],
-  "persons": [],
+  "general_detections": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        95,
+        88,
+        595,
+        997
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "face",
+      "bbox_2d": [
+        156,
+        204,
+        306,
+        395
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "palm",
+      "bbox_2d": [
+        328,
+        310,
+        411,
+        428
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "weapon",
+      "bbox_2d": [
+        402,
+        228,
+        474,
+        390
+      ],
+      "text_content": ""
+    }
+  ],
+  "persons": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        99,
+        88,
+        598,
+        998
+      ],
+      "face_bbox_2d": [
+        156,
+        174,
+        306,
+        402
+      ],
+      "action": "holding beer bottle, looking down",
+      "gender": "male",
+      "ethnicity": "caucasian",
+      "age": "20-30",
+      "visible_clothing": [
+        "black t-shirt",
+        "dark pants"
+      ],
+      "visible_accessories": [],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": true,
+      "weapon_near_person": false
+    }
+  ],
   "ocr_texts": [],
-  "timings_ms": {
-    "general_detection": {
-      "batch_size": 2,
-      "preprocess_wall_ms": 136.084,
-      "generate_gpu_ms": 4318.053,
-      "generate_wall_ms": 4318.466,
-      "decode_wall_ms": 0.565,
-      "total_wall_ms": 4455.129,
-      "amortized_total_wall_ms": 2227.565,
-      "amortized_generate_gpu_ms": 2159.027
-    },
-    "person_detection": {
-      "batch_size": 2,
-      "preprocess_wall_ms": 51.545,
-      "generate_gpu_ms": 755.09,
-      "generate_wall_ms": 755.218,
-      "decode_wall_ms": 0.14,
-      "total_wall_ms": 806.911,
-      "amortized_total_wall_ms": 403.456,
-      "amortized_generate_gpu_ms": 377.545
-    },
-    "ocr": {
-      "batch_size": 2,
-      "preprocess_wall_ms": 162.041,
-      "generate_gpu_ms": 16761.488,
-      "generate_wall_ms": 16761.811,
-      "decode_wall_ms": 0.606,
-      "total_wall_ms": 16924.469,
-      "amortized_total_wall_ms": 8462.235,
-      "amortized_generate_gpu_ms": 8380.744
-    },
-    "inference_latency_ms": 22186.509,
-    "amortized_inference_ms": 11093.256,
-    "generate_gpu_latency_ms": 21834.631,
-    "amortized_generate_gpu_ms": 10917.316,
-    "image_total_wall_ms": 22442.477
-  },
   "raw_responses": {
-    "general_detection": "",
-    "person_detection": "]",
-    "ocr": "-1000, 0, 0, 0"
+    "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [95, 88, 595, 997]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [156, 204, 306, 395]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [328, 310, 411, 428]\n  },\n  {\n    \"label\": \"weapon\",\n    \"bbox_2d\": [402, 228, 474, 390]\n  }\n]",
+    "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [99, 88, 598, 998],\n    \"face_bbox_2d\": [156, 174, 306, 402],\n    \"action\": \"holding beer bottle, looking down\",\n    \"gender\": \"male\",\n    \"age\": \"20-30\",\n    \"ethnicity\": \"caucasian\",\n    \"visible_clothing\": [\"black t-shirt\", \"dark pants\"],\n    \"visible_accessories\": [],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  }\n]",
+    "ocr": "[]"
   }
 }

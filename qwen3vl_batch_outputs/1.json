@@ -1,5 +1,4 @@
 {
-  "status": "ok",
   "image_path": "/home2/tajamul/Qwen3VL/images/1.jpg",
   "categories_requested": [
     "person",
@@ -10,22 +9,18 @@
     "text",
     "weapon",
     "keyboard",
-    "hotel room"
+    "hotel room",
+    "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+    "school uniform",
+    "school logos/badges"
   ],
-  "batch_info": {
-    "batch_size": 1,
-    "area": 1821600,
-    "images_in_batch": [
-      "/home2/tajamul/Qwen3VL/images/1.jpg"
-    ]
-  },
   "general_detections": [
     {
       "label": "person",
       "bbox_2d": [
-        320,
-        121,
-        879,
+        317,
+        120,
+        876,
         997
       ],
       "text_content": ""
@@ -33,70 +28,70 @@
     {
       "label": "face",
       "bbox_2d": [
-        382,
-        159,
-        687,
-        377
+        381,
+        158,
+        685,
+        381
       ],
       "text_content": ""
     },
     {
       "label": "tattoo",
       "bbox_2d": [
-        572,
+        569,
         538,
-        768,
-        757
+        770,
+        762
       ],
       "text_content": ""
     },
     {
       "label": "tattoo",
       "bbox_2d": [
-        704,
-        759,
-        801,
-        823
+        625,
+        802,
+        701,
+        856
       ],
       "text_content": ""
     },
     {
       "label": "tattoo",
       "bbox_2d": [
-        626,
-        801,
-        702,
-        857
+        703,
+        758,
+        803,
+        825
       ],
       "text_content": ""
     },
     {
       "label": "tattoo",
       "bbox_2d": [
-        572,
-        870,
+        570,
+        869,
         633,
-        949
+        959
       ],
       "text_content": ""
     },
     {
       "label": "tattoo",
       "bbox_2d": [
-        527,
-        971,
-        561,
-        999
+        525,
+        973,
+        563,
+        997
       ],
       "text_content": ""
     },
     {
       "label": "tattoo",
       "bbox_2d": [
-        657,
-        949,
-        735,
-        999
+        655,
+        954,
+        729,
+        997
       ],
       "text_content": ""
     },
@@ -104,9 +99,9 @@
       "label": "text",
       "bbox_2d": [
         346,
-        649,
-        485,
-        808
+        652,
+        471,
+        793
       ],
       "text_content": ""
     }
@@ -116,27 +111,27 @@
       "label": "person",
       "bbox_2d": [
         319,
-        119,
+        120,
         884,
         997
       ],
       "face_bbox_2d": [
         379,
-        157,
-        692,
-        378
+        158,
+        689,
+        381
       ],
       "action": "leaning against wall",
-      "gender": "",
-      "ethnicity": "",
-      "age": "",
+      "gender": "female",
+      "ethnicity": "white",
+      "age": "25-35",
       "visible_clothing": [
         "tank top"
       ],
       "visible_accessories": [
         "nose ring",
         "earring",
-        "necklace"
+        "choker"
       ],
       "tattoo_detected": true,
       "blood_visible": false,
@@ -148,114 +143,97 @@
     {
       "label": "text",
       "bbox_2d": [
-        354,
-        651,
+        356,
+        653,
         408,
         679
       ],
-      "text_content": "OF FIKEDOS"
-    },
-    {
-      "label": "text",
-      "bbox_2d": [
-        355,
-        673,
-        394,
-        686
-      ],
-      "text_content": "AT CAME"
+      "text_content": "FIRE DOS"
     },
     {
       "label": "text",
       "bbox_2d": [
         354,
-        686,
-        374,
-        701
+        672,
+        396,
+        687
       ],
-      "text_content": "Pud"
+      "text_content": "AT GANER"
     },
     {
       "label": "text",
       "bbox_2d": [
-        346,
-        686,
+        354,
+        685,
+        373,
+        700
+      ],
+      "text_content": "-Pedr-"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        351,
+        683,
+        462,
+        787
+      ],
+      "text_content": "Cocktail."
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        418,
+        790,
+        465,
+        810
+      ],
+      "text_content": ".01"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        418,
+        802,
         464,
-        785
+        817
       ],
-      "text_content": "Ck."
+      "text_content": "ENDING"
     },
     {
       "label": "text",
       "bbox_2d": [
-        419,
-        793,
-        468,
-        811
+        374,
+        821,
+        429,
+        854
       ],
-      "text_content": ".01 ENDING"
+      "text_content": "a pool of"
     },
     {
       "label": "text",
       "bbox_2d": [
-        375,
-        825,
-        433,
-        851
+        376,
+        840,
+        427,
+        864
       ],
-      "text_content": "a part of"
+      "text_content": "Tattoos"
     },
     {
       "label": "text",
       "bbox_2d": [
-        379,
-        842,
-        438,
-        867
+        574,
+        925,
+        707,
+        963
       ],
-      "text_content": "16 Tattoos"
+      "text_content": "never forget"
     }
   ],
-  "timings_ms": {
-    "general_detection": {
-      "batch_size": 1,
-      "preprocess_wall_ms": 194.197,
-      "generate_gpu_ms": 14622.381,
-      "generate_wall_ms": 14622.879,
-      "decode_wall_ms": 0.572,
-      "total_wall_ms": 14817.662,
-      "amortized_total_wall_ms": 14817.662,
-      "amortized_generate_gpu_ms": 14622.381
-    },
-    "person_detection": {
-      "batch_size": 1,
-      "preprocess_wall_ms": 76.931,
-      "generate_gpu_ms": 5769.542,
-      "generate_wall_ms": 5769.78,
-      "decode_wall_ms": 0.445,
-      "total_wall_ms": 5847.168,
-      "amortized_total_wall_ms": 5847.168,
-      "amortized_generate_gpu_ms": 5769.542
-    },
-    "ocr": {
-      "batch_size": 1,
-      "preprocess_wall_ms": 75.096,
-      "generate_gpu_ms": 13097.957,
-      "generate_wall_ms": 13098.296,
-      "decode_wall_ms": 0.553,
-      "total_wall_ms": 13173.965,
-      "amortized_total_wall_ms": 13173.965,
-      "amortized_generate_gpu_ms": 13097.957
-    },
-    "inference_latency_ms": 33838.795,
-    "amortized_inference_ms": 33838.795,
-    "generate_gpu_latency_ms": 33489.88,
-    "amortized_generate_gpu_ms": 33489.88,
-    "image_total_wall_ms": 34267.006
-  },
   "raw_responses": {
-    "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [320, 121, 879, 997]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [382, 159, 687, 377]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [572, 538, 768, 757]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [704, 759, 801, 823]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [626, 801, 702, 857]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [572, 870, 633, 949]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [527, 971, 561, 999]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [657, 949, 735, 999]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [346, 649, 485, 808]\n  }\n]",
-    "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [319, 119, 884, 997],\n    \"face_bbox_2d\": [379, 157, 692, 378],\n    \"action\": \"leaning against wall\",\n    \"visible_clothing\": [\"tank top\"],\n    \"visible_accessories\": [\"nose ring\", \"earring\", \"necklace\"],\n    \"tattoo_detected\": true,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  }\n]",
-    "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [354, 651, 408, 679],\n    \"text_content\": \"OF FIKEDOS\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [355, 673, 394, 686],\n    \"text_content\": \"AT CAME\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [354, 686, 374, 701],\n    \"text_content\": \"Pud\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [346, 686, 464, 785],\n    \"text_content\": \"Ck.\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [419, 793, 468, 811],\n    \"text_content\": \".01 ENDING\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [375, 825, 433, 851],\n    \"text_content\": \"a part of\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [379, 842, 438, 867],\n    \"text_content\": \"16 Tattoos\"\n  }\n]"
+    "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [317, 120, 876, 997]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [381, 158, 685, 381]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [569, 538, 770, 762]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [625, 802, 701, 856]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [703, 758, 803, 825]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [570, 869, 633, 959]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [525, 973, 563, 997]\n  },\n  {\n    \"label\": \"tattoo\",\n    \"bbox_2d\": [655, 954, 729, 997]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [346, 652, 471, 793]\n  }\n]",
+    "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [319, 120, 884, 997],\n    \"face_bbox_2d\": [379, 158, 689, 381],\n    \"action\": \"leaning against wall\",\n    \"gender\": \"female\",\n    \"age\": \"25-35\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"tank top\"],\n    \"visible_accessories\": [\"nose ring\", \"earring\", \"choker\"],\n    \"tattoo_detected\": true,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  }\n]",
+    "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [356, 653, 408, 679],\n    \"text_content\": \"FIRE DOS\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [354, 672, 396, 687],\n    \"text_content\": \"AT GANER\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [354, 685, 373, 700],\n    \"text_content\": \"-Pedr-\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [351, 683, 462, 787],\n    \"text_content\": \"Cocktail.\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [418, 790, 465, 810],\n    \"text_content\": \".01\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [418, 802, 464, 817],\n    \"text_content\": \"ENDING\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [374, 821, 429, 854],\n    \"text_content\": \"a pool of\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [376, 840, 427, 864],\n    \"text_content\": \"Tattoos\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [574, 925, 707, 963],\n    \"text_content\": \"never forget\"\n  }\n]"
   }
 }

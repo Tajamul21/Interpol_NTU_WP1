@@ -1,0 +1,132 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/9.jpg",
+  "categories_requested": [
+    "person",
+    "face",
+    "tattoo",
+    "blood",
+    "palm",
+    "text",
+    "weapon",
+    "keyboard",
+    "hotel room",
+    "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+    "school uniform",
+    "school logos/badges"
+  ],
+  "general_detections": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        6,
+        44,
+        1000,
+        999
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "face",
+      "bbox_2d": [
+        375,
+        116,
+        517,
+        300
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "nude body parts like exposed breasts",
+      "bbox_2d": [
+        279,
+        388,
+        631,
+        535
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "genitals",
+      "bbox_2d": [
+        276,
+        832,
+        347,
+        898
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "anus",
+      "bbox_2d": [
+        278,
+        832,
+        347,
+        898
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "armpits",
+      "bbox_2d": [
+        328,
+        308,
+        458,
+        374
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "belly",
+      "bbox_2d": [
+        238,
+        594,
+        532,
+        785
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "palm",
+      "bbox_2d": [
+        886,
+        830,
+        1000,
+        878
+      ],
+      "text_content": ""
+    }
+  ],
+  "persons": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        1,
+        44,
+        999,
+        1000
+      ],
+      "face_bbox_2d": [
+        375,
+        114,
+        525,
+        300
+      ],
+      "action": "sitting on driftwood",
+      "gender": "female",
+      "ethnicity": "caucasian",
+      "age": "20-30",
+      "visible_clothing": [],
+      "visible_accessories": [],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": true,
+      "weapon_near_person": false
+    }
+  ],
+  "ocr_texts": [],
+  "raw_responses": {
+    "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [6, 44, 1000, 999]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [375, 116, 517, 300]\n  },\n  {\n    \"label\": \"nude body parts like exposed breasts\",\n    \"bbox_2d\": [279, 388, 631, 535]\n  },\n  {\n    \"label\": \"genitals\",\n    \"bbox_2d\": [276, 832, 347, 898]\n  },\n  {\n    \"label\": \"anus\",\n    \"bbox_2d\": [278, 832, 347, 898]\n  },\n  {\n    \"label\": \"armpits\",\n    \"bbox_2d\": [328, 308, 458, 374]\n  },\n  {\n    \"label\": \"belly\",\n    \"bbox_2d\": [238, 594, 532, 785]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [886, 830, 1000, 878]\n  }\n]",
+    "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [1, 44, 999, 1000],\n    \"face_bbox_2d\": [375, 114, 525, 300],\n    \"action\": \"sitting on driftwood\",\n    \"gender\": \"female\",\n    \"age\": \"20-30\",\n    \"ethnicity\": \"caucasian\",\n    \"visible_clothing\": [],\n    \"visible_accessories\": [],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  }\n]",
+    "ocr": "[]"
+  }
+}

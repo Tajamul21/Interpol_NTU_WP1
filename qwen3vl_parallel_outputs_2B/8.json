@@ -1,0 +1,88 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/8.jpg",
+  "general": [
+    {
+      "bbox_2d": [
+        0,
+        106,
+        534,
+        999
+      ],
+      "label": "person"
+    },
+    {
+      "bbox_2d": [
+        226,
+        312,
+        345,
+        426
+      ],
+      "label": "face"
+    },
+    {
+      "bbox_2d": [
+        465,
+        495,
+        534,
+        555
+      ],
+      "label": "palm"
+    },
+    {
+      "bbox_2d": [
+        107,
+        197,
+        155,
+        244
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        229,
+        269,
+        366,
+        402
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        228,
+        418,
+        679,
+        606
+      ],
+      "label": "weapon"
+    },
+    {
+      "bbox_2d": [
+        240,
+        465,
+        292,
+        547
+      ],
+      "label": "school logos/badges"
+    }
+  ],
+  "person": [
+    {
+      "bbox_2d": [
+        0,
+        106,
+        537,
+        999
+      ],
+      "label": "persons"
+    }
+  ],
+  "ocr": {
+    "text": "BERRY"
+  },
+  "raw_outputs": {
+    "general": "```json\n[\n\t{\"bbox_2d\": [0, 106, 534, 999], \"label\": \"person\"},\n\t{\"bbox_2d\": [226, 312, 345, 426], \"label\": \"face\"},\n\t{\"bbox_2d\": [465, 495, 534, 555], \"label\": \"palm\"},\n\t{\"bbox_2d\": [107, 197, 155, 244], \"label\": \"text\"},\n\t{\"bbox_2d\": [229, 269, 366, 402], \"label\": \"text\"},\n\t{\"bbox_2d\": [228, 418, 679, 606], \"label\": \"weapon\"},\n\t{\"bbox_2d\": [240, 465, 292, 547], \"label\": \"school logos/badges\"}\n]\n```",
+    "person": "```json\n[\n\t{\"bbox_2d\": [0, 106, 537, 999], \"label\": \"persons\"}\n]\n```",
+    "ocr": "```json\n{\n  \"text\": \"BERRY\"\n}\n```"
+  },
+  "inference_time_sec": 9.613
+}

@@ -1,0 +1,144 @@
+{
+  "image": "/home2/tajamul/Qwen3VL/images/1.jpg",
+  "inference_time_sec": 25.426,
+  "general": [
+    {
+      "bbox_2d": [
+        318,
+        121,
+        876,
+        997
+      ],
+      "label": "person"
+    },
+    {
+      "bbox_2d": [
+        345,
+        433,
+        866,
+        999
+      ],
+      "label": "clothing"
+    },
+    {
+      "bbox_2d": [
+        466,
+        407,
+        652,
+        471
+      ],
+      "label": "necklace"
+    },
+    {
+      "bbox_2d": [
+        656,
+        341,
+        702,
+        423
+      ],
+      "label": "earring"
+    },
+    {
+      "bbox_2d": [
+        699,
+        326,
+        715,
+        341
+      ],
+      "label": "earring"
+    },
+    {
+      "bbox_2d": [
+        448,
+        271,
+        464,
+        282
+      ],
+      "label": "nose_ring"
+    },
+    {
+      "bbox_2d": [
+        572,
+        538,
+        762,
+        763
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        703,
+        757,
+        801,
+        823
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        628,
+        802,
+        701,
+        856
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        572,
+        872,
+        630,
+        913
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        572,
+        918,
+        732,
+        970
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        655,
+        959,
+        726,
+        999
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        527,
+        972,
+        557,
+        999
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        344,
+        612,
+        501,
+        999
+      ],
+      "label": "text"
+    }
+  ],
+  "person": [
+    {
+      "bbox_2d": [
+        320,
+        118,
+        876,
+        997
+      ],
+      "label": "person"
+    }
+  ],
+  "ocr": []
+}

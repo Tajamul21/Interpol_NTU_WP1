@@ -1,0 +1,33 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/2.jpg",
+  "general": [],
+  "person": [
+    {
+      "bbox_2d": [
+        0,
+        17,
+        519,
+        999
+      ],
+      "label": "persons"
+    },
+    {
+      "bbox_2d": [
+        471,
+        0,
+        992,
+        999
+      ],
+      "label": "persons"
+    }
+  ],
+  "ocr": {
+    "text": "U"
+  },
+  "raw_outputs": {
+    "general": "```json\n[\n\t{\"bbox_2d\": [0, 16, 518, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [474, 10, 991, 1000], \"label\": \"person\"},\n\t{\"bbox_2d\": [317, 108, 477, 488], \"label\": \"face\"},\n\t{\"bbox_2d\": [598, 128, 747, 416], \"label\": \"face\"},\n\t{\"bbox_2d\": [225, 770, 252, 799], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [228, 951, 257, 984], \"label\": \"palm\"},\n\t{\"bbox_2d\": [367, 585, 384, 616], \"label\": \"text\"},\n\t{\"bbox_2d\": [314, 799, 345, 830], \"label\": \"text\"},\n\t{\"bbox_2d\": [227, 975, 258, 998], \"label\": \"text\"},\n\t{\"bbox_2d\": [324, 947, 345, 975], \"label\": \"text\"},\n\t{\"bbox_2d\": [348, 943, 371, 973], \"label\": \"text\"},\n\t{\"bbox_2d\": [320, 910, 345, 945], \"label\": \"text\"},\n\t{\"bbox_2d\": [324, 901, 345, 935], \"label\": \"text\"},\n\t{\"bbox_2d\": [320, 933, 344, 962], \"label\": \"text\"},\n\t{\"bbox_2d\": [320, 960, 344, 991], \"label\": \"text\"},\n\t{\"bbox_2d\": [324, 988, 345, 1012], \"label\": \"text\"},\n\t{\"bbox_2d\": [320, 951, 345, 983], \"label\": \"text\"},\n\t{\"bbox_2d\": [320, 910, 345, 945], \"label\": \"text\"},\n\t{\"bbox_2d\": [320, 943, 345, 975], \"label\": \"text\"},\n\t{\"bbox_2d\": [320, 975, 345, 1000], \"label\": \"text\"},\n\t{\"bbox_2d\": [324, 988, 345, 1012], \"label\": \"text\"},\n\t{\"bbox_2d\": [324, 951, 345, 983], \"label\": \"text\"},\n\t{\"bbox_2d\": [320, 910, 345, 945], \"label\": \"text\"},\n\t{\"bbox_2d\": [320, 943, 345, 975], \"label\": \"text\"},\n\t{\"bbox_2d\": [320, 975, 345, 1000], \"label\": \"text\"},\n\t{\"bbox_2d\": [320, 988, 345, 1012], \"label\": \"text\"},\n\t{\"bbox_2d\": [320, 951, 345, 983], \"label\": \"text\"},\n\t{\"bbox_2d\": [320, 910, 345, 945], \"label\": \"text\"},\n\t{\"bbox_2d\": [320, 943, 345, 975], \"label\": \"text\"},\n\t{\"bbox_2d\": [320, 975, 345, 1000], \"label\": \"text\"},\n\t{\"bbox_2d\": [320, 988, 345,",
+    "person": "```json\n[\n\t{\"bbox_2d\": [0, 17, 519, 999], \"label\": \"persons\"},\n\t{\"bbox_2d\": [471, 0, 992, 999], \"label\": \"persons\"}\n]\n```",
+    "ocr": "```json\n{\n  \"text\": \"U\"\n}\n```"
+  },
+  "inference_time_sec": 35.813
+}

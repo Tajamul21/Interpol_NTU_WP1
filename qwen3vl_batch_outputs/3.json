@@ -1,5 +1,4 @@
 {
-  "status": "ok",
   "image_path": "/home2/tajamul/Qwen3VL/images/3.jpg",
   "categories_requested": [
     "person",
@@ -10,33 +9,28 @@
     "text",
     "weapon",
     "keyboard",
-    "hotel room"
+    "hotel room",
+    "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+    "school uniform",
+    "school logos/badges"
   ],
-  "batch_info": {
-    "batch_size": 2,
-    "area": 249696,
-    "images_in_batch": [
-      "/home2/tajamul/Qwen3VL/images/3.jpg",
-      "/home2/tajamul/Qwen3VL/images/6.jpeg"
-    ]
-  },
   "general_detections": [
     {
       "label": "person",
       "bbox_2d": [
         464,
-        117,
-        853,
-        912
+        118,
+        852,
+        916
       ],
       "text_content": ""
     },
     {
       "label": "face",
       "bbox_2d": [
-        573,
-        188,
-        728,
+        582,
+        202,
+        727,
         477
       ],
       "text_content": ""
@@ -45,29 +39,29 @@
       "label": "palm",
       "bbox_2d": [
         675,
-        629,
-        787,
-        786
+        631,
+        789,
+        784
       ],
       "text_content": ""
     },
     {
       "label": "palm",
       "bbox_2d": [
-        756,
-        632,
-        845,
-        750
+        755,
+        638,
+        839,
+        768
       ],
       "text_content": ""
     },
     {
       "label": "keyboard",
       "bbox_2d": [
-        694,
-        863,
-        835,
-        958
+        700,
+        862,
+        834,
+        947
       ],
       "text_content": ""
     },
@@ -87,25 +81,25 @@
       "label": "person",
       "bbox_2d": [
         467,
-        119,
-        860,
-        919
+        117,
+        859,
+        917
       ],
       "face_bbox_2d": [
-        570,
-        197,
-        731,
-        479
+        567,
+        185,
+        733,
+        485
       ],
-      "action": "smiling while looking at phone",
-      "gender": "",
-      "ethnicity": "",
-      "age": "",
+      "action": "looking at phone",
+      "gender": "male",
+      "ethnicity": "white",
+      "age": "30-40",
       "visible_clothing": [
         "white shirt"
       ],
       "visible_accessories": [
-        "black glasses"
+        "glasses"
       ],
       "tattoo_detected": false,
       "blood_visible": false,
@@ -114,46 +108,9 @@
     }
   ],
   "ocr_texts": [],
-  "timings_ms": {
-    "general_detection": {
-      "batch_size": 2,
-      "preprocess_wall_ms": 29.981,
-      "generate_gpu_ms": 8747.115,
-      "generate_wall_ms": 8747.332,
-      "decode_wall_ms": 0.393,
-      "total_wall_ms": 8777.717,
-      "amortized_total_wall_ms": 4388.858,
-      "amortized_generate_gpu_ms": 4373.558
-    },
-    "person_detection": {
-      "batch_size": 2,
-      "preprocess_wall_ms": 35.182,
-      "generate_gpu_ms": 5103.555,
-      "generate_wall_ms": 5103.723,
-      "decode_wall_ms": 0.294,
-      "total_wall_ms": 5139.208,
-      "amortized_total_wall_ms": 2569.604,
-      "amortized_generate_gpu_ms": 2551.777
-    },
-    "ocr": {
-      "batch_size": 2,
-      "preprocess_wall_ms": 32.802,
-      "generate_gpu_ms": 259.921,
-      "generate_wall_ms": 260.02,
-      "decode_wall_ms": 0.135,
-      "total_wall_ms": 292.962,
-      "amortized_total_wall_ms": 146.481,
-      "amortized_generate_gpu_ms": 129.961
-    },
-    "inference_latency_ms": 14209.887,
-    "amortized_inference_ms": 7104.943,
-    "generate_gpu_latency_ms": 14110.591,
-    "amortized_generate_gpu_ms": 7055.296,
-    "image_total_wall_ms": 14270.625
-  },
   "raw_responses": {
-    "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [464, 117, 853, 912]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [573, 188, 728, 477]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [675, 629, 787, 786]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [756, 632, 845, 750]\n  },\n  {\n    \"label\": \"keyboard\",\n    \"bbox_2d\": [694, 863, 835, 958]\n  },\n  {\n    \"label\": \"hotel room\",\n    \"bbox_2d\": [0, 0, 1000, 1000]\n  }\n]",
-    "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [467, 119, 860, 919],\n    \"face_bbox_2d\": [570, 197, 731, 479],\n    \"action\": \"smiling while looking at phone\",\n    \"visible_clothing\": [\"white shirt\"],\n    \"visible_accessories\": [\"black glasses\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  }\n]",
+    "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [464, 118, 852, 916]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [582, 202, 727, 477]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [675, 631, 789, 784]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [755, 638, 839, 768]\n  },\n  {\n    \"label\": \"keyboard\",\n    \"bbox_2d\": [700, 862, 834, 947]\n  },\n  {\n    \"label\": \"hotel room\",\n    \"bbox_2d\": [0, 0, 1000, 1000]\n  }\n]",
+    "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [467, 117, 859, 917],\n    \"face_bbox_2d\": [567, 185, 733, 485],\n    \"action\": \"looking at phone\",\n    \"gender\": \"male\",\n    \"age\": \"30-40\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\n      \"white shirt\"\n    ],\n    \"visible_accessories\": [\n      \"glasses\"\n    ],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  }\n]",
     "ocr": "[]"
   }
 }

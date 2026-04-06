@@ -1,0 +1,272 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/12.jpg",
+  "categories_requested": [
+    "person",
+    "face",
+    "tattoo",
+    "blood",
+    "palm",
+    "text",
+    "weapon",
+    "keyboard",
+    "hotel room",
+    "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+    "school uniform",
+    "school logos/badges"
+  ],
+  "general_detections": [],
+  "persons": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        37,
+        239,
+        277,
+        958
+      ],
+      "face_bbox_2d": [
+        132,
+        262,
+        198,
+        355
+      ],
+      "action": "standing with hands on hips",
+      "gender": "female",
+      "ethnicity": "white",
+      "age": "8-10",
+      "visible_clothing": [
+        "white shirt",
+        "plaid skirt",
+        "grey socks",
+        "brown shoes"
+      ],
+      "visible_accessories": [
+        "dark blue tie",
+        "bracelet"
+      ],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": false,
+      "weapon_near_person": false
+    },
+    {
+      "label": "person",
+      "bbox_2d": [
+        244,
+        42,
+        527,
+        943
+      ],
+      "face_bbox_2d": [
+        348,
+        96,
+        428,
+        183
+      ],
+      "action": "standing with hands by sides",
+      "gender": "male",
+      "ethnicity": "white",
+      "age": "10-12",
+      "visible_clothing": [
+        "white shirt",
+        "grey trousers",
+        "brown shoes"
+      ],
+      "visible_accessories": [
+        "dark green tie"
+      ],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": false,
+      "weapon_near_person": false
+    },
+    {
+      "label": "person",
+      "bbox_2d": [
+        473,
+        217,
+        688,
+        967
+      ],
+      "face_bbox_2d": [
+        547,
+        243,
+        623,
+        335
+      ],
+      "action": "standing with hands open",
+      "gender": "female",
+      "ethnicity": "white",
+      "age": "6-8",
+      "visible_clothing": [
+        "white shirt",
+        "plaid skirt",
+        "dark socks",
+        "brown shoes"
+      ],
+      "visible_accessories": [],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": true,
+      "weapon_near_person": false
+    },
+    {
+      "label": "person",
+      "bbox_2d": [
+        666,
+        106,
+        962,
+        953
+      ],
+      "face_bbox_2d": [
+        757,
+        148,
+        850,
+        249
+      ],
+      "action": "standing with hands in pockets",
+      "gender": "male",
+      "ethnicity": "white",
+      "age": "8-10",
+      "visible_clothing": [
+        "white shirt",
+        "grey trousers",
+        "black shoes"
+      ],
+      "visible_accessories": [
+        "dark green tie"
+      ],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": false,
+      "weapon_near_person": false
+    }
+  ],
+  "ocr_texts": [
+    {
+      "label": "text",
+      "bbox_2d": [
+        0,
+        15,
+        186,
+        115
+      ],
+      "text_content": "ay sol"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        0,
+        154,
+        185,
+        192
+      ],
+      "text_content": "umamos"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        23,
+        244,
+        64,
+        300
+      ],
+      "text_content": "7"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        46,
+        339,
+        81,
+        386
+      ],
+      "text_content": "2"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        535,
+        5,
+        757,
+        66
+      ],
+      "text_content": "2+0=2"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        542,
+        87,
+        763,
+        144
+      ],
+      "text_content": "2+1=3"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        546,
+        169,
+        714,
+        227
+      ],
+      "text_content": "2+2="
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        638,
+        260,
+        680,
+        314
+      ],
+      "text_content": "3"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        957,
+        1,
+        1000,
+        55
+      ],
+      "text_content": "2"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        961,
+        73,
+        1000,
+        126
+      ],
+      "text_content": "2"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        970,
+        163,
+        1000,
+        217
+      ],
+      "text_content": "2"
+    },
+    {
+      "label": "text",
+      "bbox_2d": [
+        967,
+        250,
+        997,
+        306
+      ],
+      "text_content": "2"
+    }
+  ],
+  "raw_responses": {
+    "general_detection": "```json\n[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [37, 240, 278, 958]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [244, 43, 527, 943]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [472, 218, 688, 968]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [667, 107, 962, 953]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [130, 263, 200, 357]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [351, 99, 429, 184]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [548, 242, 624, 335]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [757, 147, 853, 248]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [544, 445, 596, 491]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [576, 524, 651, 568]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [0, 15, 186, 112]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [0, 156, 186, 192]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [530, 8, 759, 65]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [541, 88, 763, 146]\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [547, 169, 715, 225]\n  },\n  {\n    \"label\": \"school uniform\",\n    \"bbox_2d\": [37, 350, 278, 758]\n  },\n  {\n    \"label\": \"school uniform\",\n    \"bbox_2d\": [244, 170, 527, 900]\n  },\n  {\n    \"label\": \"school uniform\",\n    \"bbox_2d\": [472, 328, 688, 730]\n  },\n  {\n    \"label\": \"school uniform\",\n    \"bbox_2d\": [667, 233, 962, 906]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [137, 887, 192, 958]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [183, 799, 247, 907]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [274, 874, 370, 943]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [423, 865, 495, 932]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [524, 903, 579, 968]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [570, 896, 620, 961]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [719, 894, 784, 952]\n  },\n  {\n    \"label\": \"feet\",\n    \"bbox_2d\": [814, 882, 890,",
+    "person_detection": "```json\n[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [37, 239, 277, 958],\n    \"face_bbox_2d\": [132, 262, 198, 355],\n    \"action\": \"standing with hands on hips\",\n    \"gender\": \"female\",\n    \"age\": \"8-10\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"white shirt\", \"plaid skirt\", \"grey socks\", \"brown shoes\"],\n    \"visible_accessories\": [\"dark blue tie\", \"bracelet\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [244, 42, 527, 943],\n    \"face_bbox_2d\": [348, 96, 428, 183],\n    \"action\": \"standing with hands by sides\",\n    \"gender\": \"male\",\n    \"age\": \"10-12\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"white shirt\", \"grey trousers\", \"brown shoes\"],\n    \"visible_accessories\": [\"dark green tie\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [473, 217, 688, 967],\n    \"face_bbox_2d\": [547, 243, 623, 335],\n    \"action\": \"standing with hands open\",\n    \"gender\": \"female\",\n    \"age\": \"6-8\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"white shirt\", \"plaid skirt\", \"dark socks\", \"brown shoes\"],\n    \"visible_accessories\": [],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [666, 106, 962, 953],\n    \"face_bbox_2d\": [757, 148, 850, 249],\n    \"action\": \"standing with hands in pockets\",\n    \"gender\": \"male\",\n    \"age\": \"8-10\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"white shirt\", \"grey trousers\", \"black shoes\"],\n    \"visible_accessories\": [\"dark green tie\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  }\n]\n```",
+    "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [0, 15, 186, 115],\n    \"text_content\": \"ay sol\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [0, 154, 185, 192],\n    \"text_content\": \"umamos\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [23, 244, 64, 300],\n    \"text_content\": \"7\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [46, 339, 81, 386],\n    \"text_content\": \"2\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [535, 5, 757, 66],\n    \"text_content\": \"2+0=2\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [542, 87, 763, 144],\n    \"text_content\": \"2+1=3\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [546, 169, 714, 227],\n    \"text_content\": \"2+2=\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [638, 260, 680, 314],\n    \"text_content\": \"3\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [957, 1, 1000, 55],\n    \"text_content\": \"2\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [961, 73, 1000, 126],\n    \"text_content\": \"2\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [970, 163, 1000, 217],\n    \"text_content\": \"2\"\n  },\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [967, 250, 997, 306],\n    \"text_content\": \"2\"\n  }\n]"
+  }
+}

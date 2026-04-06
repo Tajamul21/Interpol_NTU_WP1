@@ -1,0 +1,140 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/14.jpg",
+  "general": [
+    {
+      "bbox_2d": [
+        100,
+        307,
+        417,
+        840
+      ],
+      "label": "person"
+    },
+    {
+      "bbox_2d": [
+        391,
+        109,
+        780,
+        710
+      ],
+      "label": "person"
+    },
+    {
+      "bbox_2d": [
+        258,
+        453,
+        371,
+        614
+      ],
+      "label": "face"
+    },
+    {
+      "bbox_2d": [
+        537,
+        140,
+        615,
+        289
+      ],
+      "label": "face"
+    },
+    {
+      "bbox_2d": [
+        222,
+        798,
+        244,
+        836
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        249,
+        722,
+        374,
+        836
+      ],
+      "label": "palm"
+    },
+    {
+      "bbox_2d": [
+        680,
+        575,
+        743,
+        658
+      ],
+      "label": "palm"
+    },
+    {
+      "bbox_2d": [
+        728,
+        398,
+        780,
+        489
+      ],
+      "label": "palm"
+    },
+    {
+      "bbox_2d": [
+        174,
+        284,
+        214,
+        362
+      ],
+      "label": "palm"
+    },
+    {
+      "bbox_2d": [
+        0,
+        0,
+        1000,
+        1000
+      ],
+      "label": "hotel room"
+    },
+    {
+      "bbox_2d": [
+        100,
+        289,
+        252,
+        757
+      ],
+      "label": "nude body parts like exposed breasts, genitals, or buttocks"
+    },
+    {
+      "bbox_2d": [
+        174,
+        284,
+        214,
+        362
+      ],
+      "label": "feet"
+    }
+  ],
+  "person": [
+    {
+      "bbox_2d": [
+        389,
+        107,
+        779,
+        712
+      ],
+      "label": "person"
+    },
+    {
+      "bbox_2d": [
+        103,
+        284,
+        418,
+        841
+      ],
+      "label": "person"
+    }
+  ],
+  "ocr": [],
+  "raw_outputs": {
+    "general": "```json\n[\n\t{\"bbox_2d\": [100, 307, 417, 840], \"label\": \"person\"},\n\t{\"bbox_2d\": [391, 109, 780, 710], \"label\": \"person\"},\n\t{\"bbox_2d\": [258, 453, 371, 614], \"label\": \"face\"},\n\t{\"bbox_2d\": [537, 140, 615, 289], \"label\": \"face\"},\n\t{\"bbox_2d\": [222, 798, 244, 836], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [249, 722, 374, 836], \"label\": \"palm\"},\n\t{\"bbox_2d\": [680, 575, 743, 658], \"label\": \"palm\"},\n\t{\"bbox_2d\": [728, 398, 780, 489], \"label\": \"palm\"},\n\t{\"bbox_2d\": [174, 284, 214, 362], \"label\": \"palm\"},\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"hotel room\"},\n\t{\"bbox_2d\": [100, 289, 252, 757], \"label\": \"nude body parts like exposed breasts, genitals, or buttocks\"},\n\t{\"bbox_2d\": [174, 284, 214, 362], \"label\": \"feet\"}\n]\n```",
+    "person": "```json\n[\n\t{\"bbox_2d\": [389, 107, 779, 712], \"label\": \"person\"},\n\t{\"bbox_2d\": [103, 284, 418, 841], \"label\": \"person\"}\n]\n```",
+    "ocr": "There is no text in the image."
+  },
+  "inference_time_sec": 22.667
+}

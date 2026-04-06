@@ -1,0 +1,87 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/6.jpeg",
+  "general": [
+    {
+      "bbox_2d": [
+        0,
+        56,
+        208,
+        556
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        313,
+        67,
+        508,
+        692
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        528,
+        69,
+        812,
+        914
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        792,
+        128,
+        1000,
+        861
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        0,
+        569,
+        196,
+        967
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        282,
+        596,
+        508,
+        967
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        488,
+        666,
+        717,
+        940
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        669,
+        645,
+        845,
+        935
+      ],
+      "label": "tattoo"
+    }
+  ],
+  "person": [],
+  "ocr": {
+    "text": ""
+  },
+  "raw_outputs": {
+    "general": "```json\n[\n\t{\"bbox_2d\": [0, 56, 208, 556], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [313, 67, 508, 692], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [528, 69, 812, 914], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [792, 128, 1000, 861], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [0, 569, 196, 967], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [282, 596, 508, 967], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [488, 666, 717, 940], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [669, 645, 845, 935], \"label\": \"tattoo\"}\n]\n```",
+    "person": "There are none.",
+    "ocr": "```json\n{\n  \"text\": \"\"\n}\n```"
+  },
+  "inference_time_sec": 9.755
+}

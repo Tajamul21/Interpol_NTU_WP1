@@ -1,0 +1,115 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/1.jpg",
+  "general": [
+    {
+      "bbox_2d": [
+        317,
+        122,
+        889,
+        999
+      ],
+      "label": "person"
+    },
+    {
+      "bbox_2d": [
+        383,
+        157,
+        676,
+        378
+      ],
+      "label": "face"
+    },
+    {
+      "bbox_2d": [
+        572,
+        537,
+        761,
+        762
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        702,
+        757,
+        795,
+        826
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        626,
+        800,
+        703,
+        856
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        570,
+        917,
+        702,
+        986
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        526,
+        966,
+        555,
+        999
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        660,
+        958,
+        707,
+        999
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        597,
+        872,
+        631,
+        922
+      ],
+      "label": "tattoo"
+    },
+    {
+      "bbox_2d": [
+        345,
+        629,
+        501,
+        971
+      ],
+      "label": "text"
+    }
+  ],
+  "person": [
+    {
+      "bbox_2d": [
+        320,
+        120,
+        874,
+        997
+      ],
+      "label": "person"
+    }
+  ],
+  "ocr": {
+    "text": "SALVADOS DE CHINA\nThe\nSlink.\n01\nTattoo\nIt's not all\nTattoo"
+  },
+  "raw_outputs": {
+    "general": "```json\n[\n\t{\"bbox_2d\": [317, 122, 889, 999], \"label\": \"person\"},\n\t{\"bbox_2d\": [383, 157, 676, 378], \"label\": \"face\"},\n\t{\"bbox_2d\": [572, 537, 761, 762], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [702, 757, 795, 826], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [626, 800, 703, 856], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [570, 917, 702, 986], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [526, 966, 555, 999], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [660, 958, 707, 999], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [597, 872, 631, 922], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [345, 629, 501, 971], \"label\": \"text\"}\n]\n```",
+    "person": "```json\n[\n\t{\"bbox_2d\": [320, 120, 874, 997], \"label\": \"person\"}\n]\n```",
+    "ocr": "```json\n{\n  \"text\": \"SALVADOS DE CHINA\\nThe\\nSlink.\\n01\\nTattoo\\nIt's not all\\nTattoo\"\n}\n```"
+  },
+  "inference_time_sec": 19.211
+}

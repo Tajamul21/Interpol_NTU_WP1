@@ -1,5 +1,4 @@
 {
-  "status": "ok",
   "image_path": "/home2/tajamul/Qwen3VL/images/2.jpg",
   "categories_requested": [
     "person",
@@ -10,59 +9,140 @@
     "text",
     "weapon",
     "keyboard",
-    "hotel room"
+    "hotel room",
+    "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+    "school uniform",
+    "school logos/badges"
   ],
-  "batch_info": {
-    "batch_size": 2,
-    "area": 360640,
-    "images_in_batch": [
-      "/home2/tajamul/Qwen3VL/images/5.jpg",
-      "/home2/tajamul/Qwen3VL/images/2.jpg"
-    ]
-  },
-  "general_detections": [],
-  "persons": [],
-  "ocr_texts": [],
-  "timings_ms": {
-    "general_detection": {
-      "batch_size": 2,
-      "preprocess_wall_ms": 205.291,
-      "generate_gpu_ms": 2478.491,
-      "generate_wall_ms": 2478.788,
-      "decode_wall_ms": 0.48,
-      "total_wall_ms": 2684.584,
-      "amortized_total_wall_ms": 1342.292,
-      "amortized_generate_gpu_ms": 1239.246
+  "general_detections": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        0,
+        17,
+        520,
+        997
+      ],
+      "text_content": ""
     },
-    "person_detection": {
-      "batch_size": 2,
-      "preprocess_wall_ms": 40.213,
-      "generate_gpu_ms": 10208.494,
-      "generate_wall_ms": 10208.734,
-      "decode_wall_ms": 0.629,
-      "total_wall_ms": 10249.59,
-      "amortized_total_wall_ms": 5124.795,
-      "amortized_generate_gpu_ms": 5104.247
+    {
+      "label": "person",
+      "bbox_2d": [
+        472,
+        0,
+        992,
+        997
+      ],
+      "text_content": ""
     },
-    "ocr": {
-      "batch_size": 2,
-      "preprocess_wall_ms": 42.033,
-      "generate_gpu_ms": 329.84,
-      "generate_wall_ms": 329.953,
-      "decode_wall_ms": 0.117,
-      "total_wall_ms": 372.109,
-      "amortized_total_wall_ms": 186.055,
-      "amortized_generate_gpu_ms": 164.92
+    {
+      "label": "face",
+      "bbox_2d": [
+        306,
+        95,
+        494,
+        493
+      ],
+      "text_content": ""
     },
-    "inference_latency_ms": 13306.283,
-    "amortized_inference_ms": 6653.142,
-    "generate_gpu_latency_ms": 13016.825,
-    "amortized_generate_gpu_ms": 6508.413,
-    "image_total_wall_ms": 13519.726
-  },
+    {
+      "label": "face",
+      "bbox_2d": [
+        578,
+        95,
+        765,
+        419
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "palm",
+      "bbox_2d": [
+        218,
+        908,
+        315,
+        1000
+      ],
+      "text_content": ""
+    }
+  ],
+  "persons": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        0,
+        17,
+        520,
+        997
+      ],
+      "face_bbox_2d": [
+        299,
+        98,
+        488,
+        494
+      ],
+      "action": "smiling and leaning forward",
+      "gender": "female",
+      "ethnicity": "white",
+      "age": "30-40",
+      "visible_clothing": [
+        "denim jacket",
+        "black top"
+      ],
+      "visible_accessories": [
+        "necklace"
+      ],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": true,
+      "weapon_near_person": false
+    },
+    {
+      "label": "person",
+      "bbox_2d": [
+        473,
+        5,
+        991,
+        997
+      ],
+      "face_bbox_2d": [
+        574,
+        101,
+        766,
+        435
+      ],
+      "action": "smiling and sitting",
+      "gender": "female",
+      "ethnicity": "white",
+      "age": "50-60",
+      "visible_clothing": [
+        "grey cardigan",
+        "black top"
+      ],
+      "visible_accessories": [
+        "necklace"
+      ],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": false,
+      "weapon_near_person": false
+    }
+  ],
+  "ocr_texts": [
+    {
+      "label": "text",
+      "bbox_2d": [
+        367,
+        589,
+        383,
+        627
+      ],
+      "text_content": "V"
+    }
+  ],
   "raw_responses": {
-    "general_detection": "\"person\"",
-    "person_detection": "]\n[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [\n      0,\n      0,\n      1000,\n    \"face_bbox_2d\": [\n      x1,\n      y1,\n      x2,\n      y2,\n      \"action\": \"\",\n      \"visible_clothing\": [\n        \"item1\",\n        \"item2\",\n        ...\n      ]\n    }\n  }\n]\n]\n[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [\n      0,\n      0,\n      1,\n      0,\n      \"face_bbox_2d\": [\n      0,\n      0,\n      \"action\": \"\",\n      \"visible_clothing\": [\n        \"item1\",\n        \"item2\",\n        ...\n      ]\n    }\n  }\n]\n```json\n[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [\n      0,\n      0,\n      1000,\n      \"face_bbox_2d\": [\n      0,\n      0,\n      \"action\": \"\",\n      \"visible_clothing\": [\n        \"item1\",\n        \"item2\",\n        ...\n      ]\n    }\n  }\n]\n```",
-    "ocr": ""
+    "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [0, 17, 520, 997]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [472, 0, 992, 997]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [306, 95, 494, 493]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [578, 95, 765, 419]\n  },\n  {\n    \"label\": \"palm\",\n    \"bbox_2d\": [218, 908, 315, 1000]\n  }\n]",
+    "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [0, 17, 520, 997],\n    \"face_bbox_2d\": [299, 98, 488, 494],\n    \"action\": \"smiling and leaning forward\",\n    \"gender\": \"female\",\n    \"age\": \"30-40\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"denim jacket\", \"black top\"],\n    \"visible_accessories\": [\"necklace\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": true,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [473, 5, 991, 997],\n    \"face_bbox_2d\": [574, 101, 766, 435],\n    \"action\": \"smiling and sitting\",\n    \"gender\": \"female\",\n    \"age\": \"50-60\",\n    \"ethnicity\": \"white\",\n    \"visible_clothing\": [\"grey cardigan\", \"black top\"],\n    \"visible_accessories\": [\"necklace\"],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  }\n]",
+    "ocr": "[\n  {\n    \"label\": \"text\",\n    \"bbox_2d\": [367, 589, 383, 627],\n    \"text_content\": \"V\"\n  }\n]"
   }
 }

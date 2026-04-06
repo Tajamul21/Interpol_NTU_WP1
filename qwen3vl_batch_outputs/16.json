@@ -1,0 +1,177 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/16.jpg",
+  "categories_requested": [
+    "person",
+    "face",
+    "tattoo",
+    "blood",
+    "palm",
+    "text",
+    "weapon",
+    "keyboard",
+    "hotel room",
+    "nude body parts like exposed breasts, genitals, or buttocks, anus, armpits, belly, feet ",
+    "school uniform",
+    "school logos/badges"
+  ],
+  "general_detections": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        342,
+        363,
+        511,
+        608
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "person",
+      "bbox_2d": [
+        567,
+        487,
+        700,
+        582
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "face",
+      "bbox_2d": [
+        405,
+        382,
+        460,
+        487
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "face",
+      "bbox_2d": [
+        630,
+        504,
+        682,
+        575
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "hotel room",
+      "bbox_2d": [
+        0,
+        0,
+        1000,
+        1000
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "nude body parts like exposed breasts, genitals, or buttocks",
+      "bbox_2d": [
+        342,
+        487,
+        511,
+        608
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "nude body parts like exposed breasts, genitals, or buttocks",
+      "bbox_2d": [
+        567,
+        504,
+        700,
+        582
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "belly",
+      "bbox_2d": [
+        382,
+        508,
+        498,
+        580
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "armpits",
+      "bbox_2d": [
+        351,
+        504,
+        429,
+        580
+      ],
+      "text_content": ""
+    },
+    {
+      "label": "armpits",
+      "bbox_2d": [
+        578,
+        508,
+        643,
+        580
+      ],
+      "text_content": ""
+    }
+  ],
+  "persons": [
+    {
+      "label": "person",
+      "bbox_2d": [
+        335,
+        360,
+        511,
+        610
+      ],
+      "face_bbox_2d": [
+        400,
+        380,
+        462,
+        487
+      ],
+      "action": "holding phone",
+      "gender": "male",
+      "ethnicity": "caucasian",
+      "age": "30-40",
+      "visible_clothing": [],
+      "visible_accessories": [],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": false,
+      "weapon_near_person": false
+    },
+    {
+      "label": "person",
+      "bbox_2d": [
+        570,
+        484,
+        703,
+        593
+      ],
+      "face_bbox_2d": [
+        630,
+        500,
+        692,
+        567
+      ],
+      "action": "sleeping",
+      "gender": "female",
+      "ethnicity": "caucasian",
+      "age": "25-35",
+      "visible_clothing": [],
+      "visible_accessories": [],
+      "tattoo_detected": false,
+      "blood_visible": false,
+      "palm_visible": false,
+      "weapon_near_person": false
+    }
+  ],
+  "ocr_texts": [],
+  "raw_responses": {
+    "general_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [342, 363, 511, 608]\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [567, 487, 700, 582]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [405, 382, 460, 487]\n  },\n  {\n    \"label\": \"face\",\n    \"bbox_2d\": [630, 504, 682, 575]\n  },\n  {\n    \"label\": \"hotel room\",\n    \"bbox_2d\": [0, 0, 1000, 1000]\n  },\n  {\n    \"label\": \"nude body parts like exposed breasts, genitals, or buttocks\",\n    \"bbox_2d\": [342, 487, 511, 608]\n  },\n  {\n    \"label\": \"nude body parts like exposed breasts, genitals, or buttocks\",\n    \"bbox_2d\": [567, 504, 700, 582]\n  },\n  {\n    \"label\": \"belly\",\n    \"bbox_2d\": [382, 508, 498, 580]\n  },\n  {\n    \"label\": \"armpits\",\n    \"bbox_2d\": [351, 504, 429, 580]\n  },\n  {\n    \"label\": \"armpits\",\n    \"bbox_2d\": [578, 508, 643, 580]\n  }\n]",
+    "person_detection": "[\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [335, 360, 511, 610],\n    \"face_bbox_2d\": [400, 380, 462, 487],\n    \"action\": \"holding phone\",\n    \"gender\": \"male\",\n    \"age\": \"30-40\",\n    \"ethnicity\": \"caucasian\",\n    \"visible_clothing\": [],\n    \"visible_accessories\": [],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  },\n  {\n    \"label\": \"person\",\n    \"bbox_2d\": [570, 484, 703, 593],\n    \"face_bbox_2d\": [630, 500, 692, 567],\n    \"action\": \"sleeping\",\n    \"gender\": \"female\",\n    \"age\": \"25-35\",\n    \"ethnicity\": \"caucasian\",\n    \"visible_clothing\": [],\n    \"visible_accessories\": [],\n    \"tattoo_detected\": false,\n    \"blood_visible\": false,\n    \"palm_visible\": false,\n    \"weapon_near_person\": false\n  }\n]",
+    "ocr": "[]"
+  }
+}

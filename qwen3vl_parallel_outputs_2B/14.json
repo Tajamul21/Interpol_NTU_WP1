@@ -1,0 +1,33 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/14.jpg",
+  "general": [],
+  "person": [
+    {
+      "bbox_2d": [
+        101,
+        280,
+        418,
+        840
+      ],
+      "label": "persons"
+    },
+    {
+      "bbox_2d": [
+        391,
+        109,
+        779,
+        715
+      ],
+      "label": "persons"
+    }
+  ],
+  "ocr": [
+    "H"
+  ],
+  "raw_outputs": {
+    "general": "```json\n[\n\t{\"bbox_2d\": [100, 307, 417, 836], \"label\": \"person\"},\n\t{\"bbox_2d\": [391, 108, 778, 712], \"label\": \"person\"},\n\t{\"bbox_2d\": [256, 458, 366, 610], \"label\": \"face\"},\n\t{\"bbox_2d\": [530, 143, 616, 285], \"label\": \"face\"},\n\t{\"bbox_2d\": [221, 793, 241, 836], \"label\": \"palm\"},\n\t{\"bbox_2d\": [717, 364, 786, 474], \"label\": \"palm\"},\n\t{\"bbox_2d\": [219, 801, 238, 834], \"label\": \"text\"},\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"hotel room\"},\n\t{\"bbox_2d\": [100, 611, 156, 751], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [170, 278, 255, 486], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [405, 604, 648, 714], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [405, 604, 648, 714], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [165, 278, 255, 486], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [100, 611, 156, 751], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [170, 278, 255, 486], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [405, 604, 648, 714], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [405, 604, 648, 714], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [100, 611, 156, 751], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [170, 278, 255, 486], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [405, 604, 648, 714], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [405, 604, 648, 714], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [100, 611, 156, 751], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [170, 278, 255, 486], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [405, 604, 648, 714], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [405, 604, 648, 714], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [100, 611, 156, 751], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [170, 278, 255, 486], \"label\": \"nude body parts like exposed breasts\"},\n\t{\"bbox_2d\": [405, 6",
+    "person": "```json\n[\n\t{\"bbox_2d\": [101, 280, 418, 840], \"label\": \"persons\"},\n\t{\"bbox_2d\": [391, 109, 779, 715], \"label\": \"persons\"}\n]\n```",
+    "ocr": "```json\n{\n  \"text\": [\n    \"H\"\n  ]\n}\n```"
+  },
+  "inference_time_sec": 35.998
+}

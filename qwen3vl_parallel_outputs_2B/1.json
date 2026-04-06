@@ -1,0 +1,24 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/1.jpg",
+  "general": [],
+  "person": [
+    {
+      "bbox_2d": [
+        324,
+        120,
+        882,
+        999
+      ],
+      "label": "persons"
+    }
+  ],
+  "ocr": {
+    "text": "PHOTOS OF CARMEN\nCARMEN\n01\nand oil\nTattoo"
+  },
+  "raw_outputs": {
+    "general": "```json\n[\n\t{\"bbox_2d\": [320, 120, 871, 999], \"label\": \"person\"},\n\t{\"bbox_2d\": [377, 155, 691, 380], \"label\": \"face\"},\n\t{\"bbox_2d\": [569, 538, 764, 760], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [626, 802, 701, 856], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [705, 758, 801, 825], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [585, 872, 731, 999], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [622, 802, 700, 856], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [705, 758, 801, 825], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [585, 872, 731, 999], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [569, 538, 764, 760], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [626, 802, 701, 856], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [705, 758, 801, 825], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [585, 872, 731, 999], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [569, 538, 764, 760], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [626, 802, 700, 856], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [705, 758, 801, 825], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [585, 872, 731, 999], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [569, 538, 764, 760], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [626, 802, 700, 856], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [705, 758, 801, 825], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [585, 872, 731, 999], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [569, 538, 764, 760], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [626, 802, 700, 856], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [705, 758, 801, 825], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [585, 872, 731, 999], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [569, 538, 764, 760], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [626, 802, 700, 856], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [705, 758, 801, 825], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [585, 872, 731, 999], \"label\": \"tattoo\"},\n\t{\"bbox_2d\": [5",
+    "person": "```json\n[\n\t{\"bbox_2d\": [324, 120, 882, 999], \"label\": \"persons\"}\n]\n```",
+    "ocr": "```json\n{\n  \"text\": \"PHOTOS OF CARMEN\\nCARMEN\\n01\\nand oil\\nTattoo\"\n}\n```"
+  },
+  "inference_time_sec": 35.926
+}

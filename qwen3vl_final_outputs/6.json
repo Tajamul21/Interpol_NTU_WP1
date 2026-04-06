@@ -1,0 +1,80 @@
+{
+  "image": "/home2/tajamul/Qwen3VL/images/6.jpeg",
+  "inference_time": 12.889,
+  "general": [
+    {
+      "bbox_2d": [
+        0,
+        59,
+        210,
+        523
+      ],
+      "label": "object"
+    },
+    {
+      "bbox_2d": [
+        0,
+        594,
+        194,
+        965
+      ],
+      "label": "object"
+    },
+    {
+      "bbox_2d": [
+        308,
+        58,
+        492,
+        525
+      ],
+      "label": "object"
+    },
+    {
+      "bbox_2d": [
+        298,
+        579,
+        504,
+        967
+      ],
+      "label": "object"
+    },
+    {
+      "bbox_2d": [
+        542,
+        58,
+        812,
+        648
+      ],
+      "label": "object"
+    },
+    {
+      "bbox_2d": [
+        502,
+        604,
+        660,
+        937
+      ],
+      "label": "object"
+    },
+    {
+      "bbox_2d": [
+        662,
+        592,
+        816,
+        935
+      ],
+      "label": "object"
+    },
+    {
+      "bbox_2d": [
+        798,
+        162,
+        1000,
+        842
+      ],
+      "label": "object"
+    }
+  ],
+  "person": [],
+  "ocr": []
+}

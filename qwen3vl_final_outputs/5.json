@@ -1,0 +1,17 @@
+{
+  "image": "/home2/tajamul/Qwen3VL/images/5.jpg",
+  "inference_time_sec": 2.44,
+  "general": [
+    {
+      "bbox_2d": [
+        109,
+        0,
+        512,
+        819
+      ],
+      "label": "liquid"
+    }
+  ],
+  "person": [],
+  "ocr": []
+}

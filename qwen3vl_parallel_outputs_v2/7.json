@@ -1,0 +1,159 @@
+{
+  "image_path": "/home2/tajamul/Qwen3VL/images/7.jpg",
+  "general": [
+    {
+      "bbox_2d": [
+        0,
+        0,
+        1000,
+        1000
+      ],
+      "label": "keyboard"
+    },
+    {
+      "bbox_2d": [
+        655,
+        796,
+        730,
+        883
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        563,
+        440,
+        616,
+        517
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        298,
+        478,
+        350,
+        559
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        800,
+        407,
+        858,
+        480
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        806,
+        228,
+        840,
+        277
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        615,
+        246,
+        658,
+        296
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        409,
+        265,
+        444,
+        316
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        166,
+        285,
+        218,
+        337
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        131,
+        140,
+        182,
+        184
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        325,
+        125,
+        381,
+        168
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        521,
+        121,
+        553,
+        160
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        688,
+        109,
+        723,
+        149
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        836,
+        103,
+        871,
+        142
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        982,
+        106,
+        1000,
+        140
+      ],
+      "label": "text"
+    },
+    {
+      "bbox_2d": [
+        108,
+        337,
+        152,
+        356
+      ],
+      "label": "text"
+    }
+  ],
+  "person": [],
+  "ocr": {
+    "text": "Q W E R T Y U I O P A S D F G H J K L Z X C V B N M < > ? 1 2 3 4 5 6 7 8 9 0 AUTO Alt"
+  },
+  "raw_outputs": {
+    "general": "```json\n[\n\t{\"bbox_2d\": [0, 0, 1000, 1000], \"label\": \"keyboard\"},\n\t{\"bbox_2d\": [655, 796, 730, 883], \"label\": \"text\"},\n\t{\"bbox_2d\": [563, 440, 616, 517], \"label\": \"text\"},\n\t{\"bbox_2d\": [298, 478, 350, 559], \"label\": \"text\"},\n\t{\"bbox_2d\": [800, 407, 858, 480], \"label\": \"text\"},\n\t{\"bbox_2d\": [806, 228, 840, 277], \"label\": \"text\"},\n\t{\"bbox_2d\": [615, 246, 658, 296], \"label\": \"text\"},\n\t{\"bbox_2d\": [409, 265, 444, 316], \"label\": \"text\"},\n\t{\"bbox_2d\": [166, 285, 218, 337], \"label\": \"text\"},\n\t{\"bbox_2d\": [131, 140, 182, 184], \"label\": \"text\"},\n\t{\"bbox_2d\": [325, 125, 381, 168], \"label\": \"text\"},\n\t{\"bbox_2d\": [521, 121, 553, 160], \"label\": \"text\"},\n\t{\"bbox_2d\": [688, 109, 723, 149], \"label\": \"text\"},\n\t{\"bbox_2d\": [836, 103, 871, 142], \"label\": \"text\"},\n\t{\"bbox_2d\": [982, 106, 1000, 140], \"label\": \"text\"},\n\t{\"bbox_2d\": [108, 337, 152, 356], \"label\": \"text\"}\n]\n```",
+    "person": "There are none.",
+    "ocr": "```json\n{\n  \"text\": \"Q W E R T Y U I O P A S D F G H J K L Z X C V B N M < > ? 1 2 3 4 5 6 7 8 9 0 AUTO Alt\"\n}\n```"
+  },
+  "inference_time_sec": 25.076
+}

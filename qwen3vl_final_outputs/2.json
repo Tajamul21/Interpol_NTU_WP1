@@ -1,0 +1,135 @@
+{
+  "image": "/home2/tajamul/Qwen3VL/images/2.jpg",
+  "inference_time": 20.063,
+  "general": [
+    {
+      "bbox_2d": [
+        0,
+        15,
+        522,
+        998
+      ],
+      "label": "person"
+    },
+    {
+      "bbox_2d": [
+        474,
+        0,
+        991,
+        998
+      ],
+      "label": "person"
+    },
+    {
+      "bbox_2d": [
+        220,
+        888,
+        325,
+        998
+      ],
+      "label": "hand"
+    },
+    {
+      "bbox_2d": [
+        307,
+        526,
+        422,
+        882
+      ],
+      "label": "necklace"
+    },
+    {
+      "bbox_2d": [
+        613,
+        427,
+        741,
+        702
+      ],
+      "label": "necklace"
+    },
+    {
+      "bbox_2d": [
+        0,
+        383,
+        138,
+        586
+      ],
+      "label": "chair"
+    },
+    {
+      "bbox_2d": [
+        405,
+        383,
+        999,
+        998
+      ],
+      "label": "chair"
+    },
+    {
+      "bbox_2d": [
+        324,
+        857,
+        485,
+        998
+      ],
+      "label": "chair"
+    },
+    {
+      "bbox_2d": [
+        512,
+        383,
+        623,
+        532
+      ],
+      "label": "chair"
+    },
+    {
+      "bbox_2d": [
+        401,
+        390,
+        487,
+        532
+      ],
+      "label": "chair"
+    },
+    {
+      "bbox_2d": [
+        0,
+        0,
+        1000,
+        1000
+      ],
+      "label": "building"
+    },
+    {
+      "bbox_2d": [
+        502,
+        187,
+        582,
+        233
+      ],
+      "label": "building"
+    }
+  ],
+  "person": [
+    {
+      "bbox_2d": [
+        0,
+        13,
+        524,
+        999
+      ],
+      "label": "person"
+    },
+    {
+      "bbox_2d": [
+        473,
+        1,
+        990,
+        999
+      ],
+      "label": "person"
+    }
+  ],
+  "ocr": []
+}
