@@ -27,10 +27,13 @@ conda activate qwen3vl_py311
 pip install torch==2.6.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 pip install "transformers>=4.51.0" accelerate sentencepiece pillow tqdm
 pip install flash-attn --no-build-isolation
-
+pip install qwen-vl-utils==0.0.14
 huggingface-cli login
 ```
+For more details, refer to the official Qwen3-VL repository:  
+https://github.com/QwenLM/Qwen3-VL  
 
+This implementation follows the same setup and guidelines provided there.
 ---
 
 ## 🚀 Running the Pipeline
