@@ -1,4 +1,3 @@
-cat << 'EOF' > README.md
 # 🌟 NTU Interop WP1 — Qwen3-VL Multimodal Pipeline
 
 > ⚡ High-performance multi-GPU vision-language pipeline for detection, reasoning, and OCR using Qwen3-VL
