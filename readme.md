@@ -31,7 +31,7 @@ pip install qwen-vl-utils==0.0.14
 huggingface-cli login
 ```
 For more details, refer to the official Qwen3-VL repository:  
-https://github.com/QwenLM/Qwen3-VL  
+[![Qwen3-VL Repo](https://img.shields.io/badge/🔗%20Qwen3--VL%20Official%20Repo-Visit-blue?style=for-the-badge)](https://github.com/QwenLM/Qwen3-VL)
 
 This implementation follows the same setup and guidelines provided there.
 ---
