@@ -1,4 +1,4 @@
-# 🌟 NTU Interop WP1 — Qwen3-VL Multimodal Pipeline
+# 🌟 NTU Interpol WP1 — Qwen3-VL Multimodal Pipeline
 
 <p align="center">
   <a href="https://github.com/QwenLM/Qwen3-VL">
