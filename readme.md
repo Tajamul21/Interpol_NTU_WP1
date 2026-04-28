@@ -81,6 +81,73 @@ This implementation follows the same setup and guidelines provided there.
 python run.py
 ```
 
+# Smart keyframe extractor
+
+This extractor is designed to keep the important visual moments from a video **without dumping too many frames**.
+
+## What it does
+
+It uses a 4-step pipeline:
+
+1. **Adaptive scene-change detection** to find real shot changes.
+2. **Coverage-aware splitting** so long scenes still get sampled when they are visually dynamic.
+3. **Frame quality scoring** to avoid blurry / transition frames and prefer clearer representative frames.
+4. **Near-duplicate removal** so you do not end up with many almost-identical images.
+
+It saves:
+
+- optimized JPG keyframes
+- `keyframes.json` metadata with timestamps and scores
+- optional `contact_sheet.jpg` for quick review
+
+## Usage
+
+```bash
+python smart_keyframes.py /path/to/video.mp4 --contact-sheet
+```
+
+Save into a specific folder:
+
+```bash
+python smart_keyframes.py /path/to/video.mp4 -o /path/to/output_folder --contact-sheet
+```
+
+Force fewer frames:
+
+```bash
+python smart_keyframes.py /path/to/video.mp4 --max-frames 20 --contact-sheet
+```
+
+Keep higher-resolution output images:
+
+```bash
+python smart_keyframes.py /path/to/video.mp4 --max-dimension 2200 --jpeg-quality 95
+```
+
+## Good defaults
+
+The defaults are tuned to favor **not missing major visual changes** while still staying compact.
+
+If you want even fewer frames, the most useful knob is:
+
+```bash
+--max-frames 12
+```
+
+## Dependencies
+
+- OpenCV
+- NumPy
+- Pillow
+
+Install locally with:
+
+```bash
+pip install opencv-python numpy pillow
+```
+
+Once you have the key frames folder, load the path in run_parallel.py to get bounding box predictions.
+
 ### ⚡ Multi-GPU Parallel
 
 ```bash
